@@ -39,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097C28881DD05EA400BB548F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		DE26D9381DCC62D100176FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +65,7 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
+				097C28881DD05EA400BB548F /* Model */,
 				DE26D9471DCC62D100176FC0 /* AppDelegate.h */,
 				DE26D9481DCC62D100176FC0 /* AppDelegate.m */,
 				DE26D94A1DCC62D100176FC0 /* ViewController.h */,
@@ -307,6 +315,7 @@
 				DE26D95A1DCC62D100176FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
