@@ -15,6 +15,7 @@
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
 		DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA991DD060F0008A4DD9 /* login.m */; };
+		DE47DA9D1DD06161008A4DD9 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA9C1DD06161008A4DD9 /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE47DA981DD060F0008A4DD9 /* login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login.h; sourceTree = "<group>"; };
 		DE47DA991DD060F0008A4DD9 /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
+		DE47DA9B1DD06161008A4DD9 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		DE47DA9C1DD06161008A4DD9 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 			children = (
 				097C28891DD0608A00BB548F /* Card.h */,
 				097C288A1DD0608A00BB548F /* Card.m */,
+				DE47DA9B1DD06161008A4DD9 /* test.h */,
+				DE47DA9C1DD06161008A4DD9 /* test.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				097C288B1DD0608A00BB548F /* Card.m in Sources */,
+				DE47DA9D1DD06161008A4DD9 /* test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
