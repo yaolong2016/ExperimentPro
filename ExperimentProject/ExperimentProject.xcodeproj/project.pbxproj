@@ -7,24 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097C288B1DD0608A00BB548F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C288A1DD0608A00BB548F /* Card.m */; };
-		097C28911DD067CD00BB548F /* CCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C28901DD067CD00BB548F /* CCard.m */; };
 		DE26D9461DCC62D100176FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9451DCC62D100176FC0 /* main.m */; };
 		DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9481DCC62D100176FC0 /* AppDelegate.m */; };
 		DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D94B1DCC62D100176FC0 /* ViewController.m */; };
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
-		DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA991DD060F0008A4DD9 /* login.m */; };
-		DE47DA9D1DD06161008A4DD9 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA9C1DD06161008A4DD9 /* test.m */; };
-		DE47DAA01DD068BF008A4DD9 /* gggg.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA9F1DD068BF008A4DD9 /* gggg.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		097C28891DD0608A00BB548F /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		097C288A1DD0608A00BB548F /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		097C288F1DD067CD00BB548F /* CCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCard.h; sourceTree = "<group>"; };
-		097C28901DD067CD00BB548F /* CCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCard.m; sourceTree = "<group>"; };
 		DE26D9411DCC62D100176FC0 /* ExperimentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE26D9451DCC62D100176FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE26D9471DCC62D100176FC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,12 +26,6 @@
 		DE26D9501DCC62D100176FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE26D9531DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE47DA981DD060F0008A4DD9 /* login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login.h; sourceTree = "<group>"; };
-		DE47DA991DD060F0008A4DD9 /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
-		DE47DA9B1DD06161008A4DD9 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		DE47DA9C1DD06161008A4DD9 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
-		DE47DA9E1DD068BF008A4DD9 /* gggg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gggg.h; sourceTree = "<group>"; };
-		DE47DA9F1DD068BF008A4DD9 /* gggg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gggg.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +42,6 @@
 		097C28881DD05EA400BB548F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				097C28891DD0608A00BB548F /* Card.h */,
-				097C288A1DD0608A00BB548F /* Card.m */,
-				DE47DA9B1DD06161008A4DD9 /* test.h */,
-				DE47DA9C1DD06161008A4DD9 /* test.m */,
-				097C288F1DD067CD00BB548F /* CCard.h */,
-				097C28901DD067CD00BB548F /* CCard.m */,
-				DE47DA9E1DD068BF008A4DD9 /* gggg.h */,
-				DE47DA9F1DD068BF008A4DD9 /* gggg.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -122,8 +99,6 @@
 		DE47DA971DD05F76008A4DD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DE47DA981DD060F0008A4DD9 /* login.h */,
-				DE47DA991DD060F0008A4DD9 /* login.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,12 +176,7 @@
 			files = (
 				DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */,
 				DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */,
-				DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
-				097C288B1DD0608A00BB548F /* Card.m in Sources */,
-				DE47DAA01DD068BF008A4DD9 /* gggg.m in Sources */,
-				DE47DA9D1DD06161008A4DD9 /* test.m in Sources */,
-				097C28911DD067CD00BB548F /* CCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
