@@ -65,6 +65,8 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
+				DE47DA971DD05F76008A4DD9 /* Controller */,
+				DE47DA961DD05F65008A4DD9 /* View */,
 				097C28881DD05EA400BB548F /* Model */,
 				DE26D9471DCC62D100176FC0 /* AppDelegate.h */,
 				DE26D9481DCC62D100176FC0 /* AppDelegate.m */,
@@ -85,6 +87,20 @@
 				DE26D9451DCC62D100176FC0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE47DA961DD05F65008A4DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DE47DA971DD05F76008A4DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
