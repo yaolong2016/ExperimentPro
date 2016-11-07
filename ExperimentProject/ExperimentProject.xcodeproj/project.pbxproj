@@ -17,6 +17,7 @@
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
 		DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA991DD060F0008A4DD9 /* login.m */; };
 		DE47DA9D1DD06161008A4DD9 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA9C1DD06161008A4DD9 /* test.m */; };
+		DE47DAA01DD068BF008A4DD9 /* gggg.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DA9F1DD068BF008A4DD9 /* gggg.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		DE47DA991DD060F0008A4DD9 /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
 		DE47DA9B1DD06161008A4DD9 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
 		DE47DA9C1DD06161008A4DD9 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		DE47DA9E1DD068BF008A4DD9 /* gggg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gggg.h; sourceTree = "<group>"; };
+		DE47DA9F1DD068BF008A4DD9 /* gggg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gggg.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				DE47DA9C1DD06161008A4DD9 /* test.m */,
 				097C288F1DD067CD00BB548F /* CCard.h */,
 				097C28901DD067CD00BB548F /* CCard.m */,
+				DE47DA9E1DD068BF008A4DD9 /* gggg.h */,
+				DE47DA9F1DD068BF008A4DD9 /* gggg.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				DE47DA9A1DD060F0008A4DD9 /* login.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				097C288B1DD0608A00BB548F /* Card.m in Sources */,
+				DE47DAA01DD068BF008A4DD9 /* gggg.m in Sources */,
 				DE47DA9D1DD06161008A4DD9 /* test.m in Sources */,
 				097C28911DD067CD00BB548F /* CCard.m in Sources */,
 			);
