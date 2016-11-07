@@ -19,13 +19,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
 }
--(void) ffff {
-    
-    NSLog(@"ASDFASDF请问而且为safasd v");
-
-}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
