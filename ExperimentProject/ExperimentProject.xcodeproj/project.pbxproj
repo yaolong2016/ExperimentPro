@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097C28951DD0783300BB548F /* UserGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C28941DD0783300BB548F /* UserGuideVC.m */; };
-		097C28981DD07A6F00BB548F /* YunCaiAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C28971DD07A6F00BB548F /* YunCaiAPI.m */; };
+		097C289F1DD07E6E00BB548F /* UserGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C289C1DD07E6E00BB548F /* UserGuideVC.m */; };
+		097C28A01DD07E6E00BB548F /* YunCaiAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C289E1DD07E6E00BB548F /* YunCaiAPI.m */; };
 		DE26D9461DCC62D100176FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9451DCC62D100176FC0 /* main.m */; };
 		DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9481DCC62D100176FC0 /* AppDelegate.m */; };
 		DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D94B1DCC62D100176FC0 /* ViewController.m */; };
@@ -18,10 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		097C28931DD0783300BB548F /* UserGuideVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserGuideVC.h; path = ../UserGuideVC.h; sourceTree = "<group>"; };
-		097C28941DD0783300BB548F /* UserGuideVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGuideVC.m; path = ../UserGuideVC.m; sourceTree = "<group>"; };
-		097C28961DD07A6F00BB548F /* YunCaiAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YunCaiAPI.h; path = ../YunCaiAPI.h; sourceTree = "<group>"; };
-		097C28971DD07A6F00BB548F /* YunCaiAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YunCaiAPI.m; path = ../YunCaiAPI.m; sourceTree = "<group>"; };
+		097C289B1DD07E6E00BB548F /* UserGuideVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGuideVC.h; sourceTree = "<group>"; };
+		097C289C1DD07E6E00BB548F /* UserGuideVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGuideVC.m; sourceTree = "<group>"; };
+		097C289D1DD07E6E00BB548F /* YunCaiAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunCaiAPI.h; sourceTree = "<group>"; };
+		097C289E1DD07E6E00BB548F /* YunCaiAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunCaiAPI.m; sourceTree = "<group>"; };
 		DE26D9411DCC62D100176FC0 /* ExperimentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE26D9451DCC62D100176FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE26D9471DCC62D100176FC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,13 +52,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		097C28991DD07C4F00BB548F /* Other */ = {
+		097C289A1DD07E6E00BB548F /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				097C28931DD0783300BB548F /* UserGuideVC.h */,
-				097C28941DD0783300BB548F /* UserGuideVC.m */,
-				097C28961DD07A6F00BB548F /* YunCaiAPI.h */,
-				097C28971DD07A6F00BB548F /* YunCaiAPI.m */,
+				097C289B1DD07E6E00BB548F /* UserGuideVC.h */,
+				097C289C1DD07E6E00BB548F /* UserGuideVC.m */,
+				097C289D1DD07E6E00BB548F /* YunCaiAPI.h */,
+				097C289E1DD07E6E00BB548F /* YunCaiAPI.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -85,7 +85,7 @@
 				DE47DA971DD05F76008A4DD9 /* Controller */,
 				DE47DA961DD05F65008A4DD9 /* View */,
 				097C28881DD05EA400BB548F /* Model */,
-				097C28991DD07C4F00BB548F /* Other */,
+				097C289A1DD07E6E00BB548F /* Other */,
 				DE26D9471DCC62D100176FC0 /* AppDelegate.h */,
 				DE26D9481DCC62D100176FC0 /* AppDelegate.m */,
 				DE26D94A1DCC62D100176FC0 /* ViewController.h */,
@@ -194,9 +194,9 @@
 			files = (
 				DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */,
 				DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */,
-				097C28951DD0783300BB548F /* UserGuideVC.m in Sources */,
+				097C289F1DD07E6E00BB548F /* UserGuideVC.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
-				097C28981DD07A6F00BB548F /* YunCaiAPI.m in Sources */,
+				097C28A01DD07E6E00BB548F /* YunCaiAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
