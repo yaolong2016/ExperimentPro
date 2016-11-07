@@ -20,6 +20,8 @@
     
 }
 -(void) ffff {
+    
+    NSLog(@"ASDFASDF");
 
 }
 
