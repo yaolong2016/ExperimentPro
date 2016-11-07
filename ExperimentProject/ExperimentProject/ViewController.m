@@ -21,7 +21,7 @@
 }
 -(void) ffff {
     
-    NSLog(@"ASDFASDF请问而且为 v");
+    NSLog(@"ASDFASDF请问而且为safasd v");
 
 }
 
