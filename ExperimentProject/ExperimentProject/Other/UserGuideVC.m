@@ -21,9 +21,9 @@
     // Do any additional setup after loading the view.
 }
 
-//- (void)initGuide{
+- (void)initGuide{
 //    UIScrollView *scrollView = [UIScrollView alloc]initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
-//}
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

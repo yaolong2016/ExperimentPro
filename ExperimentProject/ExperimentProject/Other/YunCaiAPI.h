@@ -40,7 +40,7 @@
 #define GetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
 
 ///获取时间戳
-#define GetCurentTime [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]]
+#define GetCurentTime [NSString stringWithFormat:@"%ld",(long)[[NSDate date] timeIntervalSince1970]]
 
 @interface YunCaiAPI : NSObject
 
