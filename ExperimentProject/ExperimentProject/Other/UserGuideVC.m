@@ -9,7 +9,9 @@
 #import "UserGuideVC.h"
 
 @interface UserGuideVC ()
-
+{
+    UIPageControl *pageControl;
+}
 @end
 
 @implementation UserGuideVC
