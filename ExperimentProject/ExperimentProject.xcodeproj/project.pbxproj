@@ -46,13 +46,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		097C28881DD05EA400BB548F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		DE26D9381DCC62D100176FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +65,10 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
+				DE481D7D1DD42FDE00B9A654 /* KYVersion */,
+				DE481D7E1DD42FDE00B9A654 /* Manager */,
+				DE481D7F1DD42FDE00B9A654 /* Universal */,
 				DE481D761DD42CC300B9A654 /* Interface */,
-				DE47DA971DD05F76008A4DD9 /* Controller */,
-				DE47DA961DD05F65008A4DD9 /* View */,
-				097C28881DD05EA400BB548F /* Model */,
 				097762611DD41941009844CB /* Other */,
 				DE26D94D1DCC62D100176FC0 /* Main.storyboard */,
 				DE26D9501DCC62D100176FC0 /* Assets.xcassets */,
@@ -94,20 +87,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DE47DA961DD05F65008A4DD9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		DE47DA971DD05F76008A4DD9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		DE481D761DD42CC300B9A654 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +96,27 @@
 				DE481D7A1DD42EA200B9A654 /* ViewController.m */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		DE481D7D1DD42FDE00B9A654 /* KYVersion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KYVersion;
+			sourceTree = "<group>";
+		};
+		DE481D7E1DD42FDE00B9A654 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DE481D7F1DD42FDE00B9A654 /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Universal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
