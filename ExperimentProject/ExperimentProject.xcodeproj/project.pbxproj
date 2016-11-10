@@ -7,25 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097762661DD41941009844CB /* UserGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 097762631DD41941009844CB /* UserGuideVC.m */; };
-		097762671DD41941009844CB /* YunCaiAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 097762651DD41941009844CB /* YunCaiAPI.m */; };
-		0977626B1DD41993009844CB /* same.m in Sources */ = {isa = PBXBuildFile; fileRef = 0977626A1DD41993009844CB /* same.m */; };
 		DE26D9461DCC62D100176FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9451DCC62D100176FC0 /* main.m */; };
 		DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9481DCC62D100176FC0 /* AppDelegate.m */; };
 		DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D94B1DCC62D100176FC0 /* ViewController.m */; };
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
-		DE47DAA31DD07E13008A4DD9 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = DE47DAA21DD07E13008A4DD9 /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		097762621DD41941009844CB /* UserGuideVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGuideVC.h; sourceTree = "<group>"; };
-		097762631DD41941009844CB /* UserGuideVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGuideVC.m; sourceTree = "<group>"; };
-		097762641DD41941009844CB /* YunCaiAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunCaiAPI.h; sourceTree = "<group>"; };
-		097762651DD41941009844CB /* YunCaiAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunCaiAPI.m; sourceTree = "<group>"; };
-		097762691DD41993009844CB /* same.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = same.h; sourceTree = "<group>"; };
-		0977626A1DD41993009844CB /* same.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = same.m; sourceTree = "<group>"; };
 		DE26D9411DCC62D100176FC0 /* ExperimentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE26D9451DCC62D100176FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE26D9471DCC62D100176FC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,8 +26,6 @@
 		DE26D9501DCC62D100176FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE26D9531DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE47DAA11DD07E13008A4DD9 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		DE47DAA21DD07E13008A4DD9 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,21 +42,8 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				097762621DD41941009844CB /* UserGuideVC.h */,
-				097762631DD41941009844CB /* UserGuideVC.m */,
-				097762641DD41941009844CB /* YunCaiAPI.h */,
-				097762651DD41941009844CB /* YunCaiAPI.m */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		097762681DD41979009844CB /* Same */ = {
-			isa = PBXGroup;
-			children = (
-				097762691DD41993009844CB /* same.h */,
-				0977626A1DD41993009844CB /* same.m */,
-			);
-			name = Same;
 			sourceTree = "<group>";
 		};
 		097C28881DD05EA400BB548F /* Model */ = {
@@ -97,7 +72,6 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
-				097762681DD41979009844CB /* Same */,
 				DE47DA971DD05F76008A4DD9 /* Controller */,
 				DE47DA961DD05F65008A4DD9 /* View */,
 				097C28881DD05EA400BB548F /* Model */,
@@ -133,8 +107,6 @@
 		DE47DA971DD05F76008A4DD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DE47DAA11DD07E13008A4DD9 /* test.h */,
-				DE47DAA21DD07E13008A4DD9 /* test.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,12 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE26D94C1DCC62D100176FC0 /* ViewController.m in Sources */,
-				DE47DAA31DD07E13008A4DD9 /* test.m in Sources */,
-				097762661DD41941009844CB /* UserGuideVC.m in Sources */,
-				0977626B1DD41993009844CB /* same.m in Sources */,
 				DE26D9491DCC62D100176FC0 /* AppDelegate.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
-				097762671DD41941009844CB /* YunCaiAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
