@@ -13,10 +13,17 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize viewcontroller_m;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.viewcontroller_m = [[ViewController alloc] init];
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:self.viewcontroller_m];
+    self.window.rootViewController = navigation;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
