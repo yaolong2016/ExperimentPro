@@ -15,18 +15,27 @@
 
 @implementation ViewController
 @synthesize mainInterface_m;
+@synthesize sets_m;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mainInterface_m = nil;
+    self.sets_m = nil;
     //首先判断用户使用app是不是停留在引导页的
     if (![ToolFuncation getGuideDidMark:nil]) {//进入引导页
         [self loadMainInterfaceController:APP_INTO_GUIDE];
     } else {//进入登录或者内容页
-    
-        
+        if ([ToolFuncation isLogin:nil] == NO) {//进入登录页面
+            [self loadMainInterfaceController:APP_INTO_LOGINOUT];
+            
+        } else {//进入选择页面
+            [self loadMainInterfaceController:[ToolFuncation appInterfaceMark]];
+            
+        }
     }
-
+    
+    
+    
 }
 
 - (void) loadMainInterfaceController:(APPInterfaceChange) mark {
@@ -38,7 +47,7 @@
             [self mainViewControllerInit:LOGINOUT_CLASS_NAME];
             break;
         case APP_INTO_SETTINGS:
-            
+            [self loadSettingsController];
             break;
         case APP_INTO_UNIVERSAL:
             [self mainViewControllerInit:UNIVERSION_CLASS_NAME];
@@ -77,6 +86,16 @@
         self.mainInterface_m = nil;
     }
 }
+
+- (void) loadSettingsController {
+    if (!self.sets_m) {
+        self.sets_m = [[[NSBundle mainBundle] loadNibNamed:SETTINGS_CLASS_NAME
+                                                    owner:self
+                                                  options:nil] objectAtIndex:0];
+        [[UIApplication sharedApplication].keyWindow addSubview:self.sets_m.view];
+    }
+}
+
 ///---------------------------------------------------------------------------------------------
 
 

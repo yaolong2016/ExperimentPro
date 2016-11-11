@@ -7,16 +7,42 @@
 //
 
 #import "YCSettingsViewController.h"
+#import "ViewController.h"
+#import "ToolFuncation.h"
+#import "AppDelegate.h"
 
 @interface YCSettingsViewController ()
 
 @end
 
 @implementation YCSettingsViewController
+@synthesize tableView_m;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.view.frame = CGRectMake(-self.view.frame.size.width,
+                                 0, self.view.frame.size.width,
+                                 self.view.frame.size.height);
+    [self.view setBackgroundColor:[UIColor clearColor]];
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                             [UIView animateWithDuration:0.25
+                                              animations:^{
+                                                  [self.view setBackgroundColor:[UIColor colorWithRed:0
+                                                                                                green:0
+                                                                                                 blue:0
+                                                                                                alpha:0.5]];
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  
+                                              }];
+                         }
+                     }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +50,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesEnded:touches withEvent:event];
+    
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         [self.view setBackgroundColor:[UIColor colorWithRed:0
+                                                                       green:0
+                                                                        blue:0
+                                                                       alpha:0]];
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                             [UIView animateWithDuration:0.25
+                                              animations:^{
+                                                  self.view.frame = CGRectMake(-self.view.frame.size.width,
+                                                                               0,
+                                                                               self.view.frame.size.width,
+                                                                               self.view.frame.size.height);
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  ViewController* vc = [ToolFuncation getNavigationChildrensController:[ViewController class]
+                                                                                                       viewControllers:[ToolFuncation getAppDelegateObject].viewcontroller_m];
+                                                  [vc.sets_m.view removeFromSuperview];
+                                                  [vc.sets_m removeFromParentViewController];
+                                                  vc.sets_m = nil;
+                                              }];
+                         }
+                     }];
+    
 }
-*/
 
 @end

@@ -8,7 +8,8 @@
 
 ///板块控制参数
 typedef enum {
-
+    ///默认参数
+    APP_DEFAULT,
     ///进入整合版本
     APP_INTO_UNIVERSAL,
     ///进入管理版本
@@ -32,4 +33,7 @@ typedef enum {
 #define SETTINGS_CLASS_NAME   @"YCSettingsViewController"
 #define LOGINOUT_CLASS_NAME   @"YCLogin"
 
+///登录标示
+#define Login  @"1"
+#define Logout @"0"
 

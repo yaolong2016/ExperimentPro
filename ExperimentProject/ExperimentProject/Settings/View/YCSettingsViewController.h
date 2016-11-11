@@ -12,4 +12,6 @@
 ///app的控制入口
 @interface YCSettingsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView* tableView_m;
+
 @end

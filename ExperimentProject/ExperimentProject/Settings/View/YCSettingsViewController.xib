@@ -19,9 +19,25 @@
             <view key="view" contentMode="scaleToFill" id="BeW-52-1bV">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9l-jv-wn7">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="x9l-jv-wn7" secondAttribute="trailing" constant="80" id="63J-eL-bt2"/>
+                    <constraint firstItem="x9l-jv-wn7" firstAttribute="leading" secondItem="BeW-52-1bV" secondAttribute="leading" id="6ob-VO-77X"/>
+                    <constraint firstItem="x9l-jv-wn7" firstAttribute="top" secondItem="BeW-52-1bV" secondAttribute="top" id="Xsh-Al-9vs"/>
+                    <constraint firstItem="j59-eH-9mF" firstAttribute="top" secondItem="x9l-jv-wn7" secondAttribute="bottom" id="ZHV-ui-8IV"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="14" y="23"/>
+            <connections>
+                <outlet property="tableView_m" destination="x9l-jv-wn7" id="5L6-uX-yhf"/>
+            </connections>
+            <point key="canvasLocation" x="13.5" y="22.5"/>
         </viewController>
     </objects>
 </document>
