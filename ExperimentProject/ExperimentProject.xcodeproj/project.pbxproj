@@ -65,6 +65,8 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1841DD5623C003E7715 /* Guide */,
+				DE34E1851DD5623C003E7715 /* LoginOut */,
 				DE481D7D1DD42FDE00B9A654 /* KYVersion */,
 				DE481D7E1DD42FDE00B9A654 /* Manager */,
 				DE481D7F1DD42FDE00B9A654 /* Universal */,
@@ -85,6 +87,20 @@
 				DE26D9451DCC62D100176FC0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE34E1841DD5623C003E7715 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		DE34E1851DD5623C003E7715 /* LoginOut */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginOut;
 			sourceTree = "<group>";
 		};
 		DE481D761DD42CC300B9A654 /* Interface */ = {
