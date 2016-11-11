@@ -65,6 +65,7 @@
 		DE26D9431DCC62D100176FC0 /* ExperimentProject */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1861DD562D2003E7715 /* Settings */,
 				DE34E1841DD5623C003E7715 /* Guide */,
 				DE34E1851DD5623C003E7715 /* LoginOut */,
 				DE481D7D1DD42FDE00B9A654 /* KYVersion */,
@@ -101,6 +102,13 @@
 			children = (
 			);
 			path = LoginOut;
+			sourceTree = "<group>";
+		};
+		DE34E1861DD562D2003E7715 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DE481D761DD42CC300B9A654 /* Interface */ = {
