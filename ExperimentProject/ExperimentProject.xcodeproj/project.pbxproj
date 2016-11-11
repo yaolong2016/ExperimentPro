@@ -11,6 +11,19 @@
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
+		DE34E1991DD566CA003E7715 /* YCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1971DD566CA003E7715 /* YCLogin.m */; };
+		DE34E19A1DD566CA003E7715 /* YCLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1981DD566CA003E7715 /* YCLogin.xib */; };
+		DE34E19E1DD56733003E7715 /* YCGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E19C1DD56733003E7715 /* YCGuideViewController.m */; };
+		DE34E19F1DD56733003E7715 /* YCGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */; };
+		DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */; };
+		DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */; };
+		DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */; };
+		DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1B21DD5699D003E7715 /* YCManagerInterface.xib */; };
+		DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1B91DD569D9003E7715 /* YCKYVersionInterface.m */; };
+		DE34E1BC1DD569D9003E7715 /* YCKYVersionInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1BA1DD569D9003E7715 /* YCKYVersionInterface.xib */; };
+		DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1C11DD56A38003E7715 /* YCSettingsViewController.m */; };
+		DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1C21DD56A38003E7715 /* YCSettingsViewController.xib */; };
+		DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1C91DD57A0F003E7715 /* ToolFuncation.m */; };
 		DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE481D781DD42EA200B9A654 /* AppDelegate.m */; };
 		DE481D7C1DD42EA200B9A654 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE481D7A1DD42EA200B9A654 /* ViewController.m */; };
 /* End PBXBuildFile section */
@@ -22,6 +35,27 @@
 		DE26D9501DCC62D100176FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE26D9531DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE34E1961DD566CA003E7715 /* YCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLogin.h; sourceTree = "<group>"; };
+		DE34E1971DD566CA003E7715 /* YCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLogin.m; sourceTree = "<group>"; };
+		DE34E1981DD566CA003E7715 /* YCLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLogin.xib; sourceTree = "<group>"; };
+		DE34E19B1DD56733003E7715 /* YCGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGuideViewController.h; sourceTree = "<group>"; };
+		DE34E19C1DD56733003E7715 /* YCGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCGuideViewController.m; sourceTree = "<group>"; };
+		DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCGuideViewController.xib; sourceTree = "<group>"; };
+		DE34E1A81DD56952003E7715 /* YCUniversalInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUniversalInterface.h; sourceTree = "<group>"; };
+		DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUniversalInterface.m; sourceTree = "<group>"; };
+		DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCUniversalInterface.xib; sourceTree = "<group>"; };
+		DE34E1B01DD5699D003E7715 /* YCManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCManagerInterface.h; sourceTree = "<group>"; };
+		DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCManagerInterface.m; sourceTree = "<group>"; };
+		DE34E1B21DD5699D003E7715 /* YCManagerInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCManagerInterface.xib; sourceTree = "<group>"; };
+		DE34E1B81DD569D9003E7715 /* YCKYVersionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCKYVersionInterface.h; sourceTree = "<group>"; };
+		DE34E1B91DD569D9003E7715 /* YCKYVersionInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCKYVersionInterface.m; sourceTree = "<group>"; };
+		DE34E1BA1DD569D9003E7715 /* YCKYVersionInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCKYVersionInterface.xib; sourceTree = "<group>"; };
+		DE34E1C01DD56A38003E7715 /* YCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSettingsViewController.h; sourceTree = "<group>"; };
+		DE34E1C11DD56A38003E7715 /* YCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSettingsViewController.m; sourceTree = "<group>"; };
+		DE34E1C21DD56A38003E7715 /* YCSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCSettingsViewController.xib; sourceTree = "<group>"; };
+		DE34E1C71DD56E35003E7715 /* DefineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineTool.h; sourceTree = "<group>"; };
+		DE34E1C81DD57A0F003E7715 /* ToolFuncation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolFuncation.h; sourceTree = "<group>"; };
+		DE34E1C91DD57A0F003E7715 /* ToolFuncation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolFuncation.m; sourceTree = "<group>"; };
 		DE481D771DD42EA200B9A654 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE481D781DD42EA200B9A654 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE481D791DD42EA200B9A654 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -42,6 +76,7 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1C51DD56C6E003E7715 /* ToolFiles */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -93,6 +128,9 @@
 		DE34E1841DD5623C003E7715 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E19B1DD56733003E7715 /* YCGuideViewController.h */,
+				DE34E19C1DD56733003E7715 /* YCGuideViewController.m */,
+				DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -100,6 +138,9 @@
 		DE34E1851DD5623C003E7715 /* LoginOut */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1961DD566CA003E7715 /* YCLogin.h */,
+				DE34E1971DD566CA003E7715 /* YCLogin.m */,
+				DE34E1981DD566CA003E7715 /* YCLogin.xib */,
 			);
 			path = LoginOut;
 			sourceTree = "<group>";
@@ -107,8 +148,117 @@
 		DE34E1861DD562D2003E7715 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1BD1DD56A38003E7715 /* Controller */,
+				DE34E1BE1DD56A38003E7715 /* Model */,
+				DE34E1BF1DD56A38003E7715 /* View */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		DE34E1A51DD568E7003E7715 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE34E1A61DD568E7003E7715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE34E1A71DD568E7003E7715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE34E1A81DD56952003E7715 /* YCUniversalInterface.h */,
+				DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */,
+				DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE34E1AD1DD5699D003E7715 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE34E1AE1DD5699D003E7715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE34E1AF1DD5699D003E7715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE34E1B01DD5699D003E7715 /* YCManagerInterface.h */,
+				DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */,
+				DE34E1B21DD5699D003E7715 /* YCManagerInterface.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE34E1B51DD569D9003E7715 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE34E1B61DD569D9003E7715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE34E1B71DD569D9003E7715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE34E1B81DD569D9003E7715 /* YCKYVersionInterface.h */,
+				DE34E1B91DD569D9003E7715 /* YCKYVersionInterface.m */,
+				DE34E1BA1DD569D9003E7715 /* YCKYVersionInterface.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE34E1BD1DD56A38003E7715 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE34E1BE1DD56A38003E7715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE34E1BF1DD56A38003E7715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE34E1C01DD56A38003E7715 /* YCSettingsViewController.h */,
+				DE34E1C11DD56A38003E7715 /* YCSettingsViewController.m */,
+				DE34E1C21DD56A38003E7715 /* YCSettingsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE34E1C51DD56C6E003E7715 /* ToolFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DE34E1C71DD56E35003E7715 /* DefineTool.h */,
+				DE34E1C81DD57A0F003E7715 /* ToolFuncation.h */,
+				DE34E1C91DD57A0F003E7715 /* ToolFuncation.m */,
+			);
+			path = ToolFiles;
 			sourceTree = "<group>";
 		};
 		DE481D761DD42CC300B9A654 /* Interface */ = {
@@ -125,6 +275,9 @@
 		DE481D7D1DD42FDE00B9A654 /* KYVersion */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1B51DD569D9003E7715 /* Controller */,
+				DE34E1B61DD569D9003E7715 /* Model */,
+				DE34E1B71DD569D9003E7715 /* View */,
 			);
 			path = KYVersion;
 			sourceTree = "<group>";
@@ -132,6 +285,9 @@
 		DE481D7E1DD42FDE00B9A654 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1AD1DD5699D003E7715 /* Controller */,
+				DE34E1AE1DD5699D003E7715 /* Model */,
+				DE34E1AF1DD5699D003E7715 /* View */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -139,6 +295,9 @@
 		DE481D7F1DD42FDE00B9A654 /* Universal */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E1A51DD568E7003E7715 /* Controller */,
+				DE34E1A61DD568E7003E7715 /* Model */,
+				DE34E1A71DD568E7003E7715 /* View */,
 			);
 			path = Universal;
 			sourceTree = "<group>";
@@ -201,9 +360,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE34E19A1DD566CA003E7715 /* YCLogin.xib in Resources */,
+				DE34E1BC1DD569D9003E7715 /* YCKYVersionInterface.xib in Resources */,
 				DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */,
+				DE34E19F1DD56733003E7715 /* YCGuideViewController.xib in Resources */,
 				DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */,
+				DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */,
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
+				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
+				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +379,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE34E1991DD566CA003E7715 /* YCLogin.m in Sources */,
 				DE481D7C1DD42EA200B9A654 /* ViewController.m in Sources */,
+				DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */,
+				DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
+				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
+				DE34E19E1DD56733003E7715 /* YCGuideViewController.m in Sources */,
+				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
+				DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
