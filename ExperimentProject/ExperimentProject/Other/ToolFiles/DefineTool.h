@@ -37,6 +37,6 @@ typedef enum {
 #define Login  @"1"
 #define Logout @"0"
 
-#define XXX 323
+#define XXX 888
 #define YYY 3333
 #define  ddd 999
