@@ -39,3 +39,4 @@ typedef enum {
 
 #define XXX 323
 #define YYY 3333
+#define  ddd 999
