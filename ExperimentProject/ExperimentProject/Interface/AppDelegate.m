@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Network.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Network NetworkRequestObject:dispatch_get_main_queue()];
     
     self.viewcontroller_m = [[ViewController alloc] init];
     UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:self.viewcontroller_m];
