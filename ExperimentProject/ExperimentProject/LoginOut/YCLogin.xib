@@ -33,7 +33,7 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title=" 综合版" image="login_kongbai">
-                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <state key="selected" title=" 综合版" image="login_gou"/>
                         <connections>
@@ -47,7 +47,7 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title=" 管理版" image="login_kongbai">
-                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <state key="selected" title=" 管理版" image="login_gou"/>
                         <connections>
@@ -73,7 +73,7 @@
                             <constraint firstAttribute="height" constant="30" id="a8g-86-phr"/>
                         </constraints>
                         <state key="normal" title="忘记密码">
-                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <connections>
                             <action selector="wangJiMiMaBtnClick:" destination="Lt5-YK-Hhh" eventType="touchUpInside" id="0vL-M2-D4E"/>
@@ -86,7 +86,7 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title=" 科研版" image="login_kongbai">
-                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <state key="selected" title=" 科研版" image="login_gou"/>
                         <connections>

@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB521DD9BC57002A0B60 /* YCLogin.m */; };
+		09FDEB5B1DD9BC57002A0B60 /* YCLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB531DD9BC57002A0B60 /* YCLogin.xib */; };
+		09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB551DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m */; };
+		09FDEB5D1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB561DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib */; };
+		09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB581DD9BC57002A0B60 /* ZhuCeVC.m */; };
+		09FDEB5F1DD9BC57002A0B60 /* ZhuCeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB591DD9BC57002A0B60 /* ZhuCeVC.xib */; };
+		09FDEB631DD9BCE9002A0B60 /* YCGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB611DD9BCE9002A0B60 /* YCGuideViewController.m */; };
+		09FDEB641DD9BCE9002A0B60 /* YCGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB621DD9BCE9002A0B60 /* YCGuideViewController.xib */; };
 		DE26D9461DCC62D100176FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9451DCC62D100176FC0 /* main.m */; };
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
-		DE34E1991DD566CA003E7715 /* YCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1971DD566CA003E7715 /* YCLogin.m */; };
-		DE34E19A1DD566CA003E7715 /* YCLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1981DD566CA003E7715 /* YCLogin.xib */; };
-		DE34E19E1DD56733003E7715 /* YCGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E19C1DD56733003E7715 /* YCGuideViewController.m */; };
-		DE34E19F1DD56733003E7715 /* YCGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */; };
 		DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */; };
 		DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */; };
 		DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */; };
@@ -37,18 +41,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FDEB511DD9BC57002A0B60 /* YCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLogin.h; sourceTree = "<group>"; };
+		09FDEB521DD9BC57002A0B60 /* YCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLogin.m; sourceTree = "<group>"; };
+		09FDEB531DD9BC57002A0B60 /* YCLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLogin.xib; sourceTree = "<group>"; };
+		09FDEB541DD9BC57002A0B60 /* ZhaoHuiMiMaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhaoHuiMiMaVC.h; sourceTree = "<group>"; };
+		09FDEB551DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhaoHuiMiMaVC.m; sourceTree = "<group>"; };
+		09FDEB561DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhaoHuiMiMaVC.xib; sourceTree = "<group>"; };
+		09FDEB571DD9BC57002A0B60 /* ZhuCeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuCeVC.h; sourceTree = "<group>"; };
+		09FDEB581DD9BC57002A0B60 /* ZhuCeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuCeVC.m; sourceTree = "<group>"; };
+		09FDEB591DD9BC57002A0B60 /* ZhuCeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhuCeVC.xib; sourceTree = "<group>"; };
+		09FDEB601DD9BCE9002A0B60 /* YCGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGuideViewController.h; sourceTree = "<group>"; };
+		09FDEB611DD9BCE9002A0B60 /* YCGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCGuideViewController.m; sourceTree = "<group>"; };
+		09FDEB621DD9BCE9002A0B60 /* YCGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCGuideViewController.xib; sourceTree = "<group>"; };
 		DE26D9411DCC62D100176FC0 /* ExperimentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE26D9451DCC62D100176FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE26D94E1DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE26D9501DCC62D100176FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE26D9531DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE34E1961DD566CA003E7715 /* YCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLogin.h; sourceTree = "<group>"; };
-		DE34E1971DD566CA003E7715 /* YCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLogin.m; sourceTree = "<group>"; };
-		DE34E1981DD566CA003E7715 /* YCLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLogin.xib; sourceTree = "<group>"; };
-		DE34E19B1DD56733003E7715 /* YCGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGuideViewController.h; sourceTree = "<group>"; };
-		DE34E19C1DD56733003E7715 /* YCGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCGuideViewController.m; sourceTree = "<group>"; };
-		DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCGuideViewController.xib; sourceTree = "<group>"; };
 		DE34E1A81DD56952003E7715 /* YCUniversalInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUniversalInterface.h; sourceTree = "<group>"; };
 		DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUniversalInterface.m; sourceTree = "<group>"; };
 		DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCUniversalInterface.xib; sourceTree = "<group>"; };
@@ -155,9 +165,9 @@
 		DE34E1841DD5623C003E7715 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
-				DE34E19B1DD56733003E7715 /* YCGuideViewController.h */,
-				DE34E19C1DD56733003E7715 /* YCGuideViewController.m */,
-				DE34E19D1DD56733003E7715 /* YCGuideViewController.xib */,
+				09FDEB601DD9BCE9002A0B60 /* YCGuideViewController.h */,
+				09FDEB611DD9BCE9002A0B60 /* YCGuideViewController.m */,
+				09FDEB621DD9BCE9002A0B60 /* YCGuideViewController.xib */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -165,9 +175,15 @@
 		DE34E1851DD5623C003E7715 /* LoginOut */ = {
 			isa = PBXGroup;
 			children = (
-				DE34E1961DD566CA003E7715 /* YCLogin.h */,
-				DE34E1971DD566CA003E7715 /* YCLogin.m */,
-				DE34E1981DD566CA003E7715 /* YCLogin.xib */,
+				09FDEB511DD9BC57002A0B60 /* YCLogin.h */,
+				09FDEB521DD9BC57002A0B60 /* YCLogin.m */,
+				09FDEB531DD9BC57002A0B60 /* YCLogin.xib */,
+				09FDEB541DD9BC57002A0B60 /* ZhaoHuiMiMaVC.h */,
+				09FDEB551DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m */,
+				09FDEB561DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib */,
+				09FDEB571DD9BC57002A0B60 /* ZhuCeVC.h */,
+				09FDEB581DD9BC57002A0B60 /* ZhuCeVC.m */,
+				09FDEB591DD9BC57002A0B60 /* ZhuCeVC.xib */,
 			);
 			path = LoginOut;
 			sourceTree = "<group>";
@@ -412,12 +428,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE34E19A1DD566CA003E7715 /* YCLogin.xib in Resources */,
 				DE34E1BC1DD569D9003E7715 /* YCKYVersionInterface.xib in Resources */,
 				DE7D8DA31DD9AC270059A4CD /* LocalFileSystem.xib in Resources */,
 				DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */,
-				DE34E19F1DD56733003E7715 /* YCGuideViewController.xib in Resources */,
+				09FDEB5F1DD9BC57002A0B60 /* ZhuCeVC.xib in Resources */,
 				DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */,
+				09FDEB5B1DD9BC57002A0B60 /* YCLogin.xib in Resources */,
+				09FDEB5D1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib in Resources */,
+				09FDEB641DD9BCE9002A0B60 /* YCGuideViewController.xib in Resources */,
 				DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */,
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
@@ -433,7 +451,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE7D8D8F1DD9A1F20059A4CD /* Network.m in Sources */,
-				DE34E1991DD566CA003E7715 /* YCLogin.m in Sources */,
 				DE481D7C1DD42EA200B9A654 /* ViewController.m in Sources */,
 				DE7D8D8E1DD9A1F20059A4CD /* JSONKit.m in Sources */,
 				DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */,
@@ -441,12 +458,15 @@
 				DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
-				DE34E19E1DD56733003E7715 /* YCGuideViewController.m in Sources */,
+				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				DE7D8D8D1DD9A1F20059A4CD /* GCDAsyncSocket.m in Sources */,
+				09FDEB631DD9BCE9002A0B60 /* YCGuideViewController.m in Sources */,
 				DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */,
+				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
+				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
