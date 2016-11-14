@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "ToolFuncation.h"
 
+///测试文件头
+#import "LocalFileSystem.h"
+
 @interface ViewController ()
 
 @end
@@ -34,6 +37,10 @@
         }
     }
     
+    
+    ///测试加载文件
+//    LocalFileSystem* fs = [[[NSBundle mainBundle] loadNibNamed:@"LocalFileSystem" owner:self options:nil] objectAtIndex:0];
+//    [self.navigationController pushViewController:fs animated:YES];
     
     
 }
