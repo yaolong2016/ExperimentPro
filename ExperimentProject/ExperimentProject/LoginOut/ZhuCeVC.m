@@ -18,7 +18,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     ViewBorderRadius(self.bgView, 4, 0, [UIColor whiteColor]);
-    self.title = @"注册";
+    self.title = NSLocalizedString(@"注册", nil);
+    [self setUIString];
+}
+
+- (void)setUIString{
+    self.souJiTextField.placeholder = NSLocalizedString(@"请输入手机号", nil);
+    self.yanZhenCode.placeholder = NSLocalizedString(@"短信验证码", nil);
+    [self.yanZhenBtn setTitle:NSLocalizedString(@"获取验证码", nil) forState:UIControlStateNormal];
+    self.miMa1TextFiled.placeholder = NSLocalizedString(@"请输入密码", nil);
+    self.miMa2TextField.placeholder = NSLocalizedString(@"请确认密码", nil);
+    [self.tiJiaoBtn setTitle:NSLocalizedString(@"提交", nil) forState:UIControlStateNormal];
     
 }
 

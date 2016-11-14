@@ -19,4 +19,7 @@
 - (IBAction)tiJiaoBtnClick:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIView *bgView;
 
+@property (strong, nonatomic) IBOutlet UIButton *tiJiaoBtn;
+
+
 @end

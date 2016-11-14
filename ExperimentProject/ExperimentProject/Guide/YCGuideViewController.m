@@ -48,7 +48,7 @@
     [self.view addSubview:pageControl];
     
     UIButton *aBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [aBtn setTitle:@"跳过" forState:UIControlStateNormal];
+    [aBtn setTitle:NSLocalizedString(@"跳过", nil) forState:UIControlStateNormal];
     [aBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     aBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     aBtn.frame = CGRectMake(SCREEN_WIDTH - 70, 25, 44, 44);

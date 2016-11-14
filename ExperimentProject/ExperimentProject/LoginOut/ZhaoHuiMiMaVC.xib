@@ -11,6 +11,7 @@
                 <outlet property="miMa1TextFiled" destination="rvg-zx-F7K" id="mlv-wn-Ygt"/>
                 <outlet property="miMa2TextField" destination="VQI-fX-h9B" id="0Nn-c7-aX9"/>
                 <outlet property="souJiTextField" destination="DFh-mk-kER" id="h6y-QW-Q6X"/>
+                <outlet property="tiJiaoBtn" destination="gjm-Cz-S1s" id="20x-Oi-FM9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yanZhenBtn" destination="YMj-XT-d0q" id="cuk-on-IuU"/>
                 <outlet property="yanZhenCode" destination="RjF-ZW-08E" id="Ce9-4D-V1T"/>
@@ -24,7 +25,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwB-CS-WsE">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-mk-kER">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-mk-kER">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="WY2-sy-E6m"/>
@@ -59,7 +60,7 @@
                                 </mask>
                             </variation>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="短信验证信息" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RjF-ZW-08E">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RjF-ZW-08E">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="g5s-1r-1Zj"/>
@@ -84,7 +85,7 @@
                                 <constraint firstAttribute="width" constant="82" id="Lgc-JY-mmk"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="获取验证码" backgroundImage="login_anniu">
+                            <state key="normal" backgroundImage="login_anniu">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="default">
@@ -120,7 +121,7 @@
                                 </mask>
                             </variation>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rvg-zx-F7K">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rvg-zx-F7K">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="eWH-Sh-H4g"/>
@@ -155,7 +156,7 @@
                                 </mask>
                             </variation>
                         </view>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VQI-fX-h9B">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VQI-fX-h9B">
                             <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="Q0n-tb-m3x"/>
@@ -294,7 +295,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="7hO-Qz-GJK"/>
                         <constraint firstAttribute="height" constant="45" id="VaU-y5-mSl"/>
                     </constraints>
-                    <state key="normal" title="提交" backgroundImage="login_anniu">
+                    <state key="normal" backgroundImage="login_anniu">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -354,6 +355,6 @@
         </view>
     </objects>
     <resources>
-        <image name="login_anniu" width="329" height="45"/>
+        <image name="login_anniu" width="329" height="44"/>
     </resources>
 </document>

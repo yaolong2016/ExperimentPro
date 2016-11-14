@@ -36,9 +36,23 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    
+    
     [self.zhongHeBtn setSelected:YES];
     banBenValue = 101;
+    [self setUIstring];
     
+}
+
+- (void)setUIstring{
+    self.souJiTextField.placeholder = NSLocalizedString(@"请输入手机号码", nil);
+    self.miMaTextField.placeholder = NSLocalizedString(@"请输入密码", nil);
+    [self.zhongHeBtn setTitle:NSLocalizedString(@" 综合版", nil) forState:UIControlStateNormal];
+    [self.guanLiBtn setTitle:NSLocalizedString(@" 管理版", nil) forState:UIControlStateNormal];
+    [self.keYanBtn setTitle:NSLocalizedString(@" 科研版", nil) forState:UIControlStateNormal];
+    [self.loginBtn setTitle:NSLocalizedString(@"登录", nil) forState:UIControlStateNormal];
+    [self.zuCheBtn setTitle:NSLocalizedString(@"注册", nil) forState:UIControlStateNormal];
+    [self.wangJiMiMabtn setTitle:NSLocalizedString(@"忘记密码", nil) forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,7 +100,6 @@
 //    if(offset > 0) {
         if(SCREENH_HEIGHT < 568) {
         [UIView animateWithDuration:duration animations:^{
-           NSLog(@"进入这里");
 //            self.view.frame = CGRectMake(0.0f, -offset, self.view.frame.size.width, self.view.frame.size.height);
 //            self.view.frame = CGRectMake(0.0f, -100, self.view.frame.size.width, self.view.frame.size.height);
             self.viewCenter.constant = 50 -0;
