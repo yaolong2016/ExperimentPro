@@ -32,6 +32,8 @@
 		DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7D8D8C1DD9A1F20059A4CD /* Reachability.m */; };
 		DE7D8D921DD9A20D0059A4CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D911DD9A20D0059A4CD /* CFNetwork.framework */; };
 		DE7D8D941DD9A2260059A4CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */; };
+		DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */; };
+		DE7D8DA31DD9AC270059A4CD /* LocalFileSystem.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,9 @@
 		DE7D8D8C1DD9A1F20059A4CD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DE7D8D911DD9A20D0059A4CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE7D8D9F1DD9AC270059A4CD /* LocalFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileSystem.h; sourceTree = "<group>"; };
+		DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFileSystem.m; sourceTree = "<group>"; };
+		DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalFileSystem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				DE7D8D9B1DD9ABFB0059A4CD /* LocalFileSystem */,
 				DE7D8D841DD9A1F20059A4CD /* NetworkRequest */,
 				DE34E1C51DD56C6E003E7715 /* ToolFiles */,
 			);
@@ -338,6 +344,16 @@
 			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
+		DE7D8D9B1DD9ABFB0059A4CD /* LocalFileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				DE7D8D9F1DD9AC270059A4CD /* LocalFileSystem.h */,
+				DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */,
+				DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */,
+			);
+			path = LocalFileSystem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +414,7 @@
 			files = (
 				DE34E19A1DD566CA003E7715 /* YCLogin.xib in Resources */,
 				DE34E1BC1DD569D9003E7715 /* YCKYVersionInterface.xib in Resources */,
+				DE7D8DA31DD9AC270059A4CD /* LocalFileSystem.xib in Resources */,
 				DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */,
 				DE34E19F1DD56733003E7715 /* YCGuideViewController.xib in Resources */,
 				DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */,
@@ -421,6 +438,7 @@
 				DE7D8D8E1DD9A1F20059A4CD /* JSONKit.m in Sources */,
 				DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */,
 				DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */,
+				DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				DE34E19E1DD56733003E7715 /* YCGuideViewController.m in Sources */,
