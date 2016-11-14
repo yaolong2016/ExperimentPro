@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YCSettingsViewController"/>
@@ -17,21 +15,21 @@
                 <viewControllerLayoutGuide type="bottom" id="j59-eH-9mF"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="BeW-52-1bV">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9l-jv-wn7">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9l-jv-wn7">
                         <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.72336632013320923" green="0.72336632013320923" blue="0.72336632013320923" alpha="1" colorSpace="calibratedRGB"/>
                     </tableView>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="x9l-jv-wn7" secondAttribute="trailing" constant="80" id="63J-eL-bt2"/>
-                    <constraint firstItem="x9l-jv-wn7" firstAttribute="leading" secondItem="BeW-52-1bV" secondAttribute="leading" id="6ob-VO-77X"/>
-                    <constraint firstItem="x9l-jv-wn7" firstAttribute="top" secondItem="BeW-52-1bV" secondAttribute="top" id="Xsh-Al-9vs"/>
-                    <constraint firstItem="j59-eH-9mF" firstAttribute="top" secondItem="x9l-jv-wn7" secondAttribute="bottom" id="ZHV-ui-8IV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="x9l-jv-wn7" secondAttribute="trailing" constant="64" id="AUT-m2-v00"/>
+                    <constraint firstItem="x9l-jv-wn7" firstAttribute="leading" secondItem="BeW-52-1bV" secondAttribute="leading" id="GUO-3I-Scc"/>
+                    <constraint firstItem="x9l-jv-wn7" firstAttribute="top" secondItem="BeW-52-1bV" secondAttribute="top" id="ZeO-7w-2bW"/>
+                    <constraint firstItem="x9l-jv-wn7" firstAttribute="bottom" secondItem="j59-eH-9mF" secondAttribute="top" id="rwr-gJ-o7d"/>
                 </constraints>
             </view>
             <connections>
