@@ -7,7 +7,10 @@
 //
 
 #import "YCUniversalInterface.h"
-#import "DefineTool.h"
+#import "DefineTool.h" 
+
+#import "YCTuanDuiGuanLiVCViewController.h"
+
 @interface YCUniversalInterface ()<UIScrollViewDelegate>
 {
     ///是否有实验 yes为有 no为没有
@@ -30,6 +33,9 @@
     [imageView setImage:image];
     self.navigationItem.titleView = imageView;//设置导航栏的titleView为imageView
     ///默认实验管理
+    
+    self.headerView.bounds = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT - 64 - 45 + 20);
+    
     isShiyanGuanLi = YES;
     
     [self setNavigationUI];
@@ -72,9 +78,7 @@
     [self.jiuGongGeScrollView addSubview:contentView_GuanLi];
     
     UIView *contentView_KeYan = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.jiuGongGeScrollView.bounds.size.height)];
-//    contentView_KeYan.backgroundColor = [UIColor redColor];
     [self.jiuGongGeScrollView addSubview:contentView_KeYan];
-    NSLog(@"进入这里 %f",SCREENH_HEIGHT);
     
     float marginY = 0; //Y间隙
     float width = 50;//格子的宽
@@ -91,7 +95,6 @@
         height = 60;
         labAndBtn = 8;
     }else if(IS_IPHONE_6_PLUS){
-        NSLog(@"进入这里1");
         marginY = 40;
         width = 80;
         height = 80;
@@ -99,15 +102,10 @@
     }
     
 
-    
     NSArray *shiYanGuanLiTitleArr = @[@"经费管理",@"团队管理",@"流程管理",@"进度管理",@"待处理",@"指示"];
     NSArray *shiYanGongZuoTitleArr = @[@"日程",@"耗材",@"申请",@"汇报",@"资源",@"资料",@"消息"];
     
-    
-    
-    
-//    if (isShiyanGuanLi) {
-        for (int i = 0; i < 6; i ++) {
+    for (int i = 0; i < 6; i ++) {
             float marginX = (SCREEN_WIDTH - 40*2 - 3*width)/2.0;//X间隙
             
             int row = i/3;
@@ -129,13 +127,11 @@
             lab.text = NSLocalizedString(textStr, nil);
             [contentView_GuanLi addSubview:lab];
         }
-//    }else{
-        for (int i = 0; i < 7; i ++) {
+    for (int i = 0; i < 7; i ++) {
             float marginX = (SCREEN_WIDTH - 20*2 - 4*width)/3.0;//X间隙
-//            float marginY = 10;//Y间隙
-            
             int row = i/4;
             int col = i%4;
+            
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.frame = CGRectMake(20+col*(width+marginX), marginY/2.0+row*(height+marginY), width, height);
             [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"zonghe_gongzuo%d",i + 1]] forState:UIControlStateNormal];
@@ -153,7 +149,6 @@
             lab.text = NSLocalizedString(textStr, nil);
             [contentView_KeYan addSubview:lab];
         }
-//    }
 }
 
 
@@ -168,7 +163,21 @@
 
 ///九宫格按键点击事件btn的tag为:实验管理为200~205  实验工作为300~306
 - (void)jiuGongGeBtnClick:(UIButton *)btn{
-    NSLog(@"btn的tag == %d",btn.tag);
+    NSLog(@"btn的tag == %ld",btn.tag);
+    
+    switch (btn.tag) {
+        case 201:
+        {
+            ///团队管理
+            YCTuanDuiGuanLiVCViewController *tuanDuiVC = [[YCTuanDuiGuanLiVCViewController alloc]init];
+            [self.navigationController pushViewController:tuanDuiVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 

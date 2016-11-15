@@ -10,7 +10,9 @@
 
 ///整合版本入口
 @interface YCUniversalInterface : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *bgTabView;
 
+@property (strong, nonatomic) IBOutlet UIView *headerView;
 
 - (IBAction)sheJiShiYanBtnClick:(UIButton *)sender;
 
