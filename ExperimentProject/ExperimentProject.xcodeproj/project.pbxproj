@@ -37,7 +37,10 @@
 		DE7D8D921DD9A20D0059A4CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D911DD9A20D0059A4CD /* CFNetwork.framework */; };
 		DE7D8D941DD9A2260059A4CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */; };
 		DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */; };
-		DE7D8DA31DD9AC270059A4CD /* LocalFileSystem.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */; };
+		DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D01A1DDAA6D200738C3E /* LocalFileSystem.xib */; };
+		DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D01D1DDAB71100738C3E /* DocumentCell.m */; };
+		DEE6D0201DDAB71100738C3E /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D01E1DDAB71100738C3E /* DocumentCell.xib */; };
+		DEE6D0281DDAC14400738C3E /* PictureCellImg.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D0271DDAC14400738C3E /* PictureCellImg.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +93,14 @@
 		DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DE7D8D9F1DD9AC270059A4CD /* LocalFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileSystem.h; sourceTree = "<group>"; };
 		DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFileSystem.m; sourceTree = "<group>"; };
-		DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalFileSystem.xib; sourceTree = "<group>"; };
+		DEE6D00F1DDAA58400738C3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DEE6D0101DDAA58500738C3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DEE6D01A1DDAA6D200738C3E /* LocalFileSystem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalFileSystem.xib; sourceTree = "<group>"; };
+		DEE6D01C1DDAB71100738C3E /* DocumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCell.h; sourceTree = "<group>"; };
+		DEE6D01D1DDAB71100738C3E /* DocumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCell.m; sourceTree = "<group>"; };
+		DEE6D01E1DDAB71100738C3E /* DocumentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentCell.xib; sourceTree = "<group>"; };
+		DEE6D0261DDAC14400738C3E /* PictureCellImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCellImg.h; sourceTree = "<group>"; };
+		DEE6D0271DDAC14400738C3E /* PictureCellImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCellImg.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,7 +375,12 @@
 			children = (
 				DE7D8D9F1DD9AC270059A4CD /* LocalFileSystem.h */,
 				DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */,
-				DE7D8DA11DD9AC270059A4CD /* LocalFileSystem.xib */,
+				DEE6D01A1DDAA6D200738C3E /* LocalFileSystem.xib */,
+				DEE6D01C1DDAB71100738C3E /* DocumentCell.h */,
+				DEE6D01D1DDAB71100738C3E /* DocumentCell.m */,
+				DEE6D01E1DDAB71100738C3E /* DocumentCell.xib */,
+				DEE6D0261DDAC14400738C3E /* PictureCellImg.h */,
+				DEE6D0271DDAC14400738C3E /* PictureCellImg.m */,
 			);
 			path = LocalFileSystem;
 			sourceTree = "<group>";
@@ -410,7 +425,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = DE26D9381DCC62D100176FC0;
@@ -429,14 +443,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE34E1BC1DD569D9003E7715 /* YCKYVersionInterface.xib in Resources */,
-				DE7D8DA31DD9AC270059A4CD /* LocalFileSystem.xib in Resources */,
 				DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */,
 				09FDEB5F1DD9BC57002A0B60 /* ZhuCeVC.xib in Resources */,
 				DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */,
 				09FDEB5B1DD9BC57002A0B60 /* YCLogin.xib in Resources */,
 				09FDEB5D1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.xib in Resources */,
 				09FDEB641DD9BCE9002A0B60 /* YCGuideViewController.xib in Resources */,
+				DEE6D0201DDAB71100738C3E /* DocumentCell.xib in Resources */,
 				DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */,
+				DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */,
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
@@ -460,11 +475,13 @@
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
+				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				DE7D8D8D1DD9A1F20059A4CD /* GCDAsyncSocket.m in Sources */,
 				09FDEB631DD9BCE9002A0B60 /* YCGuideViewController.m in Sources */,
 				DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */,
+				DEE6D0281DDAC14400738C3E /* PictureCellImg.m in Sources */,
 				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
 			);
@@ -477,6 +494,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE26D94E1DCC62D100176FC0 /* Base */,
+				DEE6D00F1DDAA58400738C3E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -485,6 +503,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE26D9531DCC62D100176FC0 /* Base */,
+				DEE6D0101DDAA58500738C3E /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
