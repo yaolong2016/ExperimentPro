@@ -173,7 +173,19 @@
             }
         }
     } else if (self.selectedList == Type_Other) {
-    
+        DocumentCell* newCell = nil;
+        if (self.saveOtherArray.count <= indexPath.row) {
+            newCell = [[[NSBundle mainBundle] loadNibNamed:@"DocumentCell" owner:self options:nil] objectAtIndex:0];
+            [self.saveOtherArray addObject:newCell];
+        } else {
+            newCell = [self.saveOtherArray objectAtIndex:indexPath.row];
+        }
+        [cell.contentView addSubview:newCell];
+        if (indexPath.row == 0) {
+            [newCell setFrame:CGRectMake(0, 10, self.tableView_m.frame.size.width, cell.frame.size.height-10)];
+        } else {
+            [newCell setFrame:CGRectMake(0, 0, self.tableView_m.frame.size.width, cell.frame.size.height)];
+        }
     }
 }
 
