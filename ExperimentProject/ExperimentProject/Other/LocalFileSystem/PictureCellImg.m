@@ -12,6 +12,8 @@
 
 -(id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.layer.borderWidth = 1;
+        self.layer.borderColor = [UIColor blackColor].CGColor;
         
     }
     return self;

@@ -9,6 +9,7 @@
 #import "DocumentCell.h"
 
 @implementation DocumentCell
+@synthesize mark;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

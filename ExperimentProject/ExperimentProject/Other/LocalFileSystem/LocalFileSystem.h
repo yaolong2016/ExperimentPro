@@ -20,7 +20,7 @@ typedef enum {
 @interface LocalFileSystem : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UIView* topChange_m;
-@property (nonatomic, strong) IBOutlet UIView* tableView_m;
+@property (nonatomic, strong) IBOutlet UITableView* tableView_m;
 @property (nonatomic, strong) IBOutlet UIImageView* selectImg;
 
 
