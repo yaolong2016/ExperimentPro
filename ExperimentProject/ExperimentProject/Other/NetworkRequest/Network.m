@@ -17,6 +17,12 @@ static Network* networkRequest_m;
 @property (nonatomic,assign) BOOL userClick;
 
 - (void)checkNetworkState;
+///不能在外面直接调用
+- (id) initWithNetwork:(dispatch_queue_t) gcdqueue;
+///链接服务器 注意：当网络被连接时候，会自动连接服务器
+- (void) connectSocket;
+///数据为空的情况反馈
+- (void) UserDataForNULL;
 
 @end
 

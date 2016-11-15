@@ -51,13 +51,6 @@ NETWORK_TYPE;
 ///网络情况(默认的时候是连接的YES)
 @property (nonatomic, assign) BOOL currentNetState;
 
-///不能在外面直接调用
-- (id) initWithNetwork:(dispatch_queue_t) gcdqueue;
-///链接服务器 注意：当网络被连接时候，会自动连接服务器
-- (void) connectSocket;
-///数据为空的情况反馈
-- (void) UserDataForNULL;
-//--------------------------------------外部使用函数-------------------------------------
 ///初始化网络请求对象 注意：会自动连接网络，不需要再单独连接
 + (Network*) NetworkRequestObject:(dispatch_queue_t) gcd;
 ///发送网络请求
