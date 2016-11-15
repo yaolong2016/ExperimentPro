@@ -11,4 +11,31 @@
 ///整合版本入口
 @interface YCUniversalInterface : UIViewController
 
+
+- (IBAction)sheJiShiYanBtnClick:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UIView *topBgView;
+@property (strong, nonatomic) IBOutlet UIView *bottomBgView;
+
+@property (strong, nonatomic) IBOutlet UIImageView *topBgImageView;
+
+- (IBAction)shenQingBtnClick:(UIButton *)sender;
+- (IBAction)cuanJianBtnClick:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *guanLiBtn;
+@property (strong, nonatomic) IBOutlet UIButton *shiYanBtn;
+- (IBAction)gaunLiBtnClick:(UIButton *)sender;
+
+- (IBAction)shiYanBtnClick:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UIView *btnBottomView;
+
+
+
+@property (strong, nonatomic) IBOutlet UIScrollView *jiuGongGeScrollView;
+
+
+@property (strong, nonatomic) IBOutlet UIButton *sheJiShiYanButton;
+
+
 @end
