@@ -21,6 +21,7 @@ FileSystemCellType;
 
 @protocol DocumentCellDelegate;
 
+///文档处理
 @interface DocumentCell : UITableViewCell
 ///设置cell标示
 @property (nonatomic, assign) FileSystemCellType mark;

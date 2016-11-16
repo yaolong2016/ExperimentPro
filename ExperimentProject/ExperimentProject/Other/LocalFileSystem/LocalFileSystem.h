@@ -40,7 +40,7 @@ typedef enum {
 @end
 
 @protocol LocalFileSystemDelegate <NSObject>
-///确认数据的代理(当点击代理后  会自动退出文件系统)
+///确认数据的代理(当点击代理后  会自动退出文件系统) DocumentCell:是文档类 PictureCellImg:是图片类
 - (void) confiromLocalFileSystemSelected:(LocalFileSystem*) object data:(NSSet*) selectedData;
 
 @end

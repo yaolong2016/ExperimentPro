@@ -69,8 +69,10 @@
     self.selectImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 42, [ToolFuncation screenSize].width/3, 2)];
     [self.selectImg setBackgroundColor:ColorWithRGB(BlueColor)];
     [self.topChange_m addSubview:self.selectImg];
-    
-    [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:[NSString stringWithFormat:@"%d",k_RETURN_REFRESH]];
+    ;
+    [NSThread detachNewThreadSelector:@selector(updateThread:)
+                             toTarget:self
+                           withObject:@{@"key":[NSString stringWithFormat:@"%d",k_RETURN_REFRESH],@"index":[NSString stringWithFormat:@"%d",-1]}];
 }
 
 #pragma DocumentCellDelegate
@@ -91,13 +93,13 @@
 }
 
 #pragma PTableView
-- (void)updateThread:(NSString *)returnKey{
+- (void)updateThread:(NSDictionary *)returnKey{
  sleep(2);
-    [self performSelectorOnMainThread:@selector(updateTableView) withObject:nil waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(updateTableView:) withObject:returnKey waitUntilDone:NO];
 
 }
 
-- (void)updateTableView{
+- (void)updateTableView:(NSDictionary*) info{
     NSInteger much = 0;
     NSInteger dataMax = 0;
     if (self.selectedList == Type_Document) {
@@ -133,7 +135,7 @@
     //  returnKey用来判断执行的拖动是下拉还是上拖，如果数据正在加载，则返回DO_NOTHING
     if (returnKey != k_RETURN_DO_NOTHING) {
         NSString * key = [NSString stringWithFormat:@"%ld", (long)returnKey];
-        [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:key];
+        [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:@{@"key":key,@"index":[NSString stringWithFormat:@"%d",-1]}];
     }
 }
 
@@ -170,7 +172,9 @@
         [self.tableView_m resetFooterPrompt:NSLocalizedString(@"加载中...", nil)];
         [self saveTableViewFooterText:btn.tag proTag:ptag];
         
-        [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:[NSString stringWithFormat:@"%d",k_RETURN_REFRESH]];
+        [NSThread detachNewThreadSelector:@selector(updateThread:)
+                                 toTarget:self
+                               withObject:@{@"key":[NSString stringWithFormat:@"%d",k_RETURN_REFRESH],@"index":[NSString stringWithFormat:@"%d",-1]}];
     }
 }
 ///点击和刷新后都屌用

@@ -10,6 +10,8 @@
 
 @protocol PictureCellImgDelegate;
 
+
+///图片处理
 @interface PictureCellImg : UIImageView
 
 
