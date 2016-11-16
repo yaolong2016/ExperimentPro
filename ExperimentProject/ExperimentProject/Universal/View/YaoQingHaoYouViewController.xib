@@ -7,7 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YaoQingHaoYouViewController">
             <connections>
+                <outlet property="duanXinBtn" destination="VcL-HX-VfF" id="qAM-FO-qwE"/>
+                <outlet property="qqBtn" destination="3ux-eC-bJA" id="tHO-qw-dmb"/>
+                <outlet property="titleLab" destination="vp0-Sr-Z5x" id="2cN-Ym-W5q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weiXinBtn" destination="TyR-Ko-fZ8" id="bIa-qi-1Hk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -37,7 +41,7 @@
                         <constraint firstAttribute="height" constant="45" id="S8F-V5-5FM"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="   短信邀请" image="duanxin" backgroundImage="duanxin-bg"/>
+                    <state key="normal" image="duanxin" backgroundImage="duanxin-bg"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="S8F-V5-5FM"/>
@@ -59,7 +63,7 @@
                             <variation key="heightClass=regular-widthClass=compact" constant="45"/>
                         </constraint>
                     </constraints>
-                    <state key="normal" title="   微信邀请" image="weixin" backgroundImage="weixin-bg"/>
+                    <state key="normal" image="weixin" backgroundImage="weixin-bg"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="8ML-HK-tRf"/>
@@ -74,7 +78,7 @@
                         <action selector="weiXinBtnClick:" destination="-1" eventType="touchUpInside" id="qh8-Ln-38g"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您可以通过短信、微信、QQ、等方式把APP的下载链接发送给好友，邀请好友使用实验宝。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-Sr-Z5x">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-Sr-Z5x">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="p0c-k5-gfo"/>
@@ -98,7 +102,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="zq3-dm-95y"/>
                     </constraints>
-                    <state key="normal" title="   QQ邀请" image="qq" backgroundImage="qq-bg"/>
+                    <state key="normal" image="qq" backgroundImage="qq-bg"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="zq3-dm-95y"/>
