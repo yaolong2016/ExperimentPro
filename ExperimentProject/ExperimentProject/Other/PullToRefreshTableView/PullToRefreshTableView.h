@@ -19,6 +19,8 @@
 /*
  需要调用这个函数来设置头尾:
  [self.tableView_m initHeaderAndFooter:[ToolFuncation screenSize]];
+ 第一次加载：
+ [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:[NSString stringWithFormat:@"%d",k_RETURN_REFRESH]];
  */
 /*
  
@@ -178,5 +180,13 @@
 ///初始化头和尾
 - (void) initHeaderAndFooter:(CGSize) size;
 
+///改变头部提示文字
+- (void) resetHeaderPrompt:(NSString*) txt;
+
+///改变尾部提示文字
+- (void) resetFooterPrompt:(NSString*) txt;
+
+///获取头尾提示文本(yes:头部文本; no: 尾部)
+- (NSString*) headerAndFooterText:(BOOL) mark;
 
 @end

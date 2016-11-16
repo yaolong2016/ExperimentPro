@@ -42,10 +42,10 @@
         [self addSubview:indicatorView];
         
         //  初始化箭头视图
-        arrowView = [[UIImageView alloc] initWithFrame:CGRectMake((k_STATE_VIEW_INDICATE_WIDTH - 32) / 2, (k_STATE_VIEW_HEIGHT - 32) / 2, 32, 32)];
-        NSString * imageNamed = type == k_VIEW_TYPE_HEADER ? @"arrow_down.png" : @"arrow_up.png";
-        arrowView.image = [UIImage imageNamed:imageNamed];
-        [self addSubview:arrowView];
+//        arrowView = [[UIImageView alloc] initWithFrame:CGRectMake((k_STATE_VIEW_INDICATE_WIDTH - 32) / 2, (k_STATE_VIEW_HEIGHT - 32) / 2, 32, 32)];
+//        NSString * imageNamed = type == k_VIEW_TYPE_HEADER ? @"arrow_down.png" : @"arrow_up.png";
+//        arrowView.image = [UIImage imageNamed:imageNamed];
+//        [self addSubview:arrowView];
         
         //  初始化状态提示文本
         stateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 20)];
@@ -68,44 +68,58 @@
 
 - (void)changeState:(int)state{
     [indicatorView stopAnimating];
-    arrowView.hidden = NO;
+    if (arrowView) {
+        arrowView.hidden = NO;
+    }
     [UIView beginAnimations:nil context:nil];
     switch (state) {
         case k_PULL_STATE_NORMAL:
             currentState = k_PULL_STATE_NORMAL;
             stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
             //  旋转箭头
-            arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+            if (arrowView) {
+                arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+            }
             break;
         case k_PULL_STATE_DOWN:
             currentState = k_PULL_STATE_DOWN;
             stateLabel.text = @"释放刷新数据";
-            arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+            if (arrowView) {
+                arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+            }
             break;
             
         case k_PULL_STATE_UP:
             currentState = k_PULL_STATE_UP;
             stateLabel.text = @"释放加载数据";
-            arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+            if (arrowView) {
+                arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+            }
             break;
             
         case k_PULL_STATE_LOAD:
             currentState = k_PULL_STATE_LOAD;
             stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"正在刷新.." : @"正在加载..";
             [indicatorView startAnimating];
-            arrowView.hidden = YES;
+            if (arrowView) {
+                arrowView.hidden = YES;
+            }
             break;
             
         case k_PULL_STATE_END:
             currentState = k_PULL_STATE_END;
             stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? stateLabel.text : @"已加载全部数据";
-            arrowView.hidden = YES;
+            if (arrowView) {
+                arrowView.hidden = YES;
+            }
             break;
             
         default:
             currentState = k_PULL_STATE_NORMAL;
             stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
-            arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+            if (arrowView) {
+                arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+            }
             break;
     }
     [UIView commitAnimations];
@@ -122,7 +136,9 @@
 
 - (void)dealloc{
     [indicatorView release];
-    [arrowView release];
+    if (arrowView) {
+        [arrowView release];
+    }
     [stateLabel release];
     [timeLabel release];
     
@@ -254,6 +270,24 @@
 
 - (void) reSetHeadAndFooterSize:(CGSize) size {
 
+}
+
+- (void) resetHeaderPrompt:(NSString *)txt {
+
+    if (headerView) {
+        [headerView.stateLabel setText:txt];
+    }
+    
+}
+
+- (void) resetFooterPrompt:(NSString *)txt {
+    if (footerView) {
+        [footerView.stateLabel setText:txt];
+    }
+}
+
+- (NSString*) headerAndFooterText:(BOOL) mark {
+    return mark ? headerView.stateLabel.text:footerView.stateLabel.text;
 }
 
 @end

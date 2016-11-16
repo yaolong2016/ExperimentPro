@@ -52,6 +52,9 @@
                                 <include reference="TAz-re-O82"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="confiromSelected:" destination="Ydw-LG-BpG" eventType="touchUpInside" id="fb1-ea-xbc"/>
+                        </connections>
                     </button>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZOD-wL-Ng0" customClass="PullToRefreshTableView">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

@@ -54,4 +54,10 @@
     }
 }
 
+- (void) removeFromSuperview {
+    [super removeFromSuperview];
+    
+    
+}
+
 @end
