@@ -48,8 +48,8 @@
 		DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02C1DDB0CD000738C3E /* arrow_up.png */; };
 		DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */; };
 		DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEF133EF1DDC32FA005D9E64 /* AddMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133ED1DDC32FA005D9E64 /* AddMember.m */; };
-		DEF133F01DDC32FA005D9E64 /* AddMember.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF133EE1DDC32FA005D9E64 /* AddMember.xib */; };
+		DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133F81DDC34BC005D9E64 /* AddMember.m */; };
+		DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF133F91DDC34BC005D9E64 /* AddMember.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,9 +119,9 @@
 		DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_up@2x.png"; sourceTree = "<group>"; };
 		DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableView.h; sourceTree = "<group>"; };
 		DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableView.m; sourceTree = "<group>"; };
-		DEF133EC1DDC32FA005D9E64 /* AddMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMember.h; sourceTree = "<group>"; };
-		DEF133ED1DDC32FA005D9E64 /* AddMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMember.m; sourceTree = "<group>"; };
-		DEF133EE1DDC32FA005D9E64 /* AddMember.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMember.xib; sourceTree = "<group>"; };
+		DEF133F71DDC34BC005D9E64 /* AddMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMember.h; sourceTree = "<group>"; };
+		DEF133F81DDC34BC005D9E64 /* AddMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMember.m; sourceTree = "<group>"; };
+		DEF133F91DDC34BC005D9E64 /* AddMember.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMember.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DEF133EB1DDC32C0005D9E64 /* AddMember */,
+				DEF133F61DDC34A2005D9E64 /* AddMember */,
 				DEE6D0291DDB0CD000738C3E /* PullToRefreshTableView */,
 				DE7D8D9B1DD9ABFB0059A4CD /* LocalFileSystem */,
 				DE7D8D841DD9A1F20059A4CD /* NetworkRequest */,
@@ -424,16 +424,15 @@
 			path = PullToRefreshTableView;
 			sourceTree = "<group>";
 		};
-		DEF133EB1DDC32C0005D9E64 /* AddMember */ = {
+		DEF133F61DDC34A2005D9E64 /* AddMember */ = {
 			isa = PBXGroup;
 			children = (
-				DEF133EC1DDC32FA005D9E64 /* AddMember.h */,
-				DEF133ED1DDC32FA005D9E64 /* AddMember.m */,
-				DEF133EE1DDC32FA005D9E64 /* AddMember.xib */,
+				DEF133F71DDC34BC005D9E64 /* AddMember.h */,
+				DEF133F81DDC34BC005D9E64 /* AddMember.m */,
+				DEF133F91DDC34BC005D9E64 /* AddMember.xib */,
 			);
-			name = AddMember;
-			path = ExperimentProject/AddMember;
-			sourceTree = SOURCE_ROOT;
+			path = AddMember;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -507,7 +506,7 @@
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
 				DEE6D0311DDB0CD000738C3E /* arrow_down@2x.png in Resources */,
-				DEF133F01DDC32FA005D9E64 /* AddMember.xib in Resources */,
+				DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */,
 				DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */,
 				DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
@@ -542,7 +541,7 @@
 				DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */,
 				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
-				DEF133EF1DDC32FA005D9E64 /* AddMember.m in Sources */,
+				DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
