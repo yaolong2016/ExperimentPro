@@ -38,6 +38,7 @@
     self.saveImgArray = [[NSMutableArray alloc] init];
     self.selectedList = Type_Document;
     self.tableView_m.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [self.tableView_m initHeaderAndFooter:[ToolFuncation screenSize]];
     self.saveDocumentArray = [[NSMutableArray alloc] init];
     self.saveOtherArray = [[NSMutableArray alloc] init];
     self.saveSelected = [[NSMutableSet alloc] init];

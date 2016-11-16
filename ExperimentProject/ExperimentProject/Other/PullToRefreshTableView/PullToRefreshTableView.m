@@ -150,15 +150,30 @@
     return self;
 }
 
-- (void) awakeFromNib {
-    [super awakeFromNib];
-    [self initHeaderAndFooter];
+- (id) init {
+
+    if (self = [super init]) {
+        
+    }
+    return self;
 }
 
-- (void) initHeaderAndFooter {
+-(id) initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    if (self = [super initWithFrame:frame style:style]) {
+        
+    }
+    return self;
+}
+
+- (void) awakeFromNib {
+    [super awakeFromNib];
+//    [self initHeaderAndFooter];
+}
+
+- (void) initHeaderAndFooter:(CGSize)size {
     if (!headerView) {
-        headerView = [[StateView alloc] initWithFrame:CGRectMake(0, -40, self.frame.size.width, self.frame.size.height) viewType:k_VIEW_TYPE_HEADER];
-        footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) viewType:k_VIEW_TYPE_FOOTER];
+        headerView = [[StateView alloc] initWithFrame:CGRectMake(0, -40, size.width, size.height) viewType:k_VIEW_TYPE_HEADER];
+        footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) viewType:k_VIEW_TYPE_FOOTER];
         [self addSubview:headerView];
         [self setTableFooterView:footerView];
     }
@@ -167,6 +182,8 @@
 - (void)dealloc{
     [headerView release];
     [footerView release];
+    headerView = nil;
+    footerView = nil;
     [super dealloc];
 }
 

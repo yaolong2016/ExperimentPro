@@ -95,16 +95,16 @@
                         <exclude reference="ZOD-wL-Ng0"/>
                     </mask>
                     <mask key="constraints">
-                        <exclude reference="KoC-bw-WLi"/>
-                        <exclude reference="OF3-3m-zQq"/>
-                        <exclude reference="anN-Iw-MuS"/>
-                        <exclude reference="V3z-wk-08Y"/>
-                        <exclude reference="qRT-GP-MKG"/>
-                        <exclude reference="qou-zC-Ks7"/>
+                        <exclude reference="o9Q-96-YSE"/>
                         <exclude reference="9Xv-vp-d2H"/>
                         <exclude reference="O40-zq-tdi"/>
                         <exclude reference="jyL-TC-cgF"/>
-                        <exclude reference="o9Q-96-YSE"/>
+                        <exclude reference="V3z-wk-08Y"/>
+                        <exclude reference="qRT-GP-MKG"/>
+                        <exclude reference="qou-zC-Ks7"/>
+                        <exclude reference="KoC-bw-WLi"/>
+                        <exclude reference="OF3-3m-zQq"/>
+                        <exclude reference="anN-Iw-MuS"/>
                     </mask>
                 </variation>
                 <variation key="widthClass=compact">
@@ -114,16 +114,16 @@
                         <include reference="ZOD-wL-Ng0"/>
                     </mask>
                     <mask key="constraints">
-                        <include reference="KoC-bw-WLi"/>
-                        <include reference="OF3-3m-zQq"/>
-                        <include reference="anN-Iw-MuS"/>
-                        <include reference="V3z-wk-08Y"/>
-                        <include reference="qRT-GP-MKG"/>
-                        <include reference="qou-zC-Ks7"/>
+                        <include reference="o9Q-96-YSE"/>
                         <include reference="9Xv-vp-d2H"/>
                         <include reference="O40-zq-tdi"/>
                         <include reference="jyL-TC-cgF"/>
-                        <include reference="o9Q-96-YSE"/>
+                        <include reference="V3z-wk-08Y"/>
+                        <include reference="qRT-GP-MKG"/>
+                        <include reference="qou-zC-Ks7"/>
+                        <include reference="KoC-bw-WLi"/>
+                        <include reference="OF3-3m-zQq"/>
+                        <include reference="anN-Iw-MuS"/>
                     </mask>
                 </variation>
             </view>
