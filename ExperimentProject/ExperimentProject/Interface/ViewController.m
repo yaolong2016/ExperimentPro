@@ -10,7 +10,7 @@
 #import "ToolFuncation.h"
 
 ///测试文件头
-#import "LocalFileSystem.h"
+#import "AddMember.h"
 
 @interface ViewController ()
 
@@ -39,7 +39,7 @@
     
     
     ///测试加载文件
-//    LocalFileSystem* fs = [[[NSBundle mainBundle] loadNibNamed:@"LocalFileSystem" owner:self options:nil] objectAtIndex:0];
+//    AddMember* fs = [[[NSBundle mainBundle] loadNibNamed:@"AddMember" owner:self options:nil] objectAtIndex:0];
 //    [self.navigationController pushViewController:fs animated:YES];
     
     

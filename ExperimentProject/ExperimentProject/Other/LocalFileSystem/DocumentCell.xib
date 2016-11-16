@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -29,22 +30,35 @@
                         <rect key="frame" x="55" y="48" width="265" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eho-dn-28e">
+                        <rect key="frame" x="292" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9jd-cp-zVI"/>
+                            <constraint firstAttribute="width" secondItem="eho-dn-28e" secondAttribute="height" multiplier="1:1" id="FQa-B5-c18"/>
+                            <constraint firstAttribute="width" constant="20" id="owM-fB-wDV"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1e5-q1-sC0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="25U-Wu-t7E"/>
-                    <constraint firstItem="1e5-q1-sC0" firstAttribute="bottom" secondItem="Hq9-hP-Dte" secondAttribute="bottom" id="2lR-Nj-H8d"/>
-                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="leading" secondItem="1e5-q1-sC0" secondAttribute="trailing" constant="8" symbolic="YES" id="3UV-A6-nd6"/>
-                    <constraint firstItem="qC2-jy-7np" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="47" id="BZN-fe-yEK"/>
-                    <constraint firstAttribute="trailing" secondItem="qC2-jy-7np" secondAttribute="trailing" id="E6r-rk-ihV"/>
-                    <constraint firstItem="1e5-q1-sC0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="NhC-3Q-0Od"/>
-                    <constraint firstItem="1e5-q1-sC0" firstAttribute="top" secondItem="Hq9-hP-Dte" secondAttribute="top" id="Oki-uA-Bmf"/>
-                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Pfw-MB-TDS"/>
-                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="leading" secondItem="qC2-jy-7np" secondAttribute="leading" id="hjP-BC-gKc"/>
-                    <constraint firstItem="qC2-jy-7np" firstAttribute="top" secondItem="Hq9-hP-Dte" secondAttribute="bottom" constant="3" id="mHa-n1-eqN"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="qC2-jy-7np" secondAttribute="bottom" constant="-8" id="mpt-TD-PQD"/>
-                    <constraint firstItem="1e5-q1-sC0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ovU-yS-yDQ"/>
+                    <constraint firstItem="qC2-jy-7np" firstAttribute="top" secondItem="eho-dn-28e" secondAttribute="bottom" constant="13" id="1t6-Zm-H6q"/>
+                    <constraint firstItem="qC2-jy-7np" firstAttribute="top" secondItem="Hq9-hP-Dte" secondAttribute="bottom" constant="3" id="7to-2Y-Kkc"/>
+                    <constraint firstItem="1e5-q1-sC0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GDP-kX-nEs"/>
+                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="trailing" secondItem="eho-dn-28e" secondAttribute="trailing" id="NUV-KV-Hab"/>
+                    <constraint firstItem="1e5-q1-sC0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PMG-yo-daP"/>
+                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="centerY" secondItem="eho-dn-28e" secondAttribute="centerY" id="T9L-3z-gbC"/>
+                    <constraint firstAttribute="trailing" secondItem="qC2-jy-7np" secondAttribute="trailing" id="TVh-Nd-5ub"/>
+                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="UOf-wS-Yuz"/>
+                    <constraint firstItem="1e5-q1-sC0" firstAttribute="top" secondItem="Hq9-hP-Dte" secondAttribute="top" id="i4j-Yg-thd"/>
+                    <constraint firstItem="qC2-jy-7np" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="47" id="iH4-uT-f42"/>
+                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="leading" secondItem="1e5-q1-sC0" secondAttribute="trailing" constant="8" symbolic="YES" id="jcL-Lc-IbX"/>
+                    <constraint firstAttribute="bottom" secondItem="qC2-jy-7np" secondAttribute="bottom" id="kKn-JI-GMF"/>
+                    <constraint firstItem="Hq9-hP-Dte" firstAttribute="leading" secondItem="qC2-jy-7np" secondAttribute="leading" id="m8w-rA-jYf"/>
+                    <constraint firstItem="1e5-q1-sC0" firstAttribute="bottom" secondItem="Hq9-hP-Dte" secondAttribute="bottom" id="vWw-Dp-mTI"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="selectedImg" destination="eho-dn-28e" id="tbT-nL-Qc3"/>
+            </connections>
             <point key="canvasLocation" x="349" y="335"/>
         </tableViewCell>
     </objects>
