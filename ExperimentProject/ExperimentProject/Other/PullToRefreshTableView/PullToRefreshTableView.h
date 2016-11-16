@@ -147,8 +147,9 @@
  *
  *  下拉刷新/上拖加载 表视图
  *  使用本类，您只要调用以下三种方法即可
- *
+ *  没有右边的索引搜索
  **/
+///刷新没有搜索索引
 @interface PullToRefreshTableView : UITableView{
     StateView * headerView;  //  下拉刷新视图
     StateView * footerView;  //  上拖加载视图

@@ -11,7 +11,7 @@
 
 @protocol BATableViewDelegate;
 @class PullToRefreshTableView;
-
+///搜索＋索引＋刷新
 @interface BATableView : UIView
 @property (nonatomic, strong) PullToRefreshTableView * tableView;
 @property (nonatomic, weak) id<BATableViewDelegate> delegate;

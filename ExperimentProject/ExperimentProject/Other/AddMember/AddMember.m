@@ -8,8 +8,14 @@
 
 #import "AddMember.h"
 #import "ToolFuncation.h"
+#import "ChineseString.h"
 
 @interface AddMember ()
+
+@property (nonatomic, strong) NSMutableArray* dataArray;
+@property(nonatomic,strong)NSMutableArray *indexArray;
+@property(nonatomic,strong)NSMutableArray *letterResultArr;
+@property(nonatomic,strong)NSMutableArray *stateArray;
 
 @end
 
@@ -18,6 +24,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    _dataArray =[NSMutableArray arrayWithObjects:
+//      @"￥hhh, .$",@" ￥Chin ese ",
+//      @"开源中国 ",
+//      @"www.oschina.net",
+//      @"开源技术",@"社区",@"开发者",@"传播",
+//      @"2014",@"a1",@"100",@"中国",@"暑假作业",
+//      @"键盘", @"鼠标",@"hello",@"world",@"b1",
+//      nil];
+    
+    _dataArray = [NSMutableArray arrayWithObjects:@{@"index":@"A"},@{@"index":@"B"},@{@"index":@"AD"}, nil];
+    
+//    NSArray *sortedKeys = [_dataArray keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//        if ([obj1 integerValue] > [obj2 integerValue]) {
+//            return (NSComparisonResult)NSOrderedAscending;
+//        }
+//        if ([obj1 integerValue] < [obj2 integerValue]) {
+//            return (NSComparisonResult)NSOrderedDescending;
+//        }
+//        return (NSComparisonResult)NSOrderedSame;
+//    }];
+    
+    NSDictionary *dic = @{@"Cell": @"MainCell",@"isAttached":@(NO)};
+    self.indexArray = [ChineseString IndexArray:self.dataArray];
+    
+    self.letterResultArr = [ChineseString LetterSortArray:_dataArray];
+    
+    self.stateArray = [[NSMutableArray alloc]init];
+    for (int i = 0; i< self.indexArray.count ; i++) {
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        for (int j = 0; j< [[self.letterResultArr objectAtIndex:i] count] ; j++) {
+            
+            [array addObject:dic];
+        }
+        
+        [self.stateArray addObject:array];
+        
+    }
+
     
     self.tableView_m = [[BATableView alloc] initWithFrame:CGRectMake(0, 0, [ToolFuncation screenSize].width, [ToolFuncation screenSize].height)];
     self.tableView_m.delegate = self;
@@ -44,24 +89,67 @@
 
 - (NSString *)titleString:(NSInteger)section
 {
-    return  @"A";
+    return  [self.indexArray objectAtIndex:section];
 }
 
 #pragma UITableView
--(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *key = [self.indexArray objectAtIndex:section];
+    return key;
 }
--(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.stateArray count];
 }
--(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* str = @"cell";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if (!cell) {
-//        cell = [UITableViewCell ];
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //    NSLog(@"%ld",[[self.stateArray objectAtIndex:section] count]);
+    return [[self.stateArray objectAtIndex:section] count];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[self.stateArray[indexPath.section][indexPath.row] objectForKey:@"Cell"] isEqualToString:@"MainCell"])
+    {
+        
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        
+        cell.textLabel.text = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+        return cell;
+        
     }
     
-    return cell;
+    else if ([[self.stateArray[indexPath.section][indexPath.row] objectForKey:@"Cell"] isEqualToString:@"AttachedCell"])
+    {
+        
+        static NSString *CellIdentifier2 = @"AttachedCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
+        if (cell == nil)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
+            //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        
+        cell.textLabel.text = [[self.letterResultArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+        
+    }
+    
+    
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    return index;
 }
 
 
