@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DocumentCell.h"
+#import "PictureCellImg.h"
+#import "PullToRefreshTableView.h"
+
+#define BlueColor 0x106be6
+
 typedef enum {
     ///文档
     Type_Document,
@@ -17,10 +23,12 @@ typedef enum {
     Type_Other
 }ListType;
 
-@interface LocalFileSystem : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@class PullToRefreshTableView;
+
+@interface LocalFileSystem : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,DocumentCellDelegate,PictureCellImgDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView* topChange_m;
-@property (nonatomic, strong) IBOutlet UITableView* tableView_m;
+@property (nonatomic, strong) IBOutlet PullToRefreshTableView* tableView_m;
 @property (nonatomic, strong) IBOutlet UIImageView* selectImg;
 
 

@@ -8,8 +8,6 @@
 
 #import "LocalFileSystem.h"
 #import "ToolFuncation.h"
-#import "DocumentCell.h"
-#import "PictureCellImg.h"
 
 
 @interface LocalFileSystem ()
@@ -22,6 +20,8 @@
 @property (nonatomic, strong) NSMutableArray* saveDocumentArray;
 ///保存其他cell数据
 @property (nonatomic, strong) NSMutableArray* saveOtherArray;
+///保存选择数据
+@property (nonatomic, strong) NSMutableSet* saveSelected;
 
 @end
 
@@ -40,17 +40,7 @@
     self.tableView_m.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.saveDocumentArray = [[NSMutableArray alloc] init];
     self.saveOtherArray = [[NSMutableArray alloc] init];
-    
-//    UIButton* backIn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, self.navigationController.navigationBar.frame.size.height)];
-//    
-//    [backIn setTitle:NSLocalizedString(@"返回", nil) forState:UIControlStateNormal];
-//    [backIn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-//    [backIn setImage:[UIImage imageNamed:@"yl_back"] forState:UIControlStateNormal];
-//    [backIn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-//    [backIn setBackgroundColor:[UIColor redColor]];
-//    
-//    UIBarButtonItem* backOut = [[UIBarButtonItem alloc] initWithCustomView:backIn];
-//    [self.navigationItem setLeftBarButtonItem:backOut];
+    self.saveSelected = [[NSMutableSet alloc] init];
     
     NSArray* titles = @[@"文件",@"图片",@"其他"];
     for (int a = 0; a < 3; a ++) {
@@ -64,15 +54,86 @@
         [self.topChange_m addSubview:btn];
         [btn setTag:a];
         if (a == 0) {
-            [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            [btn setTitleColor:ColorWithRGB(BlueColor) forState:UIControlStateNormal];
             self.saveBtn = btn;
         }
     }
     
     self.selectImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 42, [ToolFuncation screenSize].width/3, 2)];
-    [self.selectImg setBackgroundColor:[UIColor blueColor]];
+    [self.selectImg setBackgroundColor:ColorWithRGB(BlueColor)];
     [self.topChange_m addSubview:self.selectImg];
     
+}
+
+#pragma DocumentCellDelegate
+-(void) documentCellSelected:(DocumentCell *)object index:(NSInteger)at isSelected:(BOOL)selected {
+    if (object.mark == CELL_TYPE_DOCUMENT) {
+        if (selected) {
+            [self.saveSelected addObject:[self.saveDocumentArray objectAtIndex:at]];
+        } else {
+            [self.saveSelected removeObject:[self.saveDocumentArray objectAtIndex:at]];
+        }
+    }else if (object.mark == CELL_TYPE_OTHER) {
+        if (selected) {
+            [self.saveSelected addObject:[self.saveOtherArray objectAtIndex:at]];
+        } else {
+            [self.saveSelected removeObject:[self.saveOtherArray objectAtIndex:at]];
+        }
+    }
+}
+
+#pragma PTableView
+- (void)updateThread:(NSString *)returnKey{
+ sleep(2);
+    [self performSelectorOnMainThread:@selector(updateTableView) withObject:nil waitUntilDone:NO];
+
+}
+
+- (void)updateTableView{
+    NSInteger much = 0;
+    NSInteger dataMax = 0;
+    if (self.selectedList == Type_Document) {
+        much = self.saveDocumentArray.count;
+        dataMax = 5;
+    } else if (self.selectedList == Type_Picture) {
+        much = self.saveImgArray.count;
+        dataMax = 21;
+    } else if (self.selectedList == Type_Other) {
+        much = self.saveOtherArray.count;
+        dataMax = 5;
+    }
+    if (much < dataMax) {
+        //  一定要调用本方法，否则下拉/上拖视图的状态不会还原，会一直转菊花
+        [self.tableView_m reloadData:NO];
+    } else {
+        //  一定要调用本方法，否则下拉/上拖视图的状态不会还原，会一直转菊花
+        [self.tableView_m reloadData:YES];
+    }
+}
+
+#pragma mark -
+#pragma mark Scroll View Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.tableView_m tableViewDidDragging];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    NSInteger returnKey = [self.tableView_m tableViewDidEndDragging];
+    
+    //  returnKey用来判断执行的拖动是下拉还是上拖，如果数据正在加载，则返回DO_NOTHING
+    if (returnKey != k_RETURN_DO_NOTHING) {
+        NSString * key = [NSString stringWithFormat:@"%ld", (long)returnKey];
+        [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:key];
+    }
+}
+
+#pragma PictureCellDelegate
+-(void) pictureCellImgSelected:(PictureCellImg *)object index:(NSInteger)at isSelected:(BOOL)selected {
+    if (selected) {
+        [self.saveSelected addObject:[self.saveImgArray objectAtIndex:at]];
+    } else {
+        [self.saveSelected removeObject:[self.saveImgArray objectAtIndex:at]];
+    }
 }
 
 -(void) changeFilesSystem:(UIButton*) btn {
@@ -87,7 +148,7 @@
                                                            self.selectImg.frame.size.width,
                                                            self.selectImg.frame.size.height);
                      }];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn setTitleColor:ColorWithRGB(BlueColor) forState:UIControlStateNormal];
     self.saveBtn = btn;
     self.selectedList = (ListType)btn.tag;
 
@@ -100,6 +161,19 @@
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSInteger much = 0;
+    if (self.selectedList == Type_Document) {
+        much = 5;
+    } else if (self.selectedList == Type_Picture) {
+        much = 5;
+    } else if (self.selectedList == Type_Other) {
+       much = 5;
+    }
+    
+    if (much == 0) {
+        //  本方法是为了在数据未空时，让“下拉刷新”视图可直接显示，比较直观
+        self.tableView_m.contentInset = UIEdgeInsetsMake(k_STATE_VIEW_HEIGHT, 0, 0, 0);
+    }
     return 5;
 }
 
@@ -146,6 +220,9 @@
         DocumentCell* newCell = nil;
         if (self.saveDocumentArray.count <= indexPath.row) {
             newCell = [[[NSBundle mainBundle] loadNibNamed:@"DocumentCell" owner:self options:nil] objectAtIndex:0];
+            newCell.tag = indexPath.row;
+            newCell.mark = CELL_TYPE_DOCUMENT;
+            newCell.delegate = self;
             [self.saveDocumentArray addObject:newCell];
         } else {
             newCell = [self.saveDocumentArray objectAtIndex:indexPath.row];
@@ -161,6 +238,8 @@
         for (NSInteger a = indexPath.row*4; a < indexPath.row*4+4; a ++) {
             if (self.saveImgArray.count <= a) {
                 img = [[PictureCellImg alloc] initWithFrame:CGRectMake(0, 0, ([ToolFuncation screenSize].width-10)/4, ([ToolFuncation screenSize].width-10)/4)];
+                img.tag = a;
+                img.delegate = self;
                 [self.saveImgArray addObject:img];
             } else {
                 img = [self.saveImgArray objectAtIndex:a];
@@ -176,6 +255,9 @@
         DocumentCell* newCell = nil;
         if (self.saveOtherArray.count <= indexPath.row) {
             newCell = [[[NSBundle mainBundle] loadNibNamed:@"DocumentCell" owner:self options:nil] objectAtIndex:0];
+            newCell.tag = indexPath.row;
+            newCell.mark = CELL_TYPE_OTHER;
+            newCell.delegate = self;
             [self.saveOtherArray addObject:newCell];
         } else {
             newCell = [self.saveOtherArray objectAtIndex:indexPath.row];

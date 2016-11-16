@@ -18,8 +18,26 @@ typedef enum {
 ///定义cell的类型
 FileSystemCellType;
 
+
+@protocol DocumentCellDelegate;
+
 @interface DocumentCell : UITableViewCell
 ///设置cell标示
 @property (nonatomic, assign) FileSystemCellType mark;
+///选择标示
+@property (nonatomic, strong) IBOutlet UIImageView* selectedImg;
+
+@property (nonatomic, weak) id<DocumentCellDelegate>delegate;
 
 @end
+
+
+@protocol DocumentCellDelegate
+
+///选择状态改变
+- (void) documentCellSelected:(DocumentCell*) object index:(NSInteger) at isSelected:(BOOL) selected;
+
+@end
+
+
+
