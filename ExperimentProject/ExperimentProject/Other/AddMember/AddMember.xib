@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddMember"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="SXn-rK-hht">
+        <viewController id="SXn-rK-hht" customClass="AddMember">
             <layoutGuides>
                 <viewControllerLayoutGuide type="top" id="WPY-de-cBa"/>
                 <viewControllerLayoutGuide type="bottom" id="uce-Gl-Bjn"/>

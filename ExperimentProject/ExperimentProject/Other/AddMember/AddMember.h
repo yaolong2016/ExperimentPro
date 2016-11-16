@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BATableView.h"
 
-@interface AddMember : UIViewController
+@class BATableView;
+
+///团队成员的添加和修改
+@interface AddMember : UIViewController<BATableViewDelegate>
+
+@property (nonatomic, strong) BATableView* tableView_m;
 
 @end

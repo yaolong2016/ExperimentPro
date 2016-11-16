@@ -11,6 +11,7 @@
 
 ///测试文件头
 #import "AddMember.h"
+#import "LocalFileSystem.h"
 
 @interface ViewController ()
 
@@ -40,6 +41,9 @@
     
     ///测试加载文件
 //    AddMember* fs = [[[NSBundle mainBundle] loadNibNamed:@"AddMember" owner:self options:nil] objectAtIndex:0];
+//    [self.navigationController pushViewController:fs animated:YES];
+    
+//    LocalFileSystem* fs = [[[NSBundle mainBundle] loadNibNamed:@"LocalFileSystem" owner:self options:nil] objectAtIndex:0];
 //    [self.navigationController pushViewController:fs animated:YES];
     
     

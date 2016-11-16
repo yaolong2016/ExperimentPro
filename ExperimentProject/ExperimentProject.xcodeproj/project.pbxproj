@@ -50,6 +50,10 @@
 		DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133F81DDC34BC005D9E64 /* AddMember.m */; };
 		DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF133F91DDC34BC005D9E64 /* AddMember.xib */; };
+		DEF134071DDC4572005D9E64 /* BATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133FF1DDC4572005D9E64 /* BATableView.m */; };
+		DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF134011DDC4572005D9E64 /* BATableViewIndex.m */; };
+		DEF134091DDC4572005D9E64 /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF134041DDC4572005D9E64 /* ChineseString.m */; };
+		DEF1340A1DDC4572005D9E64 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = DEF134051DDC4572005D9E64 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,11 +121,19 @@
 		DEE6D02B1DDB0CD000738C3E /* arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@2x.png"; sourceTree = "<group>"; };
 		DEE6D02C1DDB0CD000738C3E /* arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_up.png; sourceTree = "<group>"; };
 		DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_up@2x.png"; sourceTree = "<group>"; };
-		DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableView.h; sourceTree = "<group>"; };
-		DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableView.m; sourceTree = "<group>"; };
+		DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullToRefreshTableView.h; path = ../../PullToRefreshTableView.h; sourceTree = "<group>"; };
+		DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshTableView.m; path = ../../PullToRefreshTableView.m; sourceTree = "<group>"; };
 		DEF133F71DDC34BC005D9E64 /* AddMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMember.h; sourceTree = "<group>"; };
 		DEF133F81DDC34BC005D9E64 /* AddMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMember.m; sourceTree = "<group>"; };
 		DEF133F91DDC34BC005D9E64 /* AddMember.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMember.xib; sourceTree = "<group>"; };
+		DEF133FE1DDC4572005D9E64 /* BATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATableView.h; sourceTree = "<group>"; };
+		DEF133FF1DDC4572005D9E64 /* BATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATableView.m; sourceTree = "<group>"; };
+		DEF134001DDC4572005D9E64 /* BATableViewIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATableViewIndex.h; sourceTree = "<group>"; };
+		DEF134011DDC4572005D9E64 /* BATableViewIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATableViewIndex.m; sourceTree = "<group>"; };
+		DEF134031DDC4572005D9E64 /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
+		DEF134041DDC4572005D9E64 /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
+		DEF134051DDC4572005D9E64 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		DEF134061DDC4572005D9E64 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,12 +426,11 @@
 		DEE6D0291DDB0CD000738C3E /* PullToRefreshTableView */ = {
 			isa = PBXGroup;
 			children = (
+				DEF133FC1DDC44F9005D9E64 /* BeaseTableView */,
 				DEE6D02A1DDB0CD000738C3E /* arrow_down.png */,
 				DEE6D02B1DDB0CD000738C3E /* arrow_down@2x.png */,
 				DEE6D02C1DDB0CD000738C3E /* arrow_up.png */,
 				DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */,
-				DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */,
-				DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */,
 			);
 			path = PullToRefreshTableView;
 			sourceTree = "<group>";
@@ -432,6 +443,39 @@
 				DEF133F91DDC34BC005D9E64 /* AddMember.xib */,
 			);
 			path = AddMember;
+			sourceTree = "<group>";
+		};
+		DEF133FC1DDC44F9005D9E64 /* BeaseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEF133FD1DDC4572005D9E64 /* BATableViewKit */,
+				DEF134021DDC4572005D9E64 /* ChineseSorting */,
+			);
+			path = BeaseTableView;
+			sourceTree = "<group>";
+		};
+		DEF133FD1DDC4572005D9E64 /* BATableViewKit */ = {
+			isa = PBXGroup;
+			children = (
+				DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */,
+				DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */,
+				DEF133FE1DDC4572005D9E64 /* BATableView.h */,
+				DEF133FF1DDC4572005D9E64 /* BATableView.m */,
+				DEF134001DDC4572005D9E64 /* BATableViewIndex.h */,
+				DEF134011DDC4572005D9E64 /* BATableViewIndex.m */,
+			);
+			path = BATableViewKit;
+			sourceTree = "<group>";
+		};
+		DEF134021DDC4572005D9E64 /* ChineseSorting */ = {
+			isa = PBXGroup;
+			children = (
+				DEF134031DDC4572005D9E64 /* ChineseString.h */,
+				DEF134041DDC4572005D9E64 /* ChineseString.m */,
+				DEF134051DDC4572005D9E64 /* pinyin.c */,
+				DEF134061DDC4572005D9E64 /* pinyin.h */,
+			);
+			path = ChineseSorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,10 +570,13 @@
 				DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */,
 				DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */,
 				DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */,
+				DEF134091DDC4572005D9E64 /* ChineseString.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
+				DEF134071DDC4572005D9E64 /* BATableView.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
+				DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */,
 				0964C9B61DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
@@ -541,6 +588,7 @@
 				DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */,
 				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
+				DEF1340A1DDC4572005D9E64 /* pinyin.c in Sources */,
 				DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
