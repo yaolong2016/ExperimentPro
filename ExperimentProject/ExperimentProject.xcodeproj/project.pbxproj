@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0964C9B61DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0964C9B41DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m */; };
 		0964C9B71DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */; };
+		096786691DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096786661DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.m */; };
+		0967866A1DDC458C00A1637C /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 096786681DDC458C00A1637C /* YCUniversalInterface.m */; };
+		0967866E1DDC464F00A1637C /* YaoQingHaoYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967866C1DDC464F00A1637C /* YaoQingHaoYouViewController.m */; };
+		0967866F1DDC464F00A1637C /* YaoQingHaoYouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0967866D1DDC464F00A1637C /* YaoQingHaoYouViewController.xib */; };
 		09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB521DD9BC57002A0B60 /* YCLogin.m */; };
 		09FDEB5B1DD9BC57002A0B60 /* YCLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB531DD9BC57002A0B60 /* YCLogin.xib */; };
 		09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB551DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m */; };
@@ -21,7 +24,6 @@
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
 		DE26D9541DCC62D100176FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9521DCC62D100176FC0 /* LaunchScreen.storyboard */; };
-		DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */; };
 		DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */; };
 		DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */; };
 		DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E1B21DD5699D003E7715 /* YCManagerInterface.xib */; };
@@ -46,9 +48,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0964C9B31DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTuanDuiGuanLiVCViewController.h; sourceTree = "<group>"; };
-		0964C9B41DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTuanDuiGuanLiVCViewController.m; sourceTree = "<group>"; };
 		0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCTuanDuiGuanLiVCViewController.xib; sourceTree = "<group>"; };
+		096786651DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCTuanDuiGuanLiVCViewController.h; path = ExperimentProject/Universal/View/YCTuanDuiGuanLiVCViewController.h; sourceTree = SOURCE_ROOT; };
+		096786661DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCTuanDuiGuanLiVCViewController.m; path = ExperimentProject/Universal/View/YCTuanDuiGuanLiVCViewController.m; sourceTree = SOURCE_ROOT; };
+		096786671DDC458C00A1637C /* YCUniversalInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCUniversalInterface.h; path = ExperimentProject/Universal/View/YCUniversalInterface.h; sourceTree = SOURCE_ROOT; };
+		096786681DDC458C00A1637C /* YCUniversalInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCUniversalInterface.m; path = ExperimentProject/Universal/View/YCUniversalInterface.m; sourceTree = SOURCE_ROOT; };
+		0967866B1DDC464F00A1637C /* YaoQingHaoYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YaoQingHaoYouViewController.h; path = ExperimentProject/Universal/View/YaoQingHaoYouViewController.h; sourceTree = SOURCE_ROOT; };
+		0967866C1DDC464F00A1637C /* YaoQingHaoYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YaoQingHaoYouViewController.m; path = ExperimentProject/Universal/View/YaoQingHaoYouViewController.m; sourceTree = SOURCE_ROOT; };
+		0967866D1DDC464F00A1637C /* YaoQingHaoYouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YaoQingHaoYouViewController.xib; path = ExperimentProject/Universal/View/YaoQingHaoYouViewController.xib; sourceTree = SOURCE_ROOT; };
 		09FDEB511DD9BC57002A0B60 /* YCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLogin.h; sourceTree = "<group>"; };
 		09FDEB521DD9BC57002A0B60 /* YCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLogin.m; sourceTree = "<group>"; };
 		09FDEB531DD9BC57002A0B60 /* YCLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLogin.xib; sourceTree = "<group>"; };
@@ -67,8 +74,6 @@
 		DE26D9501DCC62D100176FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE26D9531DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE26D9551DCC62D100176FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE34E1A81DD56952003E7715 /* YCUniversalInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUniversalInterface.h; sourceTree = "<group>"; };
-		DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUniversalInterface.m; sourceTree = "<group>"; };
 		DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCUniversalInterface.xib; sourceTree = "<group>"; };
 		DE34E1B01DD5699D003E7715 /* YCManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCManagerInterface.h; sourceTree = "<group>"; };
 		DE34E1B11DD5699D003E7715 /* YCManagerInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCManagerInterface.m; sourceTree = "<group>"; };
@@ -216,6 +221,12 @@
 		DE34E1A51DD568E7003E7715 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				096786671DDC458C00A1637C /* YCUniversalInterface.h */,
+				096786681DDC458C00A1637C /* YCUniversalInterface.m */,
+				096786651DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.h */,
+				096786661DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.m */,
+				0967866B1DDC464F00A1637C /* YaoQingHaoYouViewController.h */,
+				0967866C1DDC464F00A1637C /* YaoQingHaoYouViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,11 +241,8 @@
 		DE34E1A71DD568E7003E7715 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DE34E1A81DD56952003E7715 /* YCUniversalInterface.h */,
-				DE34E1A91DD56952003E7715 /* YCUniversalInterface.m */,
+				0967866D1DDC464F00A1637C /* YaoQingHaoYouViewController.xib */,
 				DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */,
-				0964C9B31DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.h */,
-				0964C9B41DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m */,
 				0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */,
 			);
 			path = View;
@@ -463,6 +471,7 @@
 				DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */,
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
+				0967866F1DDC464F00A1637C /* YaoQingHaoYouViewController.xib in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,16 +490,17 @@
 				DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */,
 				DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
+				0967866A1DDC458C00A1637C /* YCUniversalInterface.m in Sources */,
+				0967866E1DDC464F00A1637C /* YaoQingHaoYouViewController.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
-				0964C9B61DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				DE7D8D8D1DD9A1F20059A4CD /* GCDAsyncSocket.m in Sources */,
 				09FDEB631DD9BCE9002A0B60 /* YCGuideViewController.m in Sources */,
-				DE34E1AB1DD56952003E7715 /* YCUniversalInterface.m in Sources */,
+				096786691DDC458C00A1637C /* YCTuanDuiGuanLiVCViewController.m in Sources */,
 				DEE6D0281DDAC14400738C3E /* PictureCellImg.m in Sources */,
 				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
