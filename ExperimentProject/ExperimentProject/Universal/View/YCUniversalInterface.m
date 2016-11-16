@@ -32,15 +32,34 @@
     UIImage *image = GetImage(@"labpoo");//初始化图像视图
     [imageView setImage:image];
     self.navigationItem.titleView = imageView;//设置导航栏的titleView为imageView
-    ///默认实验管理
+   
     
-    self.headerView.bounds = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT - 64 - 45 + 20);
+    self.headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT -64 - 45 );
+    self.bgTabView.tableHeaderView = self.headerView;
+//    self.headerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    self.headerView.autoresizesSubviews = YES;
+    [self sizeHeaderToFit];
     
+     ///默认实验管理
     isShiyanGuanLi = YES;
     
     [self setNavigationUI];
     [self setUI];
 }
+///初始化头部视图
+- (void)sizeHeaderToFit
+{
+    UIView *header = self.bgTabView.tableHeaderView;
+    [header setNeedsLayout];
+    [header layoutIfNeeded];
+    CGFloat height = [header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    CGRect frame = header.frame;
+    frame.size.height = height;
+    header.frame = frame;
+//    header.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.bgTabView.tableHeaderView = header;
+}
+
 
 - (void)setNavigationUI{
     self.navigationItem.hidesBackButton = YES;
