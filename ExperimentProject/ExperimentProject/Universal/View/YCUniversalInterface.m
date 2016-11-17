@@ -11,6 +11,8 @@
 
 #import "YCTuanDuiGuanLiVCViewController.h"
 
+#import "YCGeRenTableViewController.h"
+
 @interface YCUniversalInterface ()<UIScrollViewDelegate>
 {
     ///是否有实验 yes为有 no为没有
@@ -215,6 +217,10 @@
 }
 
 - (void)geRenBtnClick{
+#warning 测试 个人详情界面
+    
+    YCGeRenTableViewController *geRenTableView_m = [[YCGeRenTableViewController alloc]init];
+    [self.navigationController pushViewController:geRenTableView_m animated:YES];
     
 }
 
