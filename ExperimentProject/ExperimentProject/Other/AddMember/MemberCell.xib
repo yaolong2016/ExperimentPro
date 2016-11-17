@@ -25,37 +25,44 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-Se-61H">
-                        <rect key="frame" x="262" y="12" width="30" height="30"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yl_empty" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-Se-61H">
+                        <rect key="frame" x="262" y="17" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="XLu-wm-mGL"/>
+                            <constraint firstAttribute="width" constant="20" id="XLu-wm-mGL"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23b-cD-wJr">
-                        <rect key="frame" x="68" y="54" width="252" height="1"/>
+                        <rect key="frame" x="68" y="53" width="252" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="23b-cD-wJr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="60" id="2Gt-ap-Iwe"/>
                     <constraint firstItem="9DS-VH-mvm" firstAttribute="centerY" secondItem="8iZ-Se-61H" secondAttribute="centerY" id="8uS-qe-z68"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="8iZ-Se-61H" secondAttribute="trailing" constant="20" id="960-zj-h1P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8iZ-Se-61H" secondAttribute="trailing" constant="30" id="960-zj-h1P"/>
                     <constraint firstItem="cyl-7c-Oxq" firstAttribute="bottom" secondItem="9DS-VH-mvm" secondAttribute="bottom" id="DrI-WB-TYW"/>
                     <constraint firstItem="cyl-7c-Oxq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FU3-Y7-OpG"/>
                     <constraint firstItem="9DS-VH-mvm" firstAttribute="leading" secondItem="cyl-7c-Oxq" secondAttribute="trailing" constant="16" id="J2O-1e-N2I"/>
                     <constraint firstItem="cyl-7c-Oxq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TXu-Uk-U1q"/>
-                    <constraint firstItem="23b-cD-wJr" firstAttribute="top" secondItem="8iZ-Se-61H" secondAttribute="bottom" constant="12" id="Wx0-Zw-dJ1"/>
+                    <constraint firstItem="23b-cD-wJr" firstAttribute="top" secondItem="8iZ-Se-61H" secondAttribute="bottom" constant="16" id="Wx0-Zw-dJ1"/>
                     <constraint firstAttribute="trailing" secondItem="23b-cD-wJr" secondAttribute="trailing" id="fko-1o-Rqp"/>
                     <constraint firstItem="cyl-7c-Oxq" firstAttribute="top" secondItem="9DS-VH-mvm" secondAttribute="top" id="gcF-fN-Bos"/>
                     <constraint firstItem="9DS-VH-mvm" firstAttribute="leading" secondItem="23b-cD-wJr" secondAttribute="leading" id="k6x-DO-I4N"/>
                     <constraint firstItem="8iZ-Se-61H" firstAttribute="leading" secondItem="9DS-VH-mvm" secondAttribute="trailing" constant="8" symbolic="YES" id="rea-FZ-48H"/>
                     <constraint firstItem="cyl-7c-Oxq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="uLf-rc-DhJ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="23b-cD-wJr" secondAttribute="bottom" constant="-9" id="xpp-JX-xcW"/>
-                    <constraint firstItem="23b-cD-wJr" firstAttribute="top" secondItem="9DS-VH-mvm" secondAttribute="bottom" constant="5" id="yYl-qi-ayO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="23b-cD-wJr" secondAttribute="bottom" constant="-8" id="xpp-JX-xcW"/>
+                    <constraint firstItem="23b-cD-wJr" firstAttribute="top" secondItem="9DS-VH-mvm" secondAttribute="bottom" constant="4" id="yYl-qi-ayO"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImg" destination="cyl-7c-Oxq" id="siD-J6-Z8N"/>
+                <outlet property="selectedImg" destination="8iZ-Se-61H" id="xV1-U3-L1e"/>
+                <outlet property="title" destination="9DS-VH-mvm" id="boM-D4-BYJ"/>
+            </connections>
             <point key="canvasLocation" x="493" y="424.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="yl_empty" width="20" height="20"/>
+    </resources>
 </document>

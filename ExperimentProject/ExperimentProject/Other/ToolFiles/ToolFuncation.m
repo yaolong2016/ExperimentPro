@@ -107,7 +107,10 @@
     return [UIScreen mainScreen].bounds.size;
 }
 
-
++ (CGFloat) statusHeight {
+    CGFloat height = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    return height;
+}
 
 
 

@@ -40,4 +40,7 @@
 ///获取设备的屏幕大小
 + (CGSize) screenSize;
 
+///状态栏的高度
++ (CGFloat) statusHeight;
+
 @end

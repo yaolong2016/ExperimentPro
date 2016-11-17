@@ -45,6 +45,7 @@
 		DE7D8D921DD9A20D0059A4CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D911DD9A20D0059A4CD /* CFNetwork.framework */; };
 		DE7D8D941DD9A2260059A4CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */; };
 		DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */; };
+		DEDC451A1DDDA3AE00AD0B69 /* MemberHeadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC45191DDDA3AE00AD0B69 /* MemberHeadImage.m */; };
 		DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D01A1DDAA6D200738C3E /* LocalFileSystem.xib */; };
 		DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D01D1DDAB71100738C3E /* DocumentCell.m */; };
 		DEE6D0201DDAB71100738C3E /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D01E1DDAB71100738C3E /* DocumentCell.xib */; };
@@ -126,6 +127,8 @@
 		DE7D8D931DD9A2260059A4CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DE7D8D9F1DD9AC270059A4CD /* LocalFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileSystem.h; sourceTree = "<group>"; };
 		DE7D8DA01DD9AC270059A4CD /* LocalFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFileSystem.m; sourceTree = "<group>"; };
+		DEDC45181DDDA3AE00AD0B69 /* MemberHeadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeadImage.h; sourceTree = "<group>"; };
+		DEDC45191DDDA3AE00AD0B69 /* MemberHeadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeadImage.m; sourceTree = "<group>"; };
 		DEE6D00F1DDAA58400738C3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DEE6D0101DDAA58500738C3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DEE6D01A1DDAA6D200738C3E /* LocalFileSystem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalFileSystem.xib; sourceTree = "<group>"; };
@@ -473,6 +476,8 @@
 				DEED7D1E1DDD46FE00157CE6 /* MemberCell.h */,
 				DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */,
 				DEED7D201DDD46FE00157CE6 /* MemberCell.xib */,
+				DEDC45181DDDA3AE00AD0B69 /* MemberHeadImage.h */,
+				DEDC45191DDDA3AE00AD0B69 /* MemberHeadImage.m */,
 			);
 			path = AddMember;
 			sourceTree = "<group>";
@@ -629,6 +634,7 @@
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
 				DEF1340A1DDC4572005D9E64 /* pinyin.c in Sources */,
 				DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */,
+				DEDC451A1DDDA3AE00AD0B69 /* MemberHeadImage.m in Sources */,
 				0967867B1DDC593000A1637C /* YaoQingHaoYouViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

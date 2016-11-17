@@ -9,8 +9,9 @@
 #import "AddMember.h"
 #import "ToolFuncation.h"
 #import "ChineseString.h"
-#import "MemberCell.h"
 #import "PullToRefreshTableView.h"
+#import "MemberHeadImage.h"
+#import "LocalFileSystem.h"
 
 @interface AddMember ()
 
@@ -26,11 +27,22 @@
 ///保存我们的实际展示的视图数据
 @property (nonatomic, strong) NSMutableArray *saveViewCellArr;
 
+///保存选择的成员
+@property (nonatomic, strong) NSMutableSet *saveSelectedMember;
+
+@property (nonatomic, strong) IBOutlet UIScrollView* scrollView_m;
+
+///保存选择的头像
+@property (nonatomic, strong) NSMutableArray* saveSelectedHead;
+
+
 @end
 
 @implementation AddMember
 @synthesize tableView_m;
 @synthesize bottonView_m;
+@synthesize topView_m;
+@synthesize delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,14 +63,21 @@
 
     self.saveViewCellArr = [[NSMutableArray alloc] init];
     
+    self.saveSelectedMember = [[NSMutableSet alloc] init];
+    
+    self.saveSelectedHead = [[NSMutableArray alloc] init];
+    
     [self.tableView_m setTableViewHeaderViewAndFooterView:YES footerView:YES];
     [self.tableView_m setSetSeparatorColor:[UIColor clearColor]];
     self.tableView_m.frame = CGRectMake(self.tableView_m.frame.origin.x,
                                         self.tableView_m.frame.origin.y,
                                         self.view.frame.size.width,
-                                        self.view.frame.size.height-self.bottonView_m.frame.size.height);
+                                        self.view.frame.size.height - self.bottonView_m.frame.size.height - [ToolFuncation statusHeight] - self.topView_m.frame.size.height);
+    self.scrollView_m.showsHorizontalScrollIndicator = NO;
+    
+    [self showOperationButtonTwoOrOne:YES];
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -163,6 +182,8 @@
         MemberCell* newCell = [[[NSBundle mainBundle] loadNibNamed:@"MemberCell" owner:self options:nil] objectAtIndex:0];
         [newCell setFrame:CGRectMake(0, 0, size.width, size.height)];
         NSMutableArray* newArr = [[NSMutableArray alloc] initWithObjects:newCell, nil];
+        newCell.delegate = self;
+        newCell.indexPath = indexPath;
         [self.saveViewCellArr addObject:newArr];
         
         [cell.contentView addSubview:newCell];
@@ -170,6 +191,9 @@
         
         MemberCell* newCell = [[[NSBundle mainBundle] loadNibNamed:@"MemberCell" owner:self options:nil] objectAtIndex:0];
         [newCell setFrame:CGRectMake(0, 0, size.width, size.height)];
+        newCell.delegate = self;
+        newCell.indexPath = indexPath;
+        
         if ([[self.saveViewCellArr objectAtIndex:indexPath.section] count]==0) {
             
             NSMutableArray* newArr = [[NSMutableArray alloc] initWithObjects:newCell, nil];
@@ -197,5 +221,82 @@
     }
 }
 
+- (void) memberCellDidSelectRowAtIndexPath:(NSIndexPath *)indexPaths object:(MemberCell *)tagObject {
+    MemberCell* cell = [[self.saveViewCellArr objectAtIndex:indexPaths.section] objectAtIndex:indexPaths.row];
+    if ([self.saveSelectedMember containsObject:cell]) {
+        [self.saveSelectedMember removeObject:cell];
+        if ([self isHaveMember:cell]) {
+            [self removeHeadImg:cell];
+        }
+    } else {
+        NSInteger much = self.saveSelectedHead.count;
+        MemberHeadImage* newHead = [[MemberHeadImage alloc] initWithFrame:CGRectMake(much*self.scrollView_m.frame.size.height+20*much,
+                                                                                     0, self.scrollView_m.frame.size.height,
+                                                                                     self.scrollView_m.frame.size.height)];
+        [self.saveSelectedHead addObject:newHead];
+        [self.saveSelectedMember addObject:cell];
+        [self.scrollView_m addSubview:newHead];
+    }
+    
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         for (MemberHeadImage* oldCell in self.saveSelectedHead) {
+                             NSInteger index = [self.saveSelectedHead indexOfObject:oldCell];
+                             oldCell.frame = CGRectMake(index*self.scrollView_m.frame.size.height + 20*(index+1),
+                                                        0, self.scrollView_m.frame.size.height,
+                                                        self.scrollView_m.frame.size.height);
+                         }
+                     }];
+    NSInteger much = self.saveSelectedHead.count;
+    
+    [self.scrollView_m setContentSize:CGSizeMake(self.scrollView_m.frame.size.height*much+(20*(much+1)), self.scrollView_m.frame.size.height)];
+}
+
+- (BOOL) isHaveMember:(MemberCell*) object {
+    BOOL have = NO;
+    for (MemberHeadImage* oldHead in self.saveSelectedHead) {
+        if (object.ID == oldHead.ID) {
+            have = YES;
+        }
+    }
+    return have;
+}
+
+- (void) removeHeadImg:(MemberCell*) object {
+    for (MemberHeadImage* head in self.saveSelectedHead) {
+        if (head.ID == object.ID) {
+            [head removeFromSuperview];
+            [self.saveSelectedHead removeObject:head];
+            break;
+        }
+    }
+}
+
+- (void) showOperationButtonTwoOrOne:(BOOL) one {
+    for (int a = 0; a < (one ? 1:2); a ++) {
+        UIButton* butn = [[UIButton alloc] initWithFrame:CGRectMake(a*self.view.frame.size.width/(one ? 1:2), 0,
+                                                                    self.bottonView_m.frame.size.width/(one ? 1:2),
+                                                                    self.bottonView_m.frame.size.height)];
+        [butn setTitle:a == 0 ? @"确认":@"取消" forState:UIControlStateNormal];
+        [butn setBackgroundColor:a == 0 ? ColorWithRGB(BlueColor):[UIColor lightGrayColor]];
+        [butn addTarget:self action:@selector(operationBotton:) forControlEvents:UIControlEventTouchUpInside];
+        [butn setTag:a];
+        [self.bottonView_m addSubview:butn];
+    }
+    [self setTitle:one ? @"添加成员":@"修改成员"];
+}
+
+- (void) operationBotton:(UIButton*) btn {
+    if (btn.tag == 0) {
+        
+    } else if (btn.tag == 1) {
+    
+    }
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(addMemberOperation:data:)]) {
+            [self.delegate addMemberOperation:self data:nil];
+        }
+    }
+}
 
 @end
