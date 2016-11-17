@@ -142,7 +142,6 @@
 
 @end
 
-
 /**
  *
  *  下拉刷新/上拖加载 表视图
@@ -154,6 +153,13 @@
     StateView * headerView;  //  下拉刷新视图
     StateView * footerView;  //  上拖加载视图
 }
+
+///移除头试图
+- (void) removeCurrentHeaderView;
+
+///移除尾试图
+- (void) removeCurrentFooterView;
+
 
 /**
  *  当表视图拖动时的执行方法
@@ -189,5 +195,7 @@
 
 ///获取头尾提示文本(yes:头部文本; no: 尾部)
 - (NSString*) headerAndFooterText:(BOOL) mark;
+
+- (void) setHeadAndFooter:(BOOL) headerViews footerView:(BOOL) fview;
 
 @end

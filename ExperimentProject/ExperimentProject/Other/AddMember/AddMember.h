@@ -14,6 +14,7 @@
 ///团队成员的添加和修改
 @interface AddMember : UIViewController<BATableViewDelegate>
 
-@property (nonatomic, strong) BATableView* tableView_m;
+@property (nonatomic, strong) IBOutlet BATableView* tableView_m;
+@property (nonatomic, strong) IBOutlet UIView* bottonView_m;
 
 @end
