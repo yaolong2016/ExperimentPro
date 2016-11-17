@@ -8,6 +8,7 @@
 
 #import "ZhuCeVC.h"
 #import "DefineTool.h"
+#import "WanShanZiLiaoViewController.h"
 @interface ZhuCeVC ()
 
 @end
@@ -92,6 +93,11 @@
 }
 
 - (IBAction)tiJiaoBtnClick:(UIButton *)sender {
+    
+    WanShanZiLiaoViewController *wanShanZiLiaoVC_m = [[WanShanZiLiaoViewController alloc]init];
+    [self.navigationController pushViewController:wanShanZiLiaoVC_m animated:YES];
+    return;
+    
     if (![self.souJiTextField.text isEqualToString:@""]) {
         if([self valiMobile:self.souJiTextField.text]){
             

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0950987C1DDD80D100451F6D /* YCGeRenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950987A1DDD80D100451F6D /* YCGeRenTableViewController.m */; };
+		0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950987B1DDD80D100451F6D /* YCGeRenTableViewController.xib */; };
 		0964C9B71DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */; };
 		096786741DDC583500A1637C /* YaoQingHaoYouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096786721DDC583500A1637C /* YaoQingHaoYouViewController.xib */; };
 		0967867B1DDC593000A1637C /* YaoQingHaoYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096786761DDC593000A1637C /* YaoQingHaoYouViewController.m */; };
@@ -63,6 +65,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		095098791DDD80D100451F6D /* YCGeRenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCGeRenTableViewController.h; path = ExperimentProject/LoginOut/YCGeRenTableViewController.h; sourceTree = SOURCE_ROOT; };
+		0950987A1DDD80D100451F6D /* YCGeRenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCGeRenTableViewController.m; path = ExperimentProject/LoginOut/YCGeRenTableViewController.m; sourceTree = SOURCE_ROOT; };
+		0950987B1DDD80D100451F6D /* YCGeRenTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YCGeRenTableViewController.xib; path = ExperimentProject/LoginOut/YCGeRenTableViewController.xib; sourceTree = SOURCE_ROOT; };
 		0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCTuanDuiGuanLiVCViewController.xib; sourceTree = "<group>"; };
 		096786721DDC583500A1637C /* YaoQingHaoYouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YaoQingHaoYouViewController.xib; sourceTree = "<group>"; };
 		096786751DDC593000A1637C /* YaoQingHaoYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YaoQingHaoYouViewController.h; path = ExperimentProject/Universal/View/YaoQingHaoYouViewController.h; sourceTree = SOURCE_ROOT; };
@@ -270,6 +275,8 @@
 				096786781DDC593000A1637C /* YCTuanDuiGuanLiVCViewController.m */,
 				096786791DDC593000A1637C /* YCUniversalInterface.h */,
 				0967867A1DDC593000A1637C /* YCUniversalInterface.m */,
+				095098791DDD80D100451F6D /* YCGeRenTableViewController.h */,
+				0950987A1DDD80D100451F6D /* YCGeRenTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 		DE34E1A71DD568E7003E7715 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0950987B1DDD80D100451F6D /* YCGeRenTableViewController.xib */,
 				DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */,
 				0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */,
 				096786721DDC583500A1637C /* YaoQingHaoYouViewController.xib */,
@@ -579,6 +587,7 @@
 				DEE6D0311DDB0CD000738C3E /* arrow_down@2x.png in Resources */,
 				DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */,
 				DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */,
+				0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */,
 				DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
 			);
@@ -602,6 +611,7 @@
 				DEF134091DDC4572005D9E64 /* ChineseString.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
 				0967867D1DDC593000A1637C /* YCUniversalInterface.m in Sources */,
+				0950987C1DDD80D100451F6D /* YCGeRenTableViewController.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
 				DEF134071DDC4572005D9E64 /* BATableView.m in Sources */,
