@@ -154,6 +154,12 @@
  *
  **/
 
+@interface PullToRefreshTableView()
+
+@property (nonatomic, assign) BOOL isHeader;
+@property (nonatomic, assign) BOOL isFooter;
+
+@end
 
 @implementation PullToRefreshTableView
 
@@ -161,7 +167,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initHeaderAndFooter];
+        self.isHeader = NO;
+        self.isFooter = NO;
+        [self initHeaderAndFooter:frame.size];
     }
     return self;
 }
@@ -169,34 +177,41 @@
 - (id) init {
 
     if (self = [super init]) {
-        
+        self.isHeader = NO;
+        self.isFooter = NO;
     }
     return self;
 }
 
 -(id) initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     if (self = [super initWithFrame:frame style:style]) {
-        
+        self.isHeader = NO;
+        self.isFooter = NO;
     }
     return self;
 }
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-//    [self initHeaderAndFooter];
+    [self initHeaderAndFooter:self.frame.size];
 }
 
 - (void) initHeaderAndFooter:(CGSize)size {
-    if (!headerView) {
+    if (!headerView&self.isHeader) {
         headerView = [[StateView alloc] initWithFrame:CGRectMake(0, -40, size.width, size.height) viewType:k_VIEW_TYPE_HEADER];
-        footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) viewType:k_VIEW_TYPE_FOOTER];
         [self addSubview:headerView];
+       
+    }
+    if (!footerView&self.isFooter) {
+        footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) viewType:k_VIEW_TYPE_FOOTER];
         [self setTableFooterView:footerView];
     }
 }
 
 - (void)dealloc{
+    if (headerView)
     [headerView release];
+    if (footerView)
     [footerView release];
     headerView = nil;
     footerView = nil;
@@ -238,7 +253,7 @@
         return k_RETURN_DO_NOTHING;
     }
     //  改变“下拉可以刷新”视图的文字及箭头提示
-    if (offsetY < -k_STATE_VIEW_HEIGHT - 10) {
+    if (offsetY < -k_STATE_VIEW_HEIGHT - 10 && self.isHeader) {
         [headerView changeState:k_PULL_STATE_LOAD];
         self.contentInset = UIEdgeInsetsMake(k_STATE_VIEW_HEIGHT, 0, 0, 0);
         return k_RETURN_REFRESH;
@@ -246,7 +261,7 @@
     //  改变“上拉加载更多”视图的文字及箭头提示
     CGFloat differenceY = self.contentSize.height > self.frame.size.height ? (self.contentSize.height - self.frame.size.height) : 0;
     if (footerView.currentState != k_PULL_STATE_END && 
-        offsetY > differenceY + k_STATE_VIEW_HEIGHT / 3 * 2) {
+        offsetY > differenceY + k_STATE_VIEW_HEIGHT / 3 * 2  && self.isFooter) {
         [footerView changeState:k_PULL_STATE_LOAD];
         return k_RETURN_LOADMORE;
     } 
@@ -288,6 +303,29 @@
 
 - (NSString*) headerAndFooterText:(BOOL) mark {
     return mark ? headerView.stateLabel.text:footerView.stateLabel.text;
+}
+
+- (void) removeCurrentHeaderView {
+    if (headerView) {
+        [headerView removeFromSuperview];
+        headerView = nil;
+        self.tableHeaderView = nil;
+    }
+    self.isHeader = NO;
+}
+
+- (void) removeCurrentFooterView {
+    if (footerView) {
+        [footerView removeFromSuperview];
+        footerView = nil;
+        self.tableFooterView = nil;
+    }
+    self.isFooter = NO;
+}
+
+- (void) setHeadAndFooter:(BOOL) headerViews footerView:(BOOL) fview {
+    self.isHeader = headerViews;
+    self.isFooter = fview;
 }
 
 @end

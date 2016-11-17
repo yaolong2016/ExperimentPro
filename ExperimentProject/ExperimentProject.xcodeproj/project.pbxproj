@@ -52,6 +52,8 @@
 		DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02C1DDB0CD000738C3E /* arrow_up.png */; };
 		DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */; };
 		DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEED7D211DDD46FE00157CE6 /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */; };
+		DEED7D221DDD46FE00157CE6 /* MemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEED7D201DDD46FE00157CE6 /* MemberCell.xib */; };
 		DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133F81DDC34BC005D9E64 /* AddMember.m */; };
 		DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF133F91DDC34BC005D9E64 /* AddMember.xib */; };
 		DEF134071DDC4572005D9E64 /* BATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133FF1DDC4572005D9E64 /* BATableView.m */; };
@@ -133,6 +135,9 @@
 		DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_up@2x.png"; sourceTree = "<group>"; };
 		DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullToRefreshTableView.h; path = ../../PullToRefreshTableView.h; sourceTree = "<group>"; };
 		DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshTableView.m; path = ../../PullToRefreshTableView.m; sourceTree = "<group>"; };
+		DEED7D1E1DDD46FE00157CE6 /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
+		DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
+		DEED7D201DDD46FE00157CE6 /* MemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberCell.xib; sourceTree = "<group>"; };
 		DEF133F71DDC34BC005D9E64 /* AddMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMember.h; sourceTree = "<group>"; };
 		DEF133F81DDC34BC005D9E64 /* AddMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMember.m; sourceTree = "<group>"; };
 		DEF133F91DDC34BC005D9E64 /* AddMember.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMember.xib; sourceTree = "<group>"; };
@@ -457,6 +462,9 @@
 				DEF133F71DDC34BC005D9E64 /* AddMember.h */,
 				DEF133F81DDC34BC005D9E64 /* AddMember.m */,
 				DEF133F91DDC34BC005D9E64 /* AddMember.xib */,
+				DEED7D1E1DDD46FE00157CE6 /* MemberCell.h */,
+				DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */,
+				DEED7D201DDD46FE00157CE6 /* MemberCell.xib */,
 			);
 			path = AddMember;
 			sourceTree = "<group>";
@@ -564,6 +572,7 @@
 				DEE6D0201DDAB71100738C3E /* DocumentCell.xib in Resources */,
 				DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */,
 				DEE6D0301DDB0CD000738C3E /* arrow_down.png in Resources */,
+				DEED7D221DDD46FE00157CE6 /* MemberCell.xib in Resources */,
 				DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */,
 				DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */,
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
@@ -585,6 +594,7 @@
 				DE7D8D8F1DD9A1F20059A4CD /* Network.m in Sources */,
 				DE481D7C1DD42EA200B9A654 /* ViewController.m in Sources */,
 				DE7D8D8E1DD9A1F20059A4CD /* JSONKit.m in Sources */,
+				DEED7D211DDD46FE00157CE6 /* MemberCell.m in Sources */,
 				DE34E1B31DD5699D003E7715 /* YCManagerInterface.m in Sources */,
 				DE34E1BB1DD569D9003E7715 /* YCKYVersionInterface.m in Sources */,
 				DE7D8DA21DD9AC270059A4CD /* LocalFileSystem.m in Sources */,
