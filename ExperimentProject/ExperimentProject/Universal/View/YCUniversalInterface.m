@@ -12,6 +12,7 @@
 #import "YCTuanDuiGuanLiVCViewController.h"
 
 #import "YCGeRenTableViewController.h"
+#import "DaiChuLiViewController.h"
 
 @interface YCUniversalInterface ()<UIScrollViewDelegate>
 {
@@ -36,17 +37,25 @@
     self.navigationItem.titleView = imageView;//设置导航栏的titleView为imageView
    
     
-    self.headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT -64 - 45 );
-    self.bgTabView.tableHeaderView = self.headerView;
-//    self.headerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+   //    self.headerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 //    self.headerView.autoresizesSubviews = YES;
-    [self sizeHeaderToFit];
+    
     
      ///默认实验管理
     isShiyanGuanLi = YES;
     
     [self setNavigationUI];
+    self.headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT -64 - 45 );
+    self.bgTabView.tableHeaderView = self.headerView;
+    
+    [self sizeHeaderToFit];
     [self setUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
 }
 ///初始化头部视图
 - (void)sizeHeaderToFit
@@ -78,6 +87,8 @@
 }
 
 - (void)setUI{
+//    self.bottomBgView.backgroundColor = [UIColor redColor];
+    
     [self.guanLiBtn setTitle:NSLocalizedString(@"实验管理", nil) forState:UIControlStateNormal];
     [self.shiYanBtn setTitle:NSLocalizedString(@"实验工作", nil) forState:UIControlStateNormal];
     [self.sheJiShiYanButton setTitle:NSLocalizedString(@"实验设计", nil) forState:UIControlStateNormal];
@@ -194,6 +205,15 @@
             [self.navigationController pushViewController:tuanDuiVC animated:YES];
         }
             break;
+        case 204:
+        {
+            ///待处理界面
+            DaiChuLiViewController *daiChuLiVC_m = [[DaiChuLiViewController alloc]init];
+            [self.navigationController pushViewController:daiChuLiVC_m animated:YES];
+        }
+            break;
+    
+    
             
         default:
             break;
@@ -202,11 +222,7 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    
-}
+
 
 - (void)erWeiMaBtnClick{
     

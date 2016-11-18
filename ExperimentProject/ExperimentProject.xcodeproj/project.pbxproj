@@ -11,6 +11,10 @@
 		0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950987B1DDD80D100451F6D /* YCGeRenTableViewController.xib */; };
 		095098811DDD96C300451F6D /* GeRenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950987F1DDD96C300451F6D /* GeRenTableViewCell.m */; };
 		095098821DDD96C300451F6D /* GeRenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095098801DDD96C300451F6D /* GeRenTableViewCell.xib */; };
+		096059AB1DDEAC2A00844F17 /* DaiChuLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096059A91DDEAC2A00844F17 /* DaiChuLiViewController.m */; };
+		096059AC1DDEAC2A00844F17 /* DaiChuLiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096059AA1DDEAC2A00844F17 /* DaiChuLiViewController.xib */; };
+		096059B01DDEE95100844F17 /* DaiChuLiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 096059AE1DDEE95100844F17 /* DaiChuLiTableViewCell.m */; };
+		096059B11DDEE95100844F17 /* DaiChuLiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096059AF1DDEE95100844F17 /* DaiChuLiTableViewCell.xib */; };
 		0964C9B71DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */; };
 		096786741DDC583500A1637C /* YaoQingHaoYouViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096786721DDC583500A1637C /* YaoQingHaoYouViewController.xib */; };
 		0967867B1DDC593000A1637C /* YaoQingHaoYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096786761DDC593000A1637C /* YaoQingHaoYouViewController.m */; };
@@ -74,6 +78,12 @@
 		0950987E1DDD96C300451F6D /* GeRenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeRenTableViewCell.h; path = ExperimentProject/LoginOut/GeRenTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		0950987F1DDD96C300451F6D /* GeRenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeRenTableViewCell.m; path = ExperimentProject/LoginOut/GeRenTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		095098801DDD96C300451F6D /* GeRenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GeRenTableViewCell.xib; path = ExperimentProject/LoginOut/GeRenTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		096059A81DDEAC2A00844F17 /* DaiChuLiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaiChuLiViewController.h; path = ExperimentProject/LoginOut/DaiChuLiViewController.h; sourceTree = SOURCE_ROOT; };
+		096059A91DDEAC2A00844F17 /* DaiChuLiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaiChuLiViewController.m; path = ExperimentProject/LoginOut/DaiChuLiViewController.m; sourceTree = SOURCE_ROOT; };
+		096059AA1DDEAC2A00844F17 /* DaiChuLiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DaiChuLiViewController.xib; path = ExperimentProject/LoginOut/DaiChuLiViewController.xib; sourceTree = SOURCE_ROOT; };
+		096059AD1DDEE95100844F17 /* DaiChuLiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaiChuLiTableViewCell.h; path = ExperimentProject/LoginOut/DaiChuLiTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		096059AE1DDEE95100844F17 /* DaiChuLiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaiChuLiTableViewCell.m; path = ExperimentProject/LoginOut/DaiChuLiTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		096059AF1DDEE95100844F17 /* DaiChuLiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DaiChuLiTableViewCell.xib; path = ExperimentProject/LoginOut/DaiChuLiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		0964C9B51DDB070900F4B3FB /* YCTuanDuiGuanLiVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCTuanDuiGuanLiVCViewController.xib; sourceTree = "<group>"; };
 		096786721DDC583500A1637C /* YaoQingHaoYouViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YaoQingHaoYouViewController.xib; sourceTree = "<group>"; };
 		096786751DDC593000A1637C /* YaoQingHaoYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YaoQingHaoYouViewController.h; path = ExperimentProject/Universal/View/YaoQingHaoYouViewController.h; sourceTree = SOURCE_ROOT; };
@@ -287,6 +297,10 @@
 				0950987A1DDD80D100451F6D /* YCGeRenTableViewController.m */,
 				0950987E1DDD96C300451F6D /* GeRenTableViewCell.h */,
 				0950987F1DDD96C300451F6D /* GeRenTableViewCell.m */,
+				096059A81DDEAC2A00844F17 /* DaiChuLiViewController.h */,
+				096059A91DDEAC2A00844F17 /* DaiChuLiViewController.m */,
+				096059AD1DDEE95100844F17 /* DaiChuLiTableViewCell.h */,
+				096059AE1DDEE95100844F17 /* DaiChuLiTableViewCell.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +315,8 @@
 		DE34E1A71DD568E7003E7715 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				096059AF1DDEE95100844F17 /* DaiChuLiTableViewCell.xib */,
+				096059AA1DDEAC2A00844F17 /* DaiChuLiViewController.xib */,
 				095098801DDD96C300451F6D /* GeRenTableViewCell.xib */,
 				0950987B1DDD80D100451F6D /* YCGeRenTableViewController.xib */,
 				DE34E1AA1DD56952003E7715 /* YCUniversalInterface.xib */,
@@ -592,6 +608,7 @@
 				096786741DDC583500A1637C /* YaoQingHaoYouViewController.xib in Resources */,
 				DEE6D0201DDAB71100738C3E /* DocumentCell.xib in Resources */,
 				DE34E1B41DD5699D003E7715 /* YCManagerInterface.xib in Resources */,
+				096059AC1DDEAC2A00844F17 /* DaiChuLiViewController.xib in Resources */,
 				DEE6D0301DDB0CD000738C3E /* arrow_down.png in Resources */,
 				DEED7D221DDD46FE00157CE6 /* MemberCell.xib in Resources */,
 				DEE6D01B1DDAA6D200738C3E /* LocalFileSystem.xib in Resources */,
@@ -603,6 +620,7 @@
 				DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */,
 				0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */,
 				DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */,
+				096059B11DDEE95100844F17 /* DaiChuLiTableViewCell.xib in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +652,7 @@
 				DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */,
 				096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
+				096059AB1DDEAC2A00844F17 /* DaiChuLiViewController.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,
 				DE7D8D8D1DD9A1F20059A4CD /* GCDAsyncSocket.m in Sources */,
@@ -641,6 +660,7 @@
 				DEE6D0281DDAC14400738C3E /* PictureCellImg.m in Sources */,
 				DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */,
 				09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */,
+				096059B01DDEE95100844F17 /* DaiChuLiTableViewCell.m in Sources */,
 				09FDEB5E1DD9BC57002A0B60 /* ZhuCeVC.m in Sources */,
 				DEF1340A1DDC4572005D9E64 /* pinyin.c in Sources */,
 				DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */,

@@ -193,7 +193,7 @@
         
         
         cell = [[[NSBundle mainBundle] loadNibNamed:@"GeRenTableViewCell" owner:self options:nil] firstObject];
-        cell.lab.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        cell.lab.text = [NSString stringWithFormat:@"%d",indexPath.row];
         
     }else{
         cell = [[[NSBundle mainBundle] loadNibNamed:@"GeRenTableViewCell" owner:self options:nil] objectAtIndex:1];
