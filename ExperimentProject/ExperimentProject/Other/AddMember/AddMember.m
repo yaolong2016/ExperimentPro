@@ -142,6 +142,25 @@
     return key;
 }
 
+//-(BOOL) tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
+//
+//- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    return [tableView selfdefineTableViewCell:[NSArray arrayWithObjects:@"1",@"2",@"3adfasfasdfasdfasd", nil]
+//                                       colors:@[[UIColor redColor],[UIColor grayColor],[UIColor greenColor]]
+//                                       hander:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//                                           
+//                                           NSLog(@"==%ld,ROW=  %ld",(long)action.addIndex,(long)indexPath.row);
+//                                           
+//                                       }];
+//    
+//    return nil;
+//}
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [self.letterResultArr count];
@@ -166,7 +185,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.accessoryType = NO;
     }
-    
+
     return cell;
 }
 

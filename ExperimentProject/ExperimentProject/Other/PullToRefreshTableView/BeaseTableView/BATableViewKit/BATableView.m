@@ -8,6 +8,8 @@
 
 #import "BATableView.h"
 #import "BATableViewIndex.h"
+#import <objc/runtime.h>
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
@@ -166,3 +168,107 @@
 }
 
 @end
+
+
+///tableviewcell
+
+@interface UITableView()
+
+@property (nonatomic, weak) NSArray* rowActions;
+
+- (void) setRowActions:(NSArray *)rowActions;
+
+- (NSArray*) rowActions;
+
+@end
+
+static const char keyRow = 'b';
+
+@implementation UITableView(Ex)
+
+- (NSArray*) selfdefineTableViewCell:(NSArray*) titles
+                              colors:(NSArray*) color
+                              hander:(void (^)(UITableViewRowAction *action, NSIndexPath *indexPath))handler {
+    NSMutableArray* array = nil;
+    if (titles) {
+        if (titles.count) {
+            array = [NSMutableArray array];
+        }
+    }
+    for (NSString* title in titles) {
+        UITableViewRowAction* tablerow = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                            title:title
+                                                                          handler:handler];
+        [tablerow setAddIndex:[titles indexOfObject:title]];
+        [tablerow setBackgroundColor:[color objectAtIndex:[titles indexOfObject:title]]];
+        [array addObject:tablerow];
+    }
+    
+    self.rowActions = array;
+    
+    return array;
+}
+
+- (void) selfdefineTableViewRowButtonColor:(NSArray*) colors {
+    if (colors) {
+        if (colors.count) {
+            for (UITableViewRowAction* tvra in self.rowActions) {
+                UIColor* color = [colors objectAtIndex:[self.rowActions indexOfObject:tvra]];
+                [tvra setBackgroundColor:color];
+            }
+        }
+    }
+    
+}
+
+- (void) selfdefineTableViewRowButtonTitle:(NSArray*) titls {
+    if (titls) {
+        if (titls.count) {
+            for (UITableViewRowAction* tvra in self.rowActions) {
+                [tvra setTitle:[titls objectAtIndex:[self.rowActions indexOfObject:tvra]]];
+            }
+        }
+    }
+}
+
+- (void) selfdefineTableViewRowButtonEffects:(NSArray*) effects {
+    if (effects) {
+        if (effects.count) {
+            for (UITableViewRowAction* tvra in self.rowActions) {
+                [tvra setBackgroundEffect:[effects objectAtIndex:[self.rowActions indexOfObject:tvra]]];
+            }
+        }
+    }
+}
+
+- (void) setRowActions:(NSArray *)rowActions {
+    objc_setAssociatedObject(self, &keyRow, rowActions, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSArray*) rowActions {
+    return objc_getAssociatedObject(self, &keyRow);
+}
+
+@end
+
+static const char keyAddIndex = 'a';
+
+@implementation UITableViewRowAction(EXTABLEROW)
+
+@dynamic addIndex;
+
+- (void) setAddIndex:(NSInteger) indexs {
+    objc_setAssociatedObject(self, &keyAddIndex, [NSNumber numberWithInteger:indexs], OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSInteger) addIndex {
+    NSNumber* number = objc_getAssociatedObject(self, &keyAddIndex);
+    if (number) {
+        return [number integerValue];
+    } else {
+        return -1;
+    }
+}
+
+@end
+

@@ -11,7 +11,7 @@
 
 @protocol BATableViewDelegate;
 @class PullToRefreshTableView;
-///搜索＋索引＋刷新
+///搜索＋索引＋刷新+(cell当中的小button 需要实现- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath)
 @interface BATableView : UIView
 
 
@@ -41,3 +41,35 @@
 
 
 @end
+
+///tableviewcell
+@interface UITableView(Ex)
+
+///自定义cell的滑动显示按钮数目
+- (NSArray*) selfdefineTableViewCell:(NSArray*) titles
+                              colors:(NSArray*) color
+                              hander:(void (^)(UITableViewRowAction *action, NSIndexPath *indexPath))handler;
+///自定义背景颜色
+- (void) selfdefineTableViewRowButtonColor:(NSArray*) colors;
+
+///自定义文字
+- (void) selfdefineTableViewRowButtonTitle:(NSArray*) titls;
+
+///自定义背景效果
+- (void) selfdefineTableViewRowButtonEffects:(NSArray*) effects;
+
+@end
+
+@interface UITableViewRowAction(EXTABLEROW)
+
+///添加索引
+@property (nonatomic,assign) NSInteger addIndex;
+
+- (void) setAddIndex:(NSInteger) indexs;
+
+- (NSInteger) addIndex;
+
+@end
+
+
+
