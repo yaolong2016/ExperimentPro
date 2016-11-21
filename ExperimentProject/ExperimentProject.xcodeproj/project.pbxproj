@@ -22,6 +22,9 @@
 		0967867D1DDC593000A1637C /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967867A1DDC593000A1637C /* YCUniversalInterface.m */; };
 		096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967867F1DDC5CA600A1637C /* WanShanZiLiaoViewController.m */; };
 		096786821DDC5CA600A1637C /* WanShanZiLiaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096786801DDC5CA600A1637C /* WanShanZiLiaoViewController.xib */; };
+		09A6EDE11DE29F5800639A0C /* ButtonWithRedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6EDE01DE29F5800639A0C /* ButtonWithRedPoint.m */; };
+		09A6EDE51DE29FA500639A0C /* DaiChuLiXiangQingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6EDE31DE29FA500639A0C /* DaiChuLiXiangQingViewController.m */; };
+		09A6EDE61DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A6EDE41DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib */; };
 		09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB521DD9BC57002A0B60 /* YCLogin.m */; };
 		09FDEB5B1DD9BC57002A0B60 /* YCLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB531DD9BC57002A0B60 /* YCLogin.xib */; };
 		09FDEB5C1DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB551DD9BC57002A0B60 /* ZhaoHuiMiMaVC.m */; };
@@ -99,6 +102,11 @@
 		0967867E1DDC5CA600A1637C /* WanShanZiLiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanShanZiLiaoViewController.h; sourceTree = "<group>"; };
 		0967867F1DDC5CA600A1637C /* WanShanZiLiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanShanZiLiaoViewController.m; sourceTree = "<group>"; };
 		096786801DDC5CA600A1637C /* WanShanZiLiaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WanShanZiLiaoViewController.xib; sourceTree = "<group>"; };
+		09A6EDDF1DE29F5800639A0C /* ButtonWithRedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonWithRedPoint.h; sourceTree = "<group>"; };
+		09A6EDE01DE29F5800639A0C /* ButtonWithRedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonWithRedPoint.m; sourceTree = "<group>"; };
+		09A6EDE21DE29FA500639A0C /* DaiChuLiXiangQingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaiChuLiXiangQingViewController.h; path = ExperimentProject/Universal/View/DaiChuLiXiangQingViewController.h; sourceTree = SOURCE_ROOT; };
+		09A6EDE31DE29FA500639A0C /* DaiChuLiXiangQingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaiChuLiXiangQingViewController.m; path = ExperimentProject/Universal/View/DaiChuLiXiangQingViewController.m; sourceTree = SOURCE_ROOT; };
+		09A6EDE41DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DaiChuLiXiangQingViewController.xib; path = ExperimentProject/Universal/View/DaiChuLiXiangQingViewController.xib; sourceTree = SOURCE_ROOT; };
 		09FDEB511DD9BC57002A0B60 /* YCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLogin.h; sourceTree = "<group>"; };
 		09FDEB521DD9BC57002A0B60 /* YCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLogin.m; sourceTree = "<group>"; };
 		09FDEB531DD9BC57002A0B60 /* YCLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCLogin.xib; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				09A6EDDE1DE29F5800639A0C /* RedPointButton */,
 				DE23B3BD1DDEF83C00F1528A /* TableCricle */,
 				DEF133F61DDC34A2005D9E64 /* AddMember */,
 				DEE6D0291DDB0CD000738C3E /* PullToRefreshTableView */,
@@ -209,6 +218,15 @@
 				DE34E1C51DD56C6E003E7715 /* ToolFiles */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		09A6EDDE1DE29F5800639A0C /* RedPointButton */ = {
+			isa = PBXGroup;
+			children = (
+				09A6EDDF1DE29F5800639A0C /* ButtonWithRedPoint.h */,
+				09A6EDE01DE29F5800639A0C /* ButtonWithRedPoint.m */,
+			);
+			path = RedPointButton;
 			sourceTree = "<group>";
 		};
 		DE23B3BD1DDEF83C00F1528A /* TableCricle */ = {
@@ -327,6 +345,9 @@
 				096059A91DDEAC2A00844F17 /* DaiChuLiViewController.m */,
 				096059AD1DDEE95100844F17 /* DaiChuLiTableViewCell.h */,
 				096059AE1DDEE95100844F17 /* DaiChuLiTableViewCell.m */,
+				09A6EDE21DE29FA500639A0C /* DaiChuLiXiangQingViewController.h */,
+				09A6EDE31DE29FA500639A0C /* DaiChuLiXiangQingViewController.m */,
+				09A6EDE41DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -642,6 +663,7 @@
 				DE34E1AC1DD56952003E7715 /* YCUniversalInterface.xib in Resources */,
 				DEE6D0311DDB0CD000738C3E /* arrow_down@2x.png in Resources */,
 				DEF133FB1DDC34BC005D9E64 /* AddMember.xib in Resources */,
+				09A6EDE61DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib in Resources */,
 				095098821DDD96C300451F6D /* GeRenTableViewCell.xib in Resources */,
 				DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */,
 				0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */,
@@ -659,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A6EDE51DE29FA500639A0C /* DaiChuLiXiangQingViewController.m in Sources */,
 				DE7D8D8F1DD9A1F20059A4CD /* Network.m in Sources */,
 				DE481D7C1DD42EA200B9A654 /* ViewController.m in Sources */,
 				DE7D8D8E1DD9A1F20059A4CD /* JSONKit.m in Sources */,
@@ -679,6 +702,7 @@
 				DEF134071DDC4572005D9E64 /* BATableView.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
 				DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */,
+				09A6EDE11DE29F5800639A0C /* ButtonWithRedPoint.m in Sources */,
 				DE23B3C41DDEF83C00F1528A /* TBCard.m in Sources */,
 				096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
