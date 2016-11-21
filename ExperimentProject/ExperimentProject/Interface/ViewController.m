@@ -27,17 +27,17 @@
     self.mainInterface_m = nil;
     self.sets_m = nil;
     //首先判断用户使用app是不是停留在引导页的
-//    if (![ToolFuncation getGuideDidMark:nil]) {//进入引导页
-//        [self loadMainInterfaceController:APP_INTO_GUIDE];
-//    } else {//进入登录或者内容页
-//        if ([ToolFuncation isLogin:nil] == NO) {//进入登录页面
-//            [self loadMainInterfaceController:APP_INTO_LOGINOUT];
-//            
-//        } else {//进入选择页面
-//            [self loadMainInterfaceController:[ToolFuncation appInterfaceMark]];
-//            
-//        }
-//    }
+    if (![ToolFuncation getGuideDidMark:nil]) {//进入引导页
+        [self loadMainInterfaceController:APP_INTO_GUIDE];
+    } else {//进入登录或者内容页
+        if ([ToolFuncation isLogin:nil] == NO) {//进入登录页面
+            [self loadMainInterfaceController:APP_INTO_LOGINOUT];
+            
+        } else {//进入选择页面
+            [self loadMainInterfaceController:[ToolFuncation appInterfaceMark]];
+            
+        }
+    }
     
     
     ///测试加载文件
@@ -47,8 +47,8 @@
 //    LocalFileSystem* fs = [[[NSBundle mainBundle] loadNibNamed:@"LocalFileSystem" owner:self options:nil] objectAtIndex:0];
 //    [self.navigationController pushViewController:fs animated:YES];
 
-    TBCard * fs = [[[NSBundle mainBundle] loadNibNamed:@"TBCard" owner:self options:nil] objectAtIndex:0];
-    [self.navigationController pushViewController:fs animated:YES];
+//    TBCard * fs = [[[NSBundle mainBundle] loadNibNamed:@"TBCard" owner:self options:nil] objectAtIndex:0];
+//    [self.navigationController pushViewController:fs animated:YES];
     
 }
 
