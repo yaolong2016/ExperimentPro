@@ -165,6 +165,10 @@
 - (void) setTableViewHeaderViewAndFooterView:(BOOL) heads footerView:(BOOL) Fview {
     self.header = heads;
     self.footer = Fview;
+    
+    [self.tableView setHeadAndFooter:self.header footerView:self.footer];
+    
+    
 }
 
 @end

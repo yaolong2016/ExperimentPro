@@ -10,6 +10,7 @@
 #import "DefineTool.h"
 #import "LocalFileSystem.h"
 #import "DaiChuLiTableViewCell.h"
+#import "DaiChuLiXiangQingViewController.h"
 @interface DaiChuLiViewController ()
 {
     NSInteger topBtnIndex;
@@ -32,6 +33,12 @@
     self.shenQingBtn.selected = YES;
     [self setLocalText];
     [self setBottomScrollViewAndTableView];
+    
+    
+    self.huiBaoBtn.isOnOfRedPoint = YES;
+    self.zhiShiBtn.isOnOfRedPoint = YES;
+//    self.qiTaBtn.isOnOfRedPoint = NO;
+//    self.shenQingBtn.isOnOfRedPoint = NO;
     
     
 }
@@ -113,6 +120,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DaiChuLiXiangQingViewController *daiChuLiXiangQingViewController_m = [[DaiChuLiXiangQingViewController alloc]init];
+    [self.navigationController pushViewController:daiChuLiXiangQingViewController_m animated:YES];
+}
+
 - (void)setBtnBlueViewWithIndex:(NSInteger )index{
     btnBlueView = [[UIView alloc]initWithFrame:CGRectMake(index * SCREEN_WIDTH / 4.0, 42, SCREEN_WIDTH / 4.0, 2)];
     btnBlueView.backgroundColor = ColorWithRGB(BlueColor);
@@ -125,7 +138,7 @@
 }
 
 ///按键tag 为 500~503
-- (IBAction)topBtnClick:(UIButton *)sender {
+- (IBAction)topBtnClick:(ButtonWithRedPoint *)sender {
     topBtnIndex = sender.tag - 500;
     [self.bottomScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * topBtnIndex, 0) animated:YES];
 //    [self moveBtnBottomViewWithIndex:topBtnIndex];
@@ -158,4 +171,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.searchBar endEditing:YES];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
+}
+
 @end

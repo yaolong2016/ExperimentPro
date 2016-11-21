@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ButtonWithRedPoint.h"
 @interface DaiChuLiViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @property (weak, nonatomic) IBOutlet UIView *bgViewOfBtn;
-@property (weak, nonatomic) IBOutlet UIButton *shenQingBtn;
-@property (weak, nonatomic) IBOutlet UIButton *huiBaoBtn;
-@property (weak, nonatomic) IBOutlet UIButton *zhiShiBtn;
-@property (weak, nonatomic) IBOutlet UIButton *qiTaBtn;
-- (IBAction)topBtnClick:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet ButtonWithRedPoint *shenQingBtn;
+@property (weak, nonatomic) IBOutlet ButtonWithRedPoint *huiBaoBtn;
+@property (weak, nonatomic) IBOutlet ButtonWithRedPoint *zhiShiBtn;
+@property (weak, nonatomic) IBOutlet ButtonWithRedPoint *qiTaBtn;
+- (IBAction)topBtnClick:(ButtonWithRedPoint *)sender;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollView;
 

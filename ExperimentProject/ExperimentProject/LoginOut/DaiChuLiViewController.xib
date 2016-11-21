@@ -10,7 +10,7 @@
                 <outlet property="bgViewOfBtn" destination="F8L-2u-fHE" id="1ti-zf-QB9"/>
                 <outlet property="bottomScrollView" destination="VVR-Up-9bi" id="Chs-7F-8Z3"/>
                 <outlet property="huiBaoBtn" destination="zxb-Vg-3lN" id="YpN-iH-nMm"/>
-                <outlet property="qiTaBtn" destination="YyF-8N-Rek" id="q1C-Nx-mqN"/>
+                <outlet property="qiTaBtn" destination="BiW-o7-N7j" id="Hmb-cM-NHi"/>
                 <outlet property="searchBar" destination="pvY-A9-kgD" id="oau-Ca-o8f"/>
                 <outlet property="shenQingBtn" destination="YyF-8N-Rek" id="MNA-8k-FeQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -42,7 +42,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8L-2u-fHE">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <button opaque="NO" tag="503" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiW-o7-N7j">
+                        <button opaque="NO" tag="503" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiW-o7-N7j" customClass="ButtonWithRedPoint">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -69,7 +69,7 @@
                                 <action selector="topBtnClick:" destination="-1" eventType="touchUpInside" id="oag-3t-54n"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="502" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-dA-RnL">
+                        <button opaque="NO" tag="502" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-dA-RnL" customClass="ButtonWithRedPoint">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -96,7 +96,7 @@
                                 <action selector="topBtnClick:" destination="-1" eventType="touchUpInside" id="hyi-mU-t3S"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="500" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-8N-Rek">
+                        <button opaque="NO" tag="500" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-8N-Rek" customClass="ButtonWithRedPoint">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -106,7 +106,7 @@
                             <state key="normal" title="申请">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="selected">
+                            <state key="selected" title="申请">
                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <variation key="default">
@@ -123,7 +123,7 @@
                                 <action selector="topBtnClick:" destination="-1" eventType="touchUpInside" id="YXY-Ru-aO6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-Vg-3lN">
+                        <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-Vg-3lN" customClass="ButtonWithRedPoint">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -179,21 +179,21 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="Lhr-YE-RFL"/>
+                            <exclude reference="0wl-JM-b0U"/>
+                            <exclude reference="1Ad-qJ-Fdw"/>
+                            <exclude reference="4W7-Xy-fHy"/>
+                            <exclude reference="8RS-N8-SxM"/>
+                            <exclude reference="qgy-X0-bw8"/>
+                            <exclude reference="PZT-gf-gnI"/>
+                            <exclude reference="Zd1-KH-TFY"/>
+                            <exclude reference="aeu-7q-l9y"/>
+                            <exclude reference="toK-Il-AM3"/>
                             <exclude reference="P20-wB-7Ja"/>
                             <exclude reference="may-ds-xKV"/>
                             <exclude reference="L0f-0Y-Mk5"/>
                             <exclude reference="oXc-Be-g7F"/>
                             <exclude reference="tQS-hr-LSS"/>
                             <exclude reference="u6e-GP-dmG"/>
-                            <exclude reference="PZT-gf-gnI"/>
-                            <exclude reference="Zd1-KH-TFY"/>
-                            <exclude reference="aeu-7q-l9y"/>
-                            <exclude reference="toK-Il-AM3"/>
-                            <exclude reference="0wl-JM-b0U"/>
-                            <exclude reference="1Ad-qJ-Fdw"/>
-                            <exclude reference="4W7-Xy-fHy"/>
-                            <exclude reference="8RS-N8-SxM"/>
-                            <exclude reference="qgy-X0-bw8"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -205,21 +205,21 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="Lhr-YE-RFL"/>
+                            <include reference="0wl-JM-b0U"/>
+                            <include reference="1Ad-qJ-Fdw"/>
+                            <include reference="4W7-Xy-fHy"/>
+                            <include reference="8RS-N8-SxM"/>
+                            <include reference="qgy-X0-bw8"/>
+                            <include reference="PZT-gf-gnI"/>
+                            <include reference="Zd1-KH-TFY"/>
+                            <include reference="aeu-7q-l9y"/>
+                            <include reference="toK-Il-AM3"/>
                             <include reference="P20-wB-7Ja"/>
                             <include reference="may-ds-xKV"/>
                             <include reference="L0f-0Y-Mk5"/>
                             <include reference="oXc-Be-g7F"/>
                             <include reference="tQS-hr-LSS"/>
                             <include reference="u6e-GP-dmG"/>
-                            <include reference="PZT-gf-gnI"/>
-                            <include reference="Zd1-KH-TFY"/>
-                            <include reference="aeu-7q-l9y"/>
-                            <include reference="toK-Il-AM3"/>
-                            <include reference="0wl-JM-b0U"/>
-                            <include reference="1Ad-qJ-Fdw"/>
-                            <include reference="4W7-Xy-fHy"/>
-                            <include reference="8RS-N8-SxM"/>
-                            <include reference="qgy-X0-bw8"/>
                         </mask>
                     </variation>
                 </view>
