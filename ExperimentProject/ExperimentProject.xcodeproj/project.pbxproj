@@ -30,6 +30,10 @@
 		09FDEB5F1DD9BC57002A0B60 /* ZhuCeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB591DD9BC57002A0B60 /* ZhuCeVC.xib */; };
 		09FDEB631DD9BCE9002A0B60 /* YCGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FDEB611DD9BCE9002A0B60 /* YCGuideViewController.m */; };
 		09FDEB641DD9BCE9002A0B60 /* YCGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FDEB621DD9BCE9002A0B60 /* YCGuideViewController.xib */; };
+		DE23B3C31DDEF83C00F1528A /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23B3BF1DDEF83C00F1528A /* iCarousel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE23B3C41DDEF83C00F1528A /* TBCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23B3C11DDEF83C00F1528A /* TBCard.m */; };
+		DE23B3C51DDEF83C00F1528A /* TBCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE23B3C21DDEF83C00F1528A /* TBCard.xib */; };
+		DE23B3C81DDEFC1600F1528A /* YCTopCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE23B3C71DDEFC1600F1528A /* YCTopCardView.m */; };
 		DE26D9461DCC62D100176FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26D9451DCC62D100176FC0 /* main.m */; };
 		DE26D94F1DCC62D100176FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE26D94D1DCC62D100176FC0 /* Main.storyboard */; };
 		DE26D9511DCC62D100176FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE26D9501DCC62D100176FC0 /* Assets.xcassets */; };
@@ -107,6 +111,13 @@
 		09FDEB601DD9BCE9002A0B60 /* YCGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCGuideViewController.h; sourceTree = "<group>"; };
 		09FDEB611DD9BCE9002A0B60 /* YCGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCGuideViewController.m; sourceTree = "<group>"; };
 		09FDEB621DD9BCE9002A0B60 /* YCGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCGuideViewController.xib; sourceTree = "<group>"; };
+		DE23B3BE1DDEF83C00F1528A /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		DE23B3BF1DDEF83C00F1528A /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		DE23B3C01DDEF83C00F1528A /* TBCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCard.h; sourceTree = "<group>"; };
+		DE23B3C11DDEF83C00F1528A /* TBCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCard.m; sourceTree = "<group>"; };
+		DE23B3C21DDEF83C00F1528A /* TBCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBCard.xib; sourceTree = "<group>"; };
+		DE23B3C61DDEFC1600F1528A /* YCTopCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTopCardView.h; sourceTree = "<group>"; };
+		DE23B3C71DDEFC1600F1528A /* YCTopCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTopCardView.m; sourceTree = "<group>"; };
 		DE26D9411DCC62D100176FC0 /* ExperimentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE26D9451DCC62D100176FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE26D94E1DCC62D100176FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,6 +201,7 @@
 		097762611DD41941009844CB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				DE23B3BD1DDEF83C00F1528A /* TableCricle */,
 				DEF133F61DDC34A2005D9E64 /* AddMember */,
 				DEE6D0291DDB0CD000738C3E /* PullToRefreshTableView */,
 				DE7D8D9B1DD9ABFB0059A4CD /* LocalFileSystem */,
@@ -197,6 +209,20 @@
 				DE34E1C51DD56C6E003E7715 /* ToolFiles */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		DE23B3BD1DDEF83C00F1528A /* TableCricle */ = {
+			isa = PBXGroup;
+			children = (
+				DE23B3BE1DDEF83C00F1528A /* iCarousel.h */,
+				DE23B3BF1DDEF83C00F1528A /* iCarousel.m */,
+				DE23B3C61DDEFC1600F1528A /* YCTopCardView.h */,
+				DE23B3C71DDEFC1600F1528A /* YCTopCardView.m */,
+				DE23B3C01DDEF83C00F1528A /* TBCard.h */,
+				DE23B3C11DDEF83C00F1528A /* TBCard.m */,
+				DE23B3C21DDEF83C00F1528A /* TBCard.xib */,
+			);
+			path = TableCricle;
 			sourceTree = "<group>";
 		};
 		DE26D9381DCC62D100176FC0 = {
@@ -619,6 +645,7 @@
 				095098821DDD96C300451F6D /* GeRenTableViewCell.xib in Resources */,
 				DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */,
 				0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */,
+				DE23B3C51DDEF83C00F1528A /* TBCard.xib in Resources */,
 				DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */,
 				096059B11DDEE95100844F17 /* DaiChuLiTableViewCell.xib in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
@@ -643,13 +670,16 @@
 				DEF134091DDC4572005D9E64 /* ChineseString.m in Sources */,
 				DE481D7B1DD42EA200B9A654 /* AppDelegate.m in Sources */,
 				095098811DDD96C300451F6D /* GeRenTableViewCell.m in Sources */,
+				DE23B3C81DDEFC1600F1528A /* YCTopCardView.m in Sources */,
 				0967867D1DDC593000A1637C /* YCUniversalInterface.m in Sources */,
 				0950987C1DDD80D100451F6D /* YCGeRenTableViewController.m in Sources */,
 				DE34E1CA1DD57A0F003E7715 /* ToolFuncation.m in Sources */,
 				09FDEB5A1DD9BC57002A0B60 /* YCLogin.m in Sources */,
+				DE23B3C31DDEF83C00F1528A /* iCarousel.m in Sources */,
 				DEF134071DDC4572005D9E64 /* BATableView.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
 				DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */,
+				DE23B3C41DDEF83C00F1528A /* TBCard.m in Sources */,
 				096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
 				096059AB1DDEAC2A00844F17 /* DaiChuLiViewController.m in Sources */,
