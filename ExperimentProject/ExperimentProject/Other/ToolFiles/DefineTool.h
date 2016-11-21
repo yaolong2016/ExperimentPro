@@ -25,6 +25,8 @@ typedef enum {
     
 }APPInterfaceChange;
 
+static char bottonIndexChar = 'd';
+
 ///模块的入口的类名
 #define UNIVERSION_CLASS_NAME @"YCUniversalInterface"
 #define MANAGER_CLASS_NAME    @"YCManagerInterface"

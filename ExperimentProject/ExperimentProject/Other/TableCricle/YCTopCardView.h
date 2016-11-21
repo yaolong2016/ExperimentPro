@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 
-@interface YCTopCardView : UIView<iCarouselDelegate,iCarouselDataSource>
+@interface YCTopCardView : UIView
 
-@property (strong) iCarousel* tableView_m;
+
 
 @end
