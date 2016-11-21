@@ -71,6 +71,7 @@
     [self.selectImg setBackgroundColor:ColorWithRGB(BlueColor)];
     [self.topChange_m addSubview:self.selectImg];
     ;
+    
     [NSThread detachNewThreadSelector:@selector(updateThread:)
                              toTarget:self
                            withObject:@{@"key":[NSString stringWithFormat:@"%d",k_RETURN_REFRESH],@"index":[NSString stringWithFormat:@"%d",-1]}];
@@ -132,7 +133,7 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     NSInteger returnKey = [self.tableView_m tableViewDidEndDragging];
-    
+  
     //  returnKey用来判断执行的拖动是下拉还是上拖，如果数据正在加载，则返回DO_NOTHING
     if (returnKey != k_RETURN_DO_NOTHING) {
         NSString * key = [NSString stringWithFormat:@"%ld", (long)returnKey];

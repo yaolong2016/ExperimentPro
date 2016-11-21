@@ -34,10 +34,10 @@
 }
 
 - (UIView*) carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
-    UIView* card = [[UIView alloc] initWithFrame:CGRectMake(15,
-                                                            15,
-                                                            self.frame.size.width-30,
-                                                            self.frame.size.height-30)];
+    UIView* card = [[UIView alloc] initWithFrame:CGRectMake(30,
+                                                            10,
+                                                            self.frame.size.width-60,
+                                                            self.frame.size.height-40)];
     card.layer.borderWidth = 1;
     card.layer.borderColor = [UIColor blackColor].CGColor;
     [card setBackgroundColor: index%2 == 0 ? [UIColor grayColor]:[UIColor greenColor]];
@@ -47,7 +47,16 @@
 }
 
 - (CGFloat) carouselItemWidth:(iCarousel *)carousel {
-    return self.frame.size.width-20;
+    return self.frame.size.width-60;
+}
+
+- (CGFloat) carousel:(iCarousel *)carousel valueForTransformOption:(iCarouselTranformOption)option withDefault:(CGFloat)value {
+    if (option == iCarouselTranformOptionTilt) {
+        return 0;
+    } else if (option == iCarouselTranformOptionSpacing) {
+        return 1.2;
+    }
+    return 0;
 }
 
 
