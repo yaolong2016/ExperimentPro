@@ -74,6 +74,7 @@
 		DEE6D0321DDB0CD000738C3E /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02C1DDB0CD000738C3E /* arrow_up.png */; };
 		DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */; };
 		DEE6D0341DDB0CD000738C3E /* PullToRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE9DC051DE3E9A80009EF52 /* CardBottonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE9DC041DE3E9A80009EF52 /* CardBottonButton.m */; };
 		DEED7D211DDD46FE00157CE6 /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */; };
 		DEED7D221DDD46FE00157CE6 /* MemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEED7D201DDD46FE00157CE6 /* MemberCell.xib */; };
 		DEF133FA1DDC34BC005D9E64 /* AddMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF133F81DDC34BC005D9E64 /* AddMember.m */; };
@@ -194,6 +195,8 @@
 		DEE6D02D1DDB0CD000738C3E /* arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_up@2x.png"; sourceTree = "<group>"; };
 		DEE6D02E1DDB0CD000738C3E /* PullToRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullToRefreshTableView.h; path = ../../PullToRefreshTableView.h; sourceTree = "<group>"; };
 		DEE6D02F1DDB0CD000738C3E /* PullToRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshTableView.m; path = ../../PullToRefreshTableView.m; sourceTree = "<group>"; };
+		DEE9DC031DE3E9A80009EF52 /* CardBottonButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBottonButton.h; sourceTree = "<group>"; };
+		DEE9DC041DE3E9A80009EF52 /* CardBottonButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBottonButton.m; sourceTree = "<group>"; };
 		DEED7D1E1DDD46FE00157CE6 /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
 		DEED7D1F1DDD46FE00157CE6 /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
 		DEED7D201DDD46FE00157CE6 /* MemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberCell.xib; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				DE2DFE121DE2C936005BDCF2 /* BottonTableViewIndex.m */,
 				DE2DFE141DE2E65D005BDCF2 /* YCCard.h */,
 				DE2DFE151DE2E65D005BDCF2 /* YCCard.m */,
+				DEE9DC031DE3E9A80009EF52 /* CardBottonButton.h */,
+				DEE9DC041DE3E9A80009EF52 /* CardBottonButton.m */,
 				DE23B3C61DDEFC1600F1528A /* YCTopCardView.h */,
 				DE23B3C71DDEFC1600F1528A /* YCTopCardView.m */,
 				DE23B3C01DDEF83C00F1528A /* TBCard.h */,
@@ -756,6 +761,7 @@
 				DE23B3C41DDEF83C00F1528A /* TBCard.m in Sources */,
 				096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */,
 				DEE6D01F1DDAB71100738C3E /* DocumentCell.m in Sources */,
+				DEE9DC051DE3E9A80009EF52 /* CardBottonButton.m in Sources */,
 				096059AB1DDEAC2A00844F17 /* DaiChuLiViewController.m in Sources */,
 				DE7D8D901DD9A1F20059A4CD /* Reachability.m in Sources */,
 				DE26D9461DCC62D100176FC0 /* main.m in Sources */,

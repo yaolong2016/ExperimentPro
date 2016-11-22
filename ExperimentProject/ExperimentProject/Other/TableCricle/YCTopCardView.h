@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 
+#define BgColor 0xe3f1fc
+
 @interface YCTopCardView : UIView
 
 

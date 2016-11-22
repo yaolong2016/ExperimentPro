@@ -22,11 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    // ／／  [self setAutomaticallyAdjustsScrollViewInsets:NO];
     _table = [[YCTopCardView alloc] initWithFrame:CGRectMake(0, 64, [ToolFuncation screenSize].width, 250)];
     [self.view addSubview:_table];
-
     
 }
 

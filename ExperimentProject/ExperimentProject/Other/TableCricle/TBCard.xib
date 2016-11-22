@@ -19,7 +19,7 @@
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <size key="freeformSize" width="375" height="667"/>
-            <point key="canvasLocation" x="485.5" y="343.5"/>
+            <point key="canvasLocation" x="364.5" y="302.5"/>
         </viewController>
     </objects>
 </document>

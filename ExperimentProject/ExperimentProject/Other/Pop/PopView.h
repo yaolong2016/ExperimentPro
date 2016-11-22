@@ -16,7 +16,7 @@ typedef enum {
     POP_SIZE_30X30
 
 }
-
+///气泡大小
 PopSize;
 
 typedef enum {
@@ -25,13 +25,19 @@ typedef enum {
     POP_LOCAL_RIGHT
     
 }
-
+///气泡位置
 PopLocal;
 
 @interface PopView : UIButton
-
-- (id) initWithPop:(PopLocal) local popSize:(PopSize) size fontSize:(CGFloat) font shadow:(BOOL) mark inView:(UIView*) object;
-
+///初始化气泡
+- (instancetype) initWithPop:(PopLocal) local
+           popSize:(PopSize) size
+          fontSize:(CGFloat) font
+            shadow:(BOOL) mark
+            inView:(UIView*) object;
+///设置消息数目
 - (void) showPopNumber:(NSInteger) number;
+///添加方法
+- (void) addTagTouchInSide:(nonnull SEL) fun;
 
 @end

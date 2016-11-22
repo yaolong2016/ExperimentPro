@@ -7,40 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardBottonButton.h"
 
-typedef enum {
-    Card_Default,
-    ///主管
-    Card_Admin,
-    ///助理
-    Card_Helper,
-    ///未完成
-    Card_Continue,
-    ///负责人
-    Card_PersionInCharge,
-    ///顾问
-    Card_Adviser,
-    ///待审核
-    Card_WaittingReview,
-    ///财务
-    Card_Finance,
-    ///科研元
-    Card_ScitifficSereach,
-    
-}
-///选项卡类型
-CardType;
-
-#define CardTopHeight 44.0f
-
-#define CardSecondHeight 25.0f
 
 #define CardSpaceWidth 8.0f
 
-#define CardMiddleHeight 90.0f
+@protocol YCCardDelegate;
 
 @interface YCCard : UIView
+///卡片的类型
+@property (nonatomic, assign) CardType type_m;
+
+@property (nonatomic, weak) id<YCCardDelegate>delegate;
 
 - (id) initWithYCCard:(CGRect) frame chagneType:(CardType) type;
+
+- (void) controlButtonPopNumber:(NSInteger) number button:(CardBottonButton*) btn;
+
+- (void) notcontentShow:(NSString*) title buttonTitle:(NSString*) btitle promptColor:(UIColor*) color;
+
+@end
+
+
+@protocol YCCardDelegate <NSObject>
+
+@optional
+- (void) cardClickButton:(YCCard*) object button:(CardBottonButton*) btn;
 
 @end

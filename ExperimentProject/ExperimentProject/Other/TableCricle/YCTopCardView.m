@@ -9,6 +9,7 @@
 #import "YCTopCardView.h"
 #import "BottonTableViewIndex.h"
 #import "YCCard.h"
+#import "DefineTool.h"
 
 @class YCCard;
 
@@ -25,6 +26,8 @@
 
 - (id) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.layer.masksToBounds = YES;
+        [self setBackgroundColor:ColorWithRGB(BgColor)];
         self->bottonIndexView = nil;
         
         self->bottonIndexView = [[BottonTableViewIndex alloc] initWithBottonTableView:CGRectMake(0, 30, self.frame.size.width, 30)];
@@ -62,14 +65,13 @@
 }
 
 - (UIView*) carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view {
-    YCCard* card = [[YCCard alloc] initWithYCCard:CGRectMake(30,
-                                                            10,
-                                                            self.frame.size.width-60,
-                                                            self.frame.size.height-self->bottonIndexView.frame.size.height-20)
-                                       chagneType:Card_Admin];
-    card.layer.borderWidth = 1;
+    YCCard* card = nil;
+    card = [[YCCard alloc] initWithYCCard:CGRectMake(30,
+                                                     10,
+                                                     self.frame.size.width-60,
+                                                     self.frame.size.height-self->bottonIndexView.frame.size.height-20)
+                               chagneType:Card_Helper];
     card.layer.borderColor = [UIColor blackColor].CGColor;
-    //[card setBackgroundColor: index%2 == 0 ? [UIColor grayColor]:[UIColor greenColor]];
     return card;
 }
 

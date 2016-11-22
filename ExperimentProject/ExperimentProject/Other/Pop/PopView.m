@@ -10,8 +10,13 @@
 
 @implementation PopView
 
-- (id) initWithPop:(PopLocal) local popSize:(PopSize) size fontSize:(CGFloat) font shadow:(BOOL) mark inView:(UIView*) object{
+- (instancetype) initWithPop:(PopLocal) local popSize:(PopSize) size fontSize:(CGFloat) font shadow:(BOOL) mark inView:(UIView*) object{
 
+    if (object == nil) {
+        return nil;
+    }
+    [self setUserInteractionEnabled:NO];
+    
     CGFloat localx = 0.0f;
     CGSize popsize = CGSizeZero;
     
@@ -27,15 +32,16 @@
     
     
     if (local == POP_LOCAL_LEFT) {
-        localx = 0;
+        localx = 5;
     } else if (local == POP_LOCAL_RIGHT) {
         localx = object.frame.size.width - popsize.width;
     }
     
-    if (self = [super initWithFrame:CGRectMake(localx, 0, popsize.width, popsize.height)]) {
+    if (self = [super initWithFrame:CGRectMake(localx-2.5, 2.5, popsize.width, popsize.height)]) {
         self.backgroundColor = [UIColor redColor];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.titleLabel setFont:[UIFont systemFontOfSize:font]];
+        [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
         
         [self.layer setCornerRadius:self.frame.size.height/2];
         [self.layer setMasksToBounds:YES];
@@ -43,19 +49,20 @@
         if (mark) {
             [self.layer setShadowColor:[UIColor blackColor].CGColor];
             [self.layer setShadowOffset:CGSizeMake(0, 0)];
-            [self.layer setShadowRadius:0.5];
-            [self.layer setShadowOpacity:0.5];
+            [self.layer setShadowRadius:0.85];
+            [self.layer setShadowOpacity:0.85];
         }
         
         [object addSubview:self];
-        return self;
+        
     }
-    return nil;
+    self.hidden = YES;
+    return self;
 }
 
 - (void) showPopNumber:(NSInteger) number {
     NSString* popnumber = @"";
-    if (number<100) {
+    if (number>=100) {
         popnumber = @"99+";
         self.hidden = NO;
     } else if (number > 0) {
@@ -65,6 +72,12 @@
         self.hidden = YES;
     }
     [self setTitle:popnumber forState:UIControlStateNormal];
+}
+
+- (void) addTagTouchInSide:(nonnull SEL) fun {
+
+    [self addTarget:self action:fun forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 @end
