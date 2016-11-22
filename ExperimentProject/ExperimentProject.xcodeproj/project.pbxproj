@@ -22,6 +22,8 @@
 		0967867D1DDC593000A1637C /* YCUniversalInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967867A1DDC593000A1637C /* YCUniversalInterface.m */; };
 		096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967867F1DDC5CA600A1637C /* WanShanZiLiaoViewController.m */; };
 		096786821DDC5CA600A1637C /* WanShanZiLiaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096786801DDC5CA600A1637C /* WanShanZiLiaoViewController.xib */; };
+		097528E81DE3EDEA00B174F7 /* DaiChuLiViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 097528E61DE3EDEA00B174F7 /* DaiChuLiViewModel.m */; };
+		097528E91DE3EDEA00B174F7 /* DaiChuLiViewModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097528E71DE3EDEA00B174F7 /* DaiChuLiViewModel.xib */; };
 		09A6EDE11DE29F5800639A0C /* ButtonWithRedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6EDE01DE29F5800639A0C /* ButtonWithRedPoint.m */; };
 		09A6EDE51DE29FA500639A0C /* DaiChuLiXiangQingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6EDE31DE29FA500639A0C /* DaiChuLiXiangQingViewController.m */; };
 		09A6EDE61DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A6EDE41DE29FA500639A0C /* DaiChuLiXiangQingViewController.xib */; };
@@ -106,6 +108,9 @@
 		0967867E1DDC5CA600A1637C /* WanShanZiLiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanShanZiLiaoViewController.h; sourceTree = "<group>"; };
 		0967867F1DDC5CA600A1637C /* WanShanZiLiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanShanZiLiaoViewController.m; sourceTree = "<group>"; };
 		096786801DDC5CA600A1637C /* WanShanZiLiaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WanShanZiLiaoViewController.xib; sourceTree = "<group>"; };
+		097528E51DE3EDEA00B174F7 /* DaiChuLiViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiChuLiViewModel.h; sourceTree = "<group>"; };
+		097528E61DE3EDEA00B174F7 /* DaiChuLiViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiChuLiViewModel.m; sourceTree = "<group>"; };
+		097528E71DE3EDEA00B174F7 /* DaiChuLiViewModel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaiChuLiViewModel.xib; sourceTree = "<group>"; };
 		09A6EDDF1DE29F5800639A0C /* ButtonWithRedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonWithRedPoint.h; sourceTree = "<group>"; };
 		09A6EDE01DE29F5800639A0C /* ButtonWithRedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonWithRedPoint.m; sourceTree = "<group>"; };
 		09A6EDE21DE29FA500639A0C /* DaiChuLiXiangQingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaiChuLiXiangQingViewController.h; path = ExperimentProject/Universal/View/DaiChuLiXiangQingViewController.h; sourceTree = SOURCE_ROOT; };
@@ -398,6 +403,9 @@
 		DE34E1A71DD568E7003E7715 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				097528E51DE3EDEA00B174F7 /* DaiChuLiViewModel.h */,
+				097528E61DE3EDEA00B174F7 /* DaiChuLiViewModel.m */,
+				097528E71DE3EDEA00B174F7 /* DaiChuLiViewModel.xib */,
 				096059AF1DDEE95100844F17 /* DaiChuLiTableViewCell.xib */,
 				096059AA1DDEAC2A00844F17 /* DaiChuLiViewController.xib */,
 				095098801DDD96C300451F6D /* GeRenTableViewCell.xib */,
@@ -705,6 +713,7 @@
 				0950987D1DDD80D100451F6D /* YCGeRenTableViewController.xib in Resources */,
 				DE23B3C51DDEF83C00F1528A /* TBCard.xib in Resources */,
 				DEE6D0331DDB0CD000738C3E /* arrow_up@2x.png in Resources */,
+				097528E91DE3EDEA00B174F7 /* DaiChuLiViewModel.xib in Resources */,
 				096059B11DDEE95100844F17 /* DaiChuLiTableViewCell.xib in Resources */,
 				DE34E1C41DD56A38003E7715 /* YCSettingsViewController.xib in Resources */,
 			);
@@ -742,6 +751,7 @@
 				DEF134071DDC4572005D9E64 /* BATableView.m in Sources */,
 				DE34E1C31DD56A38003E7715 /* YCSettingsViewController.m in Sources */,
 				DEF134081DDC4572005D9E64 /* BATableViewIndex.m in Sources */,
+				097528E81DE3EDEA00B174F7 /* DaiChuLiViewModel.m in Sources */,
 				09A6EDE11DE29F5800639A0C /* ButtonWithRedPoint.m in Sources */,
 				DE23B3C41DDEF83C00F1528A /* TBCard.m in Sources */,
 				096786811DDC5CA600A1637C /* WanShanZiLiaoViewController.m in Sources */,
