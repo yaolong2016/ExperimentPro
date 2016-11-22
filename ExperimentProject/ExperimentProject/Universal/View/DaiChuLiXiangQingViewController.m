@@ -10,6 +10,8 @@
 #import "BATableView.h"
 #import "DefineTool.h"
 #import "ToolFuncation.h"
+#import "DaiChuLiViewModel.h"
+
 @interface DaiChuLiXiangQingViewController ()<BATableViewDelegate>
 {
     BATableView *bgTableView;
@@ -22,25 +24,72 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    bgTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREENH_HEIGHT)];
-    [bgTableView setTableViewHeaderViewAndFooterView:YES footerView:NO];
+    
+    
+    bgTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREENH_HEIGHT - 64)];
+    [bgTableView setTableViewHeaderViewAndFooterView:NO footerView:NO];
     [bgTableView.tableView initHeaderAndFooter:[ToolFuncation screenSize]];
     bgTableView.delegate = self;
     [self.view addSubview:bgTableView];
     
-
+    
+    
     [NSThread detachNewThreadSelector:@selector(updateThread:) toTarget:self withObject:[NSString stringWithFormat:@"%d",k_RETURN_REFRESH]];
+    
+    
+//    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 468)];
+//    bgView.backgroundColor = ColorWithRGB(0xEFF6F9);
+//    bgTableView.tableView.tableHeaderView = bgView;
+//
+//    DaiChuLiViewModel *daiChuLiViewModel = [DaiChuLiViewModel instanceDaiChuLiViewModel];
+//    daiChuLiViewModel.frame = CGRectMake(5, 5, SCREEN_WIDTH - 10, 468);
+//    
+//    daiChuLiViewModel.viewType =(NSInteger) self.viewType;
+//    
+//    [bgView addSubview:daiChuLiViewModel];
+    
+    [self setHeaderViewWith:(NSInteger )self.viewType];
 
+}
+
+- (void)setHeaderViewWith:(NSInteger )viewType{
+    CGFloat headerHeight = 0.0;
+    switch (viewType) {
+        case 0:
+        {
+            headerHeight = 468;
+        }
+            break;
+        case 1:case 2:
+        {
+            headerHeight = 468 - 40;
+        }
+            break;
+        case 3:
+        {
+            headerHeight = 210 ;;
+        }
+            break;
+        default:
+            break;
+    }
+    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, headerHeight)];
+    
+    bgView.backgroundColor = ColorWithRGB(0xEFF6F9);
+    bgTableView.tableView.tableHeaderView = bgView;
+    
+    DaiChuLiViewModel *daiChuLiViewModel = [DaiChuLiViewModel instanceDaiChuLiViewModel];
+    daiChuLiViewModel.frame = CGRectMake(5, 5, SCREEN_WIDTH - 10, headerHeight - 10);
+    
+    daiChuLiViewModel.viewType =(NSInteger) self.viewType;
+    
+    [bgView addSubview:daiChuLiViewModel];
     
 }
 
-- (void) awakeFromNib {
-    [super awakeFromNib];
-
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,24 +105,10 @@
     return CELL;
 }
 
-- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 
-}
-
-
-- (void) tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    for (UIView* view in cell.contentView.subviews) {
-        [view removeFromSuperview];
-    }
-
-}
-
-
-
- 
  #pragma PTableView
  - (void)updateThread:(NSString *)returnKey{
+
  sleep(2);
  [self performSelectorOnMainThread:@selector(updateTableView) withObject:nil waitUntilDone:NO];
  
@@ -100,8 +135,7 @@
  [bgTableView.tableView reloadData:YES];
  }
  }
- 
- #pragma mark -
+
  #pragma mark Scroll View Delegate
  - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
  [bgTableView.tableView tableViewDidDragging];
@@ -125,13 +159,6 @@
 }
 
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
 
 @end

@@ -106,10 +106,11 @@
     self.jiuGongGeScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 2, self.jiuGongGeScrollView.bounds.size.height);
     self.jiuGongGeScrollView.pagingEnabled = YES;
     self.jiuGongGeScrollView.delegate = self;
-    UIView *contentView_GuanLi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.jiuGongGeScrollView.bounds.size.height)];
+    
+    UIView *contentView_GuanLi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREENH_HEIGHT -64 - 45) / 2.0 - 52)];
     [self.jiuGongGeScrollView addSubview:contentView_GuanLi];
     
-    UIView *contentView_KeYan = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.jiuGongGeScrollView.bounds.size.height)];
+    UIView *contentView_KeYan = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, (SCREENH_HEIGHT -64 - 45) / 2.0 - 52)];
     [self.jiuGongGeScrollView addSubview:contentView_KeYan];
     
     float marginY = 0; //Y间隙

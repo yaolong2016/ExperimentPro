@@ -63,21 +63,25 @@
     tabView_0 = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREENH_HEIGHT- 64 - 44 - 44 - 5) style:UITableViewStylePlain];
     tabView_0.delegate = self;
     tabView_0.dataSource = self;
+    tabView_0.tag = 600;
     [self.bottomScrollView addSubview:tabView_0];
     
     tabView_1 = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREENH_HEIGHT- 64 - 44 - 44 - 5) style:UITableViewStylePlain];
     tabView_1.delegate = self;
     tabView_1.dataSource = self;
+    tabView_1.tag = 601;
     [self.bottomScrollView addSubview:tabView_1];
     
     tabView_2 = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH * 2, 0, SCREEN_WIDTH, SCREENH_HEIGHT- 64 - 44 - 44 - 5) style:UITableViewStylePlain];
     tabView_2.delegate = self;
     tabView_2.dataSource = self;
+    tabView_2.tag = 602;
     [self.bottomScrollView addSubview:tabView_2];
     
     tabView_3 = [[UITableView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH * 3, 0, SCREEN_WIDTH, SCREENH_HEIGHT- 64 - 44 - 44 - 5) style:UITableViewStylePlain];
     tabView_3.delegate = self;
     tabView_3.dataSource = self;
+    tabView_3.tag = 603;
     [self.bottomScrollView addSubview:tabView_3];
     
     
@@ -123,6 +127,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DaiChuLiXiangQingViewController *daiChuLiXiangQingViewController_m = [[DaiChuLiXiangQingViewController alloc]init];
+    daiChuLiXiangQingViewController_m.viewType =(NSInteger)tableView.tag - 600;
     [self.navigationController pushViewController:daiChuLiXiangQingViewController_m animated:YES];
 }
 

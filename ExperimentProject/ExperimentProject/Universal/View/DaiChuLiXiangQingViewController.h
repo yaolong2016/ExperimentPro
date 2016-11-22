@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DaiChuLiXiangQingViewController : UIViewController
-
+@property (nonatomic, assign)NSInteger *viewType;
 @end
