@@ -8,8 +8,13 @@
 
 #import "TBCard.h"
 #import "ToolFuncation.h"
+#import "BATableView.h"
 
-@interface TBCard ()
+@interface TBCard ()<BATableViewDelegate>{
+
+    BATableView* tableView_m;
+
+}
 
 @end
 
@@ -18,9 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    _table = [[YCTopCardView alloc] initWithFrame:CGRectMake(0, 64, [ToolFuncation screenSize].width, 300)];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    _table = [[YCTopCardView alloc] initWithFrame:CGRectMake(0, 64, [ToolFuncation screenSize].width, 250)];
     [self.view addSubview:_table];
+
     
 }
 

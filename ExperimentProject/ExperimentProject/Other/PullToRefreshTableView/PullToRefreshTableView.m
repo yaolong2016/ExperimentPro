@@ -71,58 +71,59 @@
     if (arrowView) {
         arrowView.hidden = NO;
     }
-    [UIView beginAnimations:nil context:nil];
-    switch (state) {
-        case k_PULL_STATE_NORMAL:
-            currentState = k_PULL_STATE_NORMAL;
-            stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
-            //  旋转箭头
-            if (arrowView) {
-                arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
-            }
-            break;
-        case k_PULL_STATE_DOWN:
-            currentState = k_PULL_STATE_DOWN;
-            stateLabel.text = @"释放刷新数据";
-            if (arrowView) {
-                arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
-            }
-            break;
-            
-        case k_PULL_STATE_UP:
-            currentState = k_PULL_STATE_UP;
-            stateLabel.text = @"释放加载数据";
-            if (arrowView) {
-                arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
-            }
-            break;
-            
-        case k_PULL_STATE_LOAD:
-            currentState = k_PULL_STATE_LOAD;
-            stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"正在刷新.." : @"正在加载..";
-            [indicatorView startAnimating];
-            if (arrowView) {
-                arrowView.hidden = YES;
-            }
-            break;
-            
-        case k_PULL_STATE_END:
-            currentState = k_PULL_STATE_END;
-            stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? stateLabel.text : @"已加载全部数据";
-            if (arrowView) {
-                arrowView.hidden = YES;
-            }
-            break;
-            
-        default:
-            currentState = k_PULL_STATE_NORMAL;
-            stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
-            if (arrowView) {
-                arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
-            }
-            break;
-    }
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         switch (state) {
+                             case k_PULL_STATE_NORMAL:
+                                 currentState = k_PULL_STATE_NORMAL;
+                                 stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
+                                 //  旋转箭头
+                                 if (arrowView) {
+                                     arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+                                 }
+                                 break;
+                             case k_PULL_STATE_DOWN:
+                                 currentState = k_PULL_STATE_DOWN;
+                                 stateLabel.text = @"释放刷新数据";
+                                 if (arrowView) {
+                                     arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+                                 }
+                                 break;
+                                 
+                             case k_PULL_STATE_UP:
+                                 currentState = k_PULL_STATE_UP;
+                                 stateLabel.text = @"释放加载数据";
+                                 if (arrowView) {
+                                     arrowView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+                                 }
+                                 break;
+                                 
+                             case k_PULL_STATE_LOAD:
+                                 currentState = k_PULL_STATE_LOAD;
+                                 stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"正在刷新.." : @"正在加载..";
+                                 [indicatorView startAnimating];
+                                 if (arrowView) {
+                                     arrowView.hidden = YES;
+                                 }
+                                 break;
+                                 
+                             case k_PULL_STATE_END:
+                                 currentState = k_PULL_STATE_END;
+                                 stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? stateLabel.text : @"已加载全部数据";
+                                 if (arrowView) {
+                                     arrowView.hidden = YES;
+                                 }
+                                 break;
+                                 
+                             default:
+                                 currentState = k_PULL_STATE_NORMAL;
+                                 stateLabel.text = viewType == k_VIEW_TYPE_HEADER ? @"下拉可以刷新" : @"上拖加载更多";
+                                 if (arrowView) {
+                                     arrowView.layer.transform = CATransform3DMakeRotation(M_PI * 2, 0, 0, 1);
+                                 }
+                                 break;
+                         }
+                     }];
 }
 
 - (void)updateTimeLabel{
@@ -197,15 +198,25 @@
 }
 
 - (void) initHeaderAndFooter:(CGSize)size {
-    if (!headerView&self.isHeader) {
-        headerView = [[StateView alloc] initWithFrame:CGRectMake(0, -40, size.width, size.height) viewType:k_VIEW_TYPE_HEADER];
-        [self addSubview:headerView];
-       
-    }
-    if (!footerView&self.isFooter) {
-        footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) viewType:k_VIEW_TYPE_FOOTER];
-        [self setTableFooterView:footerView];
-    }
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         if (!headerView&self.isHeader) {
+                             headerView = [[StateView alloc] initWithFrame:CGRectMake(0, -40, size.width, size.height) viewType:k_VIEW_TYPE_HEADER];
+                             [self addSubview:headerView];
+                             [self initLoadHeadView];
+                         }
+                         if (!footerView&self.isFooter) {
+                             footerView = [[StateView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) viewType:k_VIEW_TYPE_FOOTER];
+                             [self setTableFooterView:footerView];
+                         }
+                     }];
+}
+
+- (void) initLoadHeadView {
+    headerView.currentState = k_RETURN_REFRESH;
+    [self setContentInset:UIEdgeInsetsMake(51, 0, 0, 0)];
+    [self tableViewDidDragging];
+    [self tableViewDidEndDragging];
 }
 
 - (void)dealloc{
@@ -270,7 +281,10 @@
 
 - (void)reloadData:(BOOL)dataIsAllLoaded{
     [self reloadData];
-    self.contentInset = UIEdgeInsetsZero;
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         self.contentInset = UIEdgeInsetsZero;
+                     }];
     [headerView changeState:k_PULL_STATE_NORMAL];
     //  如果数据已全部加载，则禁用“上拖加载”
     if (dataIsAllLoaded) {

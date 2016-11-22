@@ -154,6 +154,9 @@
     StateView * footerView;  //  上拖加载视图
 }
 
+/////在初始化后面调用  就会显示headerview
+//- (void) initLoadHeadView;
+
 ///移除头试图
 - (void) removeCurrentHeaderView;
 
